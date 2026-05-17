@@ -1,0 +1,237 @@
+cv:
+  name: Kidanemaryam Wagaw Reta
+  label: Plant Physiologist | Plant Biochemist | Predictive Modeling | Systems Crop Scientist
+  email: kidane.et@gmail.com
+  #phone: "+972587964242"
+  location: Be'er Sheva, Israel
+  image: ""
+  summary: Plant scientist with a PhD in plant biotechnology, specializing in crop physiology, plant metabolism, trait characterization under complex abiotic stresses, multi-omics integration, and predictive modeling for climate-resilient crop performance.
+
+  social_networks:
+    - network: LinkedIn
+      username: kidanemaryam-wagaw-reta
+
+  sections:
+    Education:
+      - institution: Ben-Gurion University of the Negev
+        location: Be'er Sheva, Israel
+        area: Plant Metabolomics
+        studyType: PhD
+        start_date: 2021-10
+        end_date: 2025-11
+        highlights:
+          - "Thesis: Responses of Vitis vinifera grafts to combined abiotic stress: Physiology and Metabolism."
+          - Designed and executed multi-season experiments across field, greenhouse, and semi-controlled systems to quantify grapevine responses to combined salinity, heatwave, and water stress.
+          - Integrated physiology with metabolomics, transcriptomics, ionomics, phenomics, and root-shoot phenotyping to identify mechanisms and traits associated with stress resilience.
+          - Developed predictive and network-based analyses linking environmental variables, physiological traits, molecular responses, and crop performance.
+
+      - institution: Jimma University
+        location: Ethiopia
+        area: Plant Breeding
+        studyType: MSc
+        start_date: 2016-10
+        end_date: 2018-10
+        highlights:
+          - "Thesis: Assessment of heterotic performance and combining ability of Ethiopian elite sorghum (Sorghum bicolor (L.) Moench) lines."
+          - Designed field-based experiments for hybrid sorghum development and evaluated heterosis, combining ability, stability, and genotype-by-environment interactions.
+
+      - institution: Haramaya University
+        location: Ethiopia
+        area: Plant Sciences
+        studyType: BSc, Great Distinction
+        start_date: 2009-09
+        end_date: 2012-07
+
+    Experience:
+      - company: Ben-Gurion University of the Negev
+        position: Postdoctoral Researcher in Plant Metabolomics and Physiology
+        location: Be'er Sheva, Israel
+        start_date: 2025-11
+        end_date: Present
+        highlights:
+          - Lead an OIV-funded integrative phenotyping project combining UAV-based thermal imaging, physiology, metabolomics, gene expression, and AI-assisted predictive modeling to identify climate-resilient varietal performance.
+          - Design above- and below-ground crop physiology experiments using gas exchange, chlorophyll fluorescence, ionomics, plant biochemistry, and multi-year field and controlled-environment phenotyping.
+          - Generate and analyze metabolomics and volatilomics datasets using GC-MS, LC-MS, HS-SPME-GC-MS, multivariate statistics, network analysis, and machine learning.
+          - Integrate multi-omics datasets to resolve carbon metabolism, ion partitioning, root-zone processes, and biochemical regulation underlying abiotic stress responses.
+
+      - company: Bio and Emerging Technology Institute
+        position: Researcher II, Plant Molecular Breeder
+        location: Addis Ababa, Ethiopia
+        start_date: 2021-02
+        end_date: Present
+        highlights:
+          - Led crop improvement research for dryland production systems, integrating physiological phenotyping, quantitative genetics, molecular tools, and stress-resilient trait validation.
+          - Applied genomic-assisted selection and molecular breeding approaches to accelerate selection and deployment of improved crop varieties.
+          - Coordinated multi-institutional, internationally funded research programs including BIOINNOVATE Africa.
+
+      - company: Ethiopian Institute of Agricultural Research
+        position: Junior Researcher to Associate Researcher, Plant Breeder
+        location: Addis Ababa, Ethiopia
+        start_date: 2014-05
+        end_date: 2021-01
+        highlights:
+          - Designed and implemented breeding schemes, crossing, hybridization, and heterosis exploitation that led to three improved sorghum varieties and contributed to eight more released varieties as part of a team.
+          - Led large-scale phenotyping and physiological characterization of sorghum germplasm across multi-environment trials.
+          - Integrated field phenotyping, SNP-based genotyping, genotype-phenotype association analysis, and data-driven selection pipelines.
+
+      - company: Amhara Bureau of Agriculture, Amhara Sayint Agricultural Office
+        position: Crop Production and Protection Expert, System Agronomist
+        location: Amhara Sayint, Ethiopia
+        start_date: 2012-10
+        end_date: 2014-04
+        highlights:
+          - Provided field-level agronomic diagnostics and advisory support for maize, wheat, barley, and haricot bean production.
+          - Conducted seed quality assessment and certification for haricot bean production systems targeting local and export markets.
+
+    Interests:
+      - name: Crop stress physiology
+        keywords: [Photosynthesis, gas exchange, chlorophyll fluorescence, heatwave stress, salinity, water deficit, stress thresholds]
+      - name: Plant metabolomics and multi-omics
+        keywords: [GC-MS, LC-MS, ionomics, transcriptomics, phenomics, metabolic network analysis, pathway analysis]
+      - name: Root-shoot interactions
+        keywords: [Root system architecture, ion selectivity, rootstock-mediated traits, plant-soil interactions, belowground phenotyping]
+      - name: Predictive crop performance
+        keywords: [Machine learning, UAV thermal sensing, high-throughput phenotyping, AI-assisted forecasting, climate resilience]
+
+    Publications:
+      - title: "Modulation of phenology and agronomical performance of Syrah grafted on two rootstocks under combined salinity and water stress conditions: A three-year field study"
+        authors:
+          - Reta K.
+          - Lupo Y.
+          - Persi N.S.
+          - Lazarovitch N.
+          - Fait A.
+        publisher: Plant Stress
+        releaseDate: 2025
+        url: https://doi.org/10.1016/j.stress.2025.101050
+        summary: Three-year field study of rootstock-mediated phenology and agronomic performance under combined salinity and water stress.
+
+      - title: Integrated metabolomics, ionomics, physiology, and network analysis reveals distinct salinity tipping point in Vitis vinifera cv. Syrah to enter a stress response mode
+        authors:
+          - Reta K.
+          - Lazarovitch N.
+          - Fait A.
+        publisher: Plant Stress
+        releaseDate: 2025
+        url: https://doi.org/10.1016/j.stress.2025.100864
+        summary: Integrative analysis identifying physiological, metabolic, and ionomic tipping points in grapevine salinity response.
+
+      - title: Canopy management practices in warm environment vineyards to improve grape yield and quality in a changing climate
+        authors:
+          - Reta K.
+          - Netzer Y.
+          - Lazarovitch N.
+          - Fait A.
+        publisher: Scientia Horticulturae
+        releaseDate: 2025
+        url: https://doi.org/10.1016/j.scienta.2025.113998
+        summary: Review of canopy management strategies for grape yield and quality under warming climates.
+
+      - title: Improved berry and wine quality of Vitis vinifera L. cv. Gewurztraminer grown in an arid climate using a Y-shaped training system
+        authors:
+          - Zohar Y.
+          - Reta K.
+          - Drori E.
+          - Gliksman U.
+          - Rauchberger S.
+          - Bar E.
+        publisher: OENO One
+        releaseDate: 2024
+        url: https://doi.org/10.20870/oeno-one.2024.58.1.7148
+
+      - title: Review on mechanisms of drought tolerance in sorghum (Sorghum bicolor (L.) Moench) basis and breeding methods
+        authors:
+          - Wagaw K.
+        publisher: Academic Research Journal of Agricultural Science and Research
+        releaseDate: 2019
+        url: https://doi.org/10.14662/ARJASR2019.007
+
+    Projects:
+      - name: Integrative metabolomics, physiology, and predictive modeling in Vitis vinifera under elevated temperature
+        summary: OIV-funded project linking physiology, metabolomics, UAV-based thermal phenotyping, gene expression, and AI-assisted forecasting to identify resilient grapevine varietal performance.
+        start_date: 2023
+        end_date: 2026
+        highlights:
+          - Lead role / PI
+          - Funded by the International Organisation of Vine and Wine
+
+      - name: Small-scale community biorefining of sorghum for food, sugar, and biomaterials in rainfed areas of Eastern Africa
+        summary: Multi-institutional project focused on sorghum-based value chains and dryland production systems.
+        start_date: 2019
+        end_date: 2022
+        highlights:
+          - Coordinator
+          - Funded by BIOINNOVATE Africa
+
+      - name: Climate-smart interventions for smallholder farmers in Ethiopia
+        summary: Collaborative CultiAF-2 project with the University of Queensland and regional research institutes.
+        start_date: 2019
+        end_date: 2021
+        highlights:
+          - Co-PI
+          - Funded by IDRC and ACIAR
+
+      - name: Modernizing Ethiopian Agricultural Research in Crop Improvement
+        summary: MERCI crop improvement initiative with the University of Queensland and regional research institutes.
+        start_date: 2016
+        end_date: 2020
+        highlights:
+          - Component 2 focal person
+          - Funded by the Bill & Melinda Gates Foundation
+
+    Awards:
+      - title: Research grant
+        awarder: International Organisation of Vine and Wine
+        date: 2023
+        summary: OIV grant for integrative grapevine phenotyping and predictive modeling research.
+      - title: AKIS Publication Prize
+        awarder: Ben-Gurion University of the Negev
+        date: 2025
+      - title: MASOK research grant
+        awarder: Ben-Gurion University of the Negev
+        date: 2024
+      - title: Travel grant
+        awarder: Prism Charitable Trust, Ben-Gurion University of the Negev
+        date: 2024
+      - title: Tamar Golan Africa Center Award
+        awarder: Ben-Gurion University of the Negev
+        date: 2022
+      - title: Silver Medal recognition
+        awarder: 7th Ethiopian Science, Technology and Innovation Awards
+        date: 2016
+      - title: Distinction Honor Award
+        awarder: Haramaya University
+        date: 2012
+
+    Skills:
+      - name: Crop physiology and phenotyping
+        icon: fa-solid fa-seedling
+        keywords: [Gas exchange, LI-COR, chlorophyll fluorescence, MicroPAM, root phenotyping, root system architecture, shoot physiology]
+      - name: Metabolomics and molecular phenotyping
+        icon: fa-solid fa-flask
+        keywords: [GC-MS, LC-MS, HS-SPME-GC-MS, ICP-OES, metabolite identification, spectral curation, transcriptomics integration]
+      - name: Computational biology and data science
+        icon: fa-solid fa-chart-line
+        keywords: [R, Python, machine learning, predictive modeling, network analysis, PCA, PLS-DA, sPLS-DA, GxE analysis]
+      - name: Research operations
+        icon: fa-solid fa-clipboard-check
+        keywords: [Experimental design, multi-environment trials, SOPs, technical reports, ELN workflows, mentoring, project coordination]
+
+    Languages:
+      - name: Amharic
+        summary: Native
+      - name: English
+        summary: Fluent
+
+    Professional Service:
+      - bullet: "Reviewer for Cogent Food & Agriculture, Journal of Crop Improvement, African Journal of Plant Science, African Journal of Agricultural Research, African Journal of Biotechnology, Plant Physiology and Biochemistry, Scientia Horticulturae, and The Plant Cell."
+      - bullet: "Member of the Ethiopian Biotechnology Society and the Crop Science Society of Ethiopia."
+
+    References:
+    - name: Will be provided upon request
+      # - name: Professor Aaron Fait
+      #   reference: PhD major supervisor; Chair, Biotechnology, Viticulture, Plant Metabolomics, Ben-Gurion University of the Negev, Be'er Sheva, Israel. fait@bgu.ac.il
+      # - name: Professor Naftali Lazarovitch
+      #   reference: PhD co-supervisor; Director, Plant Stress Sensor, Ben-Gurion University of the Negev, Be'er Sheva, Israel. lazarovi@bgu.ac.il
+      # - name: Dr. Taye Tadesse
+      #   reference: MSc supervisor and long-term research supervisor; Senior Researcher and Crop Research Director, Ethiopian Institute of Agricultural Research, Addis Ababa, Ethiopia. tayabo@gmail.com
