@@ -17,7 +17,7 @@ This gallery is prepared for research photos from field trials, greenhouse exper
     {% include figure.liquid path="assets/img/2.jpg" title="Crop phenotyping placeholder" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm-6 col-md-4 mt-3">
-    {% include figure.liquid path="assets/img/3.jpg" title="Plant physiology placeholder" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/Logo.jpg" title="Plant physiology placeholder" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm-6 col-md-4 mt-3">
     {% include figure.liquid path="assets/img/4.jpg" title="Grapevine research placeholder" class="img-fluid rounded z-depth-1" %}
