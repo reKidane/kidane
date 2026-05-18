@@ -6,23 +6,20 @@ footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
 
-  .container,
-  .container-fluid.site-wide-container {
-    color: #ffffff !important;
+  .container {
+    color: var(--global-footer-text-color);
     padding-top: 9px;
     padding-bottom: 8px;
     text-align: center;
   }
 
-  a,
-  i,
-  .footer-platform {
-    color: #ffffff !important;
-  }
+  a {
+    color: var(--global-footer-link-color);
 
-  a:hover {
-    color: #ffffff !important;
-    text-decoration: underline;
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
   }
 }
 
@@ -32,15 +29,7 @@ footer.sticky-bottom {
   padding-bottom: 40px;
   font-size: 0.9rem;
 
-  .container,
-  .container-fluid.site-wide-container {
-    color: #ffffff !important;
+  .container {
     text-align: center;
-  }
-
-  a,
-  i,
-  .footer-platform {
-    color: #ffffff !important;
   }
 }
