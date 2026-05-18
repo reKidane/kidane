@@ -156,7 +156,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/kidane/assets/pdf/Kidane_CV_Auburn_Pool_25042026.docx", "_blank");
+          window.open("/kidane/assets/pdf/Kidane_CV_25042026.docx", "_blank");
         },
       },{
         id: 'social-email',
