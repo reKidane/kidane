@@ -33,5 +33,5 @@ The website presents research interests, publications, conference presentations,
 ## Local Preview
 
 ```bash
-cd /Users/kidane/Documents/Kidane_Personal_website
+cd /Users/kidane/dir
 bundle exec jekyll serve
