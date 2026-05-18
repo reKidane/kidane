@@ -35,3 +35,4 @@ The website presents research interests, publications, conference presentations,
 ```bash
 cd /Users/kidane/dir
 bundle exec jekyll serve
+```

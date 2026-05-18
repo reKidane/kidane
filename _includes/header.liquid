@@ -4,7 +4,7 @@
     <div class="container-fluid site-wide-container">
       {% if page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
-        <img src="{{ '/assets/img/Logo.jpg' | relative_url }}" alt="Kidanemaryam Wagaw Reta logo" class="navbar-logo">
+          <img src="{{ '/assets/img/Logo.jpg' | relative_url }}" alt="Kidanemaryam Wagaw Reta logo" class="navbar-logo">
           {% if site.title == 'blank' %}
             {% if site.first_name %}
               <span class="font-weight-bold">
@@ -47,15 +47,13 @@
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
 
-
           <!-- Logo -->
           <li class="nav-item navbar-logo-item">
             <a class="nav-link navbar-logo-link" href="{{ '/' | relative_url }}" aria-label="Home">
               <img src="{{ '/assets/img/Logo.jpg' | relative_url }}" alt="Kidanemaryam Wagaw Reta logo" class="navbar-logo">
             </a>
           </li>
-          
-          
+
           <!-- About -->
           <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
             <a class="nav-link" href="{{ '/' | relative_url }}">

@@ -10,7 +10,7 @@ nav_order: 12
 ## Contact Details
 
 **Name:** Kidanemaryam Wagaw Reta  
-**Email:** [kidane.et@gmail.com](mailto:kidane.et@gmail.com)  
+**Email:** [kidane.et@gmail.com](mailto:kidane.et@gmail.com)
 
 ## Map
 
