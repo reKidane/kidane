@@ -4,6 +4,16 @@
 
 @use "variables" as v;
 
+
+.navbar-logo {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
