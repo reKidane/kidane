@@ -18,7 +18,7 @@ function determineGiscusTheme() {
 
   let giscusAttributes = {
     src: "https://giscus.app/client.js",
-    "data-repo": "reKidane/Kidane_Personal_website",
+    "data-repo": "reKidane/kidane",
     "data-repo-id": "",
     "data-category": "Comments",
     "data-category-id": "",
