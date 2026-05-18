@@ -2,24 +2,21 @@
  * Footer styles
  ******************************************************************************/
 
-footer.fixed-bottom {
+footer.fixed-bottom,
+footer.sticky-bottom {
   background-color: var(--global-footer-bg-color);
+  color: var(--global-footer-text-color);
+}
+
+footer.fixed-bottom {
   font-size: 0.75rem;
 
-  .container {
+  .container,
+  .container-fluid.site-wide-container {
     color: var(--global-footer-text-color);
     padding-top: 9px;
     padding-bottom: 8px;
     text-align: center;
-  }
-
-  a {
-    color: var(--global-footer-link-color);
-
-    &:hover {
-      color: var(--global-theme-color);
-      text-decoration: none;
-    }
   }
 }
 
@@ -29,7 +26,23 @@ footer.sticky-bottom {
   padding-bottom: 40px;
   font-size: 0.9rem;
 
-  .container {
+  .container,
+  .container-fluid.site-wide-container {
+    color: var(--global-footer-text-color);
     text-align: center;
+  }
+}
+
+footer {
+  a,
+  i,
+  span,
+  .footer-platform {
+    color: var(--global-footer-link-color);
+  }
+
+  a:hover {
+    color: var(--global-theme-color);
+    text-decoration: underline;
   }
 }
