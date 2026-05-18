@@ -6,20 +6,25 @@ footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
 
-  .container {
-    color: var(--global-footer-text-color);
+  .container,
+  .container-fluid.site-wide-container {
+    color: #ffffff !important;
     padding-top: 9px;
     padding-bottom: 8px;
     text-align: center;
   }
 
-  a {
-    color: var(--global-footer-link-color);
+  *,
+  a,
+  i,
+  span,
+  .footer-platform {
+    color: #ffffff !important;
+  }
 
-    &:hover {
-      color: var(--global-theme-color);
-      text-decoration: none;
-    }
+  a:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
   }
 }
 
@@ -29,7 +34,22 @@ footer.sticky-bottom {
   padding-bottom: 40px;
   font-size: 0.9rem;
 
-  .container {
+  .container,
+  .container-fluid.site-wide-container {
+    color: #ffffff !important;
     text-align: center;
+  }
+
+  *,
+  a,
+  i,
+  span,
+  .footer-platform {
+    color: #ffffff !important;
+  }
+
+  a:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
   }
 }
