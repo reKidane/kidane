@@ -166,6 +166,41 @@ ninja.data = [{
           window.open("mailto:%6B%69%64%61%6E%65.%65%74@%67%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=0C-PTFgAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0002-2823-5376", "_blank");
+        },
+      },{
+        id: 'social-researchgate',
+        title: 'ResearchGate',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.researchgate.net/profile/Kidanemaryam-Wagaw/", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/kidanemaryam", "_blank");
+        },
+      },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://twitter.com/reKidane", "_blank");
+        },
+      },{
         id: 'social-rss',
         title: 'RSS Feed',
         section: 'Socials',
@@ -177,7 +212,7 @@ ninja.data = [{
         title: 'whatsapp',
         section: 'Socials',
         handler: () => {
-          window.open("https://wa.me/972587964242", "_blank");
+          window.open("https://wa.me/false", "_blank");
         },
       },{
       id: 'light-theme',
