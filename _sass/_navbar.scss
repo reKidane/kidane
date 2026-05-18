@@ -6,12 +6,18 @@
 
 
 .navbar-logo {
-  height: 32px;
-  width: 32px;
+  height: 28px;
+  width: 28px;
   object-fit: contain;
-  margin-right: 0.5rem;
   vertical-align: middle;
 }
+
+.navbar-logo-link {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+
 
 
 .navbar {
