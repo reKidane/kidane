@@ -81,7 +81,7 @@ ninja.data = [{
           },
         },{id: "nav-contact",
           title: "Contact",
-          description: "Contact information, message form, and location.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/kidane/contact/";
