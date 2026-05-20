@@ -2,18 +2,15 @@
 layout: page
 permalink: /contact/
 title: Contact
-description: Contact information, message form, and location.
+/*description: Contact information, message form, and location.*/
 nav: true
 nav_order: 12
 ---
-
-## Contact Details
-
-**Name:** Kidanemaryam Wagaw Reta  
+**Name:** Kidanemaryam W. Reta  
 **Email:** [kidane.et@gmail.com](mailto:kidane.et@gmail.com)  
 
 
-## Send A Message
+## Send a message
 
 <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
   <label for="email">Email</label>
