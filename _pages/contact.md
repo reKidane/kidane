@@ -6,7 +6,6 @@ title: Contact
 nav: true
 nav_order: 12
 ---
-
 {% capture left_column %}
 **Name:** Kidanemaryam W. Reta  
 **Email:** [kidane.et@gmail.com](mailto:kidane.et@gmail.com)
@@ -28,7 +27,7 @@ nav_order: 12
 
   <input type="hidden" name="_subject" value="Website contact form message">
 
-<button type="submit">Send Message</button>
+<button type="submit">Send</button>
 
 </form>
 
