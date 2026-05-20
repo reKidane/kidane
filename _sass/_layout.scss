@@ -67,3 +67,37 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+
+
+.contact-form {
+  max-width: 760px;
+  margin: 1.5rem 0 2.5rem;
+
+  label {
+    display: block;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.35rem;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    padding: 0.7rem 0.8rem;
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+  }
+
+  button {
+    margin-top: 1rem;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 6px;
+    padding: 0.65rem 1.2rem;
+    background: var(--global-theme-color);
+    color: #fff;
+    cursor: pointer;
+  }
+}

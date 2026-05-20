@@ -6,18 +6,6 @@ description: Short-form research notes and placeholders for future updates from 
 nav: true
 nav_order: 9
 ---
-
-## Social Updates
-
-{% for post in site.data.social_posts %}
-
-<div class="social-post">
-  <p class="post-meta">{{ post.date | date: "%B %d, %Y" }} ?? {{ post.platform }}</p>
-  <h3><a href="{{ post.url }}" target="_blank" rel="noopener noreferrer">{{ post.title }}</a></h3>
-  <p>{{ post.description }}</p>
-</div>
-{% endfor %}
-
 ## Planned Notes
 
 - **Stress thresholds in grapevine:** notes on physiological and metabolic transition points under combined salinity and water deficit.
@@ -27,3 +15,24 @@ nav_order: 9
 - **Sorghum breeding lessons:** reflections from dryland crop improvement, multi-environment trials, and genotype-by-environment analysis.
 
 This section is intentionally structured as a living research notebook. Full entries can be added as manuscripts, datasets, or conference outputs become ready to share.
+
+## Social Updates
+
+{% for post in site.data.social_posts %}
+
+<div class="social-post">
+  <p class="post-meta">
+    {{ post.date | date: "%B %d, %Y" }}
+    {% if post.platform == "LinkedIn" %}
+      <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+    {% elsif post.platform == "X" %}
+      <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+    {% endif %}
+    {{ post.platform }}
+  </p>
+  <h3><a href="{{ post.url }}" target="_blank" rel="noopener noreferrer">{{ post.title }}</a></h3>
+  <p>{{ post.description }}</p>
+</div>
+
+{% endfor %}
+
