@@ -6,3 +6,12 @@ bundle exec jekyll serve
 #if it fails run once:
 bundle exec jekyll clean
 bundle exec jekyll serve
+
+
+#install prettier message error
+cd /Users/kidane/Documents/Kidane_Personal_website
+npm install
+npx prettier . --write
+
+# check and if all matches it done correctlly.
+npx prettier . --check

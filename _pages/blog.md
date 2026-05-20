@@ -6,6 +6,7 @@ description: Short-form research notes and placeholders for future updates from 
 nav: true
 nav_order: 9
 ---
+
 ## Planned Notes
 
 - **Stress thresholds in grapevine:** notes on physiological and metabolic transition points under combined salinity and water deficit.
@@ -35,4 +36,3 @@ This section is intentionally structured as a living research notebook. Full ent
 </div>
 
 {% endfor %}
-

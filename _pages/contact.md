@@ -9,8 +9,7 @@ nav_order: 12
 
 {% capture left_column %}
 **Name:** Kidanemaryam W. Reta  
-**Email:** [kidane.et@gmail.com](mailto:kidane.et@gmail.com)  
-
+**Email:** [kidane.et@gmail.com](mailto:kidane.et@gmail.com)
 
 ## Send a message
 
@@ -18,18 +17,19 @@ nav_order: 12
   <label for="email">Email</label>
   <input id="email" name="email" type="email" required>
 
-  <label for="name">First and Last Name</label>
-  <input id="name" name="name" type="text" required>
+<label for="name">First and Last Name</label>
+<input id="name" name="name" type="text" required>
 
-  <label for="subject">Subject <small>(maximum 25 words)</small></label>
-  <input id="subject" name="subject" type="text" required>
+<label for="subject">Subject <small>(maximum 25 words)</small></label>
+<input id="subject" name="subject" type="text" required>
 
-  <label for="message">Description <small>(maximum 200 words)</small></label>
-  <textarea id="message" name="message" rows="7" required></textarea>
+<label for="message">Description <small>(maximum 200 words)</small></label>
+<textarea id="message" name="message" rows="7" required></textarea>
 
   <input type="hidden" name="_subject" value="Website contact form message">
 
-  <button type="submit">Send Message</button>
+<button type="submit">Send Message</button>
+
 </form>
 
 <script>
@@ -48,6 +48,7 @@ nav_order: 12
   limitWords("subject", 25);
   limitWords("message", 200);
 </script>
+
 {% endcapture %}
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
@@ -70,5 +71,6 @@ nav_order: 12
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
+
   </div>
 </div>
