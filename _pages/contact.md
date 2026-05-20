@@ -6,6 +6,8 @@ title: Contact
 nav: true
 nav_order: 12
 ---
+
+{% capture left_column %}
 **Name:** Kidanemaryam W. Reta  
 **Email:** [kidane.et@gmail.com](mailto:kidane.et@gmail.com)  
 
@@ -46,18 +48,27 @@ nav_order: 12
   limitWords("subject", 25);
   limitWords("message", 200);
 </script>
+{% endcapture %}
 
-## Map
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+  <div>
+    {{ left_column | markdownify }}
+  </div>
 
-<div class="contact-map">
-  <iframe
-    title="Google Map of exact research location"
-    src="https://www.google.com/maps?q=30.854802714948544,34.78294697265252&z=16&output=embed"
-    width="100%"
-    height="460"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
+  <div>
+    <h2>Map</h2>
+
+    <div class="contact-map">
+      <iframe
+        title="Google Map of exact research location"
+        src="https://www.google.com/maps?q=30.854802714948544,34.78294697265252&z=16&output=embed"
+        width="100%"
+        height="460"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
 </div>
