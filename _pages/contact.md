@@ -6,6 +6,7 @@ title: Contact
 nav: true
 nav_order: 12
 ---
+
 {% capture left_column %}
 **Name:** Kidanemaryam W. Reta  
 **Email:** [kidane.et@gmail.com](mailto:kidane.et@gmail.com)

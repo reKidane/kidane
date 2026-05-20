@@ -47,7 +47,6 @@ nav_order: 11
 1. Undergraduate Student 1: Field phenotyping and data collection.
 2. Undergraduate Student 2: Laboratory sample preparation and data curation.
 
-
 ## Alumni
 
 1. Alumni 1: Crop physiology and phenotyping.
