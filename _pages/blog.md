@@ -6,6 +6,16 @@ description: Short-form research notes and placeholders for future updates from 
 nav: true
 nav_order: 9
 ---
+## Social Updates
+
+{% for post in site.data.social_posts %}
+<div class="social-post">
+  <p class="post-meta">{{ post.date | date: "%B %d, %Y" }} ?? {{ post.platform }}</p>
+  <h3><a href="{{ post.url }}" target="_blank" rel="noopener noreferrer">{{ post.title }}</a></h3>
+  <p>{{ post.description }}</p>
+</div>
+{% endfor %}
+
 
 ## Planned Notes
 
