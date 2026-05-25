@@ -13,24 +13,32 @@ nav_order: 12
 
 ## Send a message
 
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+<form
+  action="https://docs.google.com/forms/d/e/1FAIpQLSf4uy5IeJMkgIkLe0b4Vx4S39v57NF449DSuWlu70RP2ZDHLg/formResponse"
+  method="POST"
+  target="hidden_iframe"
+  class="contact-form"
+  onsubmit="document.getElementById('contact-thanks').style.display='block';"
+>
   <label for="email">Email</label>
-  <input id="email" name="email" type="email" required>
+  <input id="email" name="entry.572919377" type="email" required>
 
-<label for="name">First and Last Name</label>
-<input id="name" name="name" type="text" required>
+  <label for="name">First and Last Name</label>
+  <input id="name" name="entry.1758920286" type="text" required>
 
-<label for="subject">Subject <small>(maximum 25 words)</small></label>
-<input id="subject" name="subject" type="text" required>
+  <label for="subject">Subject <small>(maximum 25 words)</small></label>
+  <input id="subject" name="entry.1325711690" type="text" required>
 
-<label for="message">Description <small>(maximum 200 words)</small></label>
-<textarea id="message" name="message" rows="7" required></textarea>
+  <label for="message">Description <small>(maximum 200 words)</small></label>
+  <textarea id="message" name="entry.1931690262" rows="7" required></textarea>
 
-  <input type="hidden" name="_subject" value="Website contact form message">
-
-<button type="submit">Send</button>
-
+  <button type="submit">Send</button>
 </form>
+
+<iframe name="hidden_iframe" style="display: none;"></iframe>
+
+<p id="contact-thanks" style="display: none;">Thank you. Your message has been submitted.</p>
+
 
 <script>
   function limitWords(fieldId, maxWords) {
