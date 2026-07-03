@@ -72,12 +72,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/kidane/gallery/";
           },
-        },{id: "nav-people-amp-collaborators",
-          title: "People &amp; Collaborators",
-          description: "Research team structure, collaborators, staff, trainees, and alumni.",
+        },{id: "nav-team",
+          title: "Team",
+          description: "Research team members, staff, trainees, and alumni.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/kidane/people/";
+          },
+        },{id: "nav-collaboration",
+          title: "Collaboration",
+          description: "Research collaborators, institutes, funders, networks, and useful external links. ==&gt; Will be updated frequently",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/kidane/collaboration/";
           },
         },{id: "nav-contact",
           title: "Contact",
