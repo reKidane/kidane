@@ -1,0 +1,33 @@
+name: Update Publications From OpenAlex
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-publications:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch latest publications and citation metrics
+        run: python _scripts/update_publications_openalex.py
+
+      - name: Commit updated publication data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add _data/auto_publications.yml _data/publication_metrics.yml
+          git diff --cached --quiet || git commit -m "Update publication list and citation metrics"
+          git push
