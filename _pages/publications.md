@@ -13,7 +13,7 @@ Google Scholar profile: [Kidanemaryam W. Reta](https://scholar.google.com/citati
 
 ## Scientific Publications
 
-14. Reta K., Lupo Y., Persi N.S., Acu??a T., Lazarovitch N. and Fait A. (2026). Metabolic network homeostasis and antagonistic stress response drive rootstock-mediated tolerance to combined salinity and water-deficit in grapevine _cv_. Syrah. _Plant Stress_,22,101456. doi: 10.1016/j.stress.2026.101456.
+14. Reta K., Lupo Y., Persi N.S., Acuna T., Lazarovitch N. and Fait A. (2026). Metabolic network homeostasis and antagonistic stress response drive rootstock-mediated tolerance to combined salinity and water-deficit in grapevine _cv_. Syrah. _Plant Stress_,22,101456. doi: 10.1016/j.stress.2026.101456.
 15. Reta K., Lupo Y., Persi N.S., Lazarovitch N. and Fait A. (2025). Modulation of phenology and agronomical performance of Syrah grafted on two rootstocks under combined salinity and water stress conditions: A three-year field study. _Plant Stress_, 18, 101050. doi: 10.1016/j.stress.2025.101050.
 16. Reta K., Lazarovitch N. and Fait A. (2025). Metabolic and physiological analysis reveals distinct salinity tipping point in _Vitis vinifera_ _cv_. Syrah to enter a stress response mode. _Plant Stress_, 16, 1-14. doi: 10.1016/j.stress.2025.100864.
 17. Reta K., Netzer Y., Lazarovitch N. and Fait A. (2025). Canopy management practices in warm environment vineyards to improve grape yield and quality in a changing climate. A review vademecum to vine canopy management under the challenge of global warming. _Scientia Horticulturae_, 341, 113998. doi: 10.1016/j.scienta.2025.113998.
