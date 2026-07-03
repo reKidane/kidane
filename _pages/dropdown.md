@@ -2,7 +2,7 @@
 layout: page
 title: More
 nav: true
-nav_order: 13
+nav_order: 14
 dropdown: true
 children:
   - title: News

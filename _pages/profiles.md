@@ -1,11 +1,13 @@
 ---
 layout: page
 permalink: /people/
-title: People & Collaborators
-description: Research team structure, collaborators, staff, trainees, and alumni.
+title: Team
+description: Research team members, staff, trainees, and alumni.
 nav: true
 nav_order: 11
 ---
+
+##(This is a place holder for my future lab establishment)##
 
 ## Principal Researcher
 
@@ -16,8 +18,8 @@ nav_order: 11
   <div class="col-md-9">
     <h3>Kidanemaryam Wagaw Reta</h3>
     <p><strong>Postdoctoral Researcher in Plant Metabolomics and Physiology</strong><br>
-    Ben-Gurion University of the Negev, Be'er Sheva, Israel</p>
-    <p>Research focus: crop stress physiology, plant metabolomics, multi-omics integration, root-shoot interactions, UAV thermal phenotyping, and predictive modeling for climate-resilient crop performance.</p>
+    Ben-Gurion University of the Negev, Israel</p>
+    <p>Research focus: crop stress physiology, plant metabolomics, multi-omics integration, root-shoot interactions, UAV thermal phenotyping, and predictive modeling.</p>
   </div>
 </div>
 
