@@ -9,7 +9,7 @@ nav_order: 3
 
 <!-- _pages/publications.md -->
 
-Google Scholar profile: [Kidanemaryam W. Reta](https://scholar.google.com/citations?user=0C-PTFgAAAAJ&hl=en), listed as Ben-Gurion University of the Negev, with research areas in metabolomics/multi-omics, plant breeding, plant metabolism, network analysis/ML, and combined stress.
+Google Scholar profile: [Kidanemaryam W. Reta](https://scholar.google.com/citations?user=0C-PTFgAAAAJ&hl=en), Research areas: metabolomics, physiology, genomics, multi-omics, plant breeding, natural variability, photosynthesis, PAM-fluorometry, network analysis, machine learning, combined stress, stress modeling.
 
 ## Citation Report
 
