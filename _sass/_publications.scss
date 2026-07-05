@@ -23,15 +23,15 @@
     }
   }
 
-h2.bibliography {
-  color: var(--global-text-color);
-  border-top: 1px solid var(--global-divider-color);
-  padding-top: 1rem;
-  margin-top: 2rem;
-  text-align: right;
-  font-weight: 700;
-}
-  
+  h2.bibliography {
+    color: var(--global-text-color);
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 1rem;
+    margin-top: 2rem;
+    text-align: right;
+    font-weight: 700;
+  }
+
   ol.bibliography {
     list-style: none;
     padding: 0;
@@ -44,30 +44,28 @@ h2.bibliography {
         display: inline-block;
       }
 
- .abbr {
-  margin-bottom: 0.5rem;
+      .abbr {
+        margin-bottom: 0.5rem;
 
-  abbr {
-    display: inline-block;
-    background-color: var(--global-theme-color);
-    margin-bottom: 0.5rem;
-    color: #ffffff !important;
+        abbr {
+          display: inline-block;
+          background-color: var(--global-theme-color);
+          margin-bottom: 0.5rem;
+          color: #ffffff !important;
 
-    a {
-      color: #ffffff !important;
+          a {
+            color: #ffffff !important;
 
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-}
-      
-
-        .award {
-          color: var(--global-theme-color) !important;
-          border: 1px solid var(--global-theme-color);
+            &:hover {
+              text-decoration: none;
+            }
+          }
         }
+      }
+
+      .award {
+        color: var(--global-theme-color) !important;
+        border: 1px solid var(--global-theme-color);
       }
 
       .title {
