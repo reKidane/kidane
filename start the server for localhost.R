@@ -22,3 +22,11 @@ cd /Users/kidane/Documents/Kidane_Personal_website
 python3 _scripts/update_publications_openalex.py
 npx prettier _pages/publications.md .github/workflows/update-publications-openalex.yml --write
 bundle exec jekyll serve
+
+
+#if pritier shows error after pushing to github do this
+cd /Users/kidane/Documents/Kidane_Personal_website
+npx prettier _pages/publications.md --write
+
+# then check. # Then has to say All matched files use Prettier code style! if so push to github
+npx prettier _pages/publications.md --check
