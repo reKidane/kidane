@@ -8,8 +8,16 @@ nav_order: 7
 ---
 
 ## Peer Review
+- The Plant Cell
+- Plant Physiology and Biochemistry
+- Scientia Horticulturae
+- Cogent Food & Agriculture
+- Journal of Crop Improvement
+- African Journal of Plant Science
+- African Journal of Agricultural Research
+- African Journal of Biotechnology
 
-Reviewer for journals including Cogent Food & Agriculture, Journal of Crop Improvement, African Journal of Plant Science, African Journal of Agricultural Research, African Journal of Biotechnology, Plant Physiology and Biochemistry, Scientia Horticulturae, and The Plant Cell.
+
 
 ## Professional Memberships
 
