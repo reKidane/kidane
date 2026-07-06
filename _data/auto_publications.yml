@@ -1,0 +1,149 @@
+# Automatically updated from OpenAlex. Edit script settings, not this file.
+# Last updated: 2026-07-06
+- title: "Metabolic network homeostasis and antagonistic stress response drive rootstock-mediated tolerance to combined salinity and water-deficit in grapevine cv. Syrah"
+  year: 2026
+  date: "2026-06-25"
+  authors:
+    - "Kidanemaryam Wagaw"
+    - "Yaniv Lupo"
+    - "Noga Sikron-Persi"
+    - "Tania Acuña"
+    - "Naftali Lazarovitch"
+    - "Aaron Fait"
+  source: "Plant Stress"
+  doi: "https://doi.org/10.1016/j.stress.2026.101456"
+  openalex: "https://openalex.org/W7165957910"
+  citations: 0
+  type: "article"
+
+- title: "Metabolic and physiological analysis reveals distinct salinity tipping point in Vitis vinifera cv. Syrah to enter a stress response mode"
+  year: 2025
+  date: "2025-04-23"
+  authors:
+    - "Kidanemaryam Wagaw"
+    - "Naftali Lazarovitch"
+    - "Aaron Fait"
+  source: "Plant Stress"
+  doi: "https://doi.org/10.1016/j.stress.2025.100864"
+  openalex: "https://openalex.org/W4409697335"
+  citations: 7
+  type: "article"
+
+- title: "Canopy management practices in warm environment vineyards to improve grape yield and quality in a changing climate. A review A vademecum to vine canopy management under the challenge of global warming"
+  year: 2025
+  date: "2025-02-01"
+  authors:
+    - "Kidanemaryam Wagaw"
+    - "Yishai Netzer"
+    - "Naftali Lazarovitch"
+    - "Aaron Fait"
+  source: "Scientia Horticulturae"
+  doi: "https://doi.org/10.1016/j.scienta.2025.113998"
+  openalex: "https://openalex.org/W4407183634"
+  citations: 27
+  type: "review"
+
+- title: "Distinguishing of Stable Genotypes and Mega Environment for Grain Yield Performance of Sorghum [&amp;lt;i&amp;gt;Sorghum bicolor&amp;lt;/i&amp;gt; (L.) Moench] Genotypes Using Spatial Analysis"
+  year: 2021
+  date: "2021-01-01"
+  authors:
+    - "Kidanemaryam Wagaw"
+    - "Amare Seyoum"
+    - "Taye Tadesse"
+    - "Amare Nega"
+    - "A Gebre-Yohannes"
+    - "Tamirat Bejiga"
+    - "Siraw Sewmehon"
+    - "Hailemariam Solomon"
+    - "Daniel Nadew"
+    - "Meron Bogale"
+  source: "American Journal of Plant Sciences"
+  doi: "https://doi.org/10.4236/ajps.2021.123027"
+  openalex: "https://openalex.org/W3140456450"
+  citations: 6
+  type: "article"
+
+- title: "Multi-environment trial and spatial analysis for yield performance of sorghum [Sorghum bicolor (L.) Moench] hybrids in dry lowland sorghum growing areas of Ethiopia"
+  year: 2020
+  date: "2020-10-31"
+  authors:
+    - "Kidanemaryam Wagaw"
+    - "Amare Seyoum"
+    - "Amare Nega"
+    - "Taye Tadesse"
+    - "Daniel Nadew"
+    - "Habte Nida"
+    - "Alemu Tirfessa"
+    - "A Gebre-Yohannes"
+  source: "Journal of Plant Breeding and Crop Science"
+  doi: "https://doi.org/10.5897/jpbcs2019.0850"
+  openalex: "https://openalex.org/W3092823050"
+  citations: 4
+  type: "article"
+
+- title: "Gene action, combining ability and heterotic performance of Ethiopian Sorghum (Sorghum bicolor (L.) Moench) lines under moisture stress areas in Ethiopia"
+  year: 2020
+  date: "2020-09-30"
+  authors:
+    - "Kidanemaryam Wagaw"
+    - "Kassahun Bantte"
+    - "Tadesse Taye"
+  source: "African Journal of Plant Science"
+  doi: "https://doi.org/10.5897/ajps2019.1813"
+  openalex: "https://openalex.org/W3090112541"
+  citations: 7
+  type: "article"
+
+- title: "Combining Ability and Heterosis of Sorghum (&amp;lt;i&amp;gt;Sorghum bicolor&amp;lt;/i&amp;gt; L. Moench) Hybrids for Grain and Biomass Yield"
+  year: 2020
+  date: "2020-01-01"
+  authors:
+    - "Kidanemaryam Wagaw"
+    - "Taye Tadesse"
+  source: "American Journal of Plant Sciences"
+  doi: "https://doi.org/10.4236/ajps.2020.1112151"
+  openalex: "https://openalex.org/W3114056180"
+  citations: 7
+  type: "article"
+
+- title: "The MET Analysis of Yield Performance of Advanced Sorghum [&amp;lt;i&amp;gt;Sorghum Bicolor&amp;lt;/i&amp;gt; (L.) Moench] Lines under Moisture Stress Areas Using Spatial Analysis"
+  year: 2020
+  date: "2020-01-01"
+  authors:
+    - "Kidanemaryam Wagaw"
+    - "Seyoum Amare"
+    - "Taye Tadesse"
+    - "A Gebre-Yohannes"
+    - "Nega Amare"
+    - "Diriba Tadesse"
+  source: "American Journal of Plant Sciences"
+  doi: "https://doi.org/10.4236/ajps.2020.1110117"
+  openalex: "https://openalex.org/W3097671685"
+  citations: 2
+  type: "article"
+
+- title: "Multi-Environment Evaluation and Genotype &amp;#215; Environment Interaction Analysis of Sorghum [&amp;lt;i&amp;gt;Sorghum bicolor&amp;lt;/i&amp;gt; (L.) Moench] Genotypes in Highland Areas of Ethiopia"
+  year: 2020
+  date: "2020-01-01"
+  authors:
+    - "Amare Seyoum"
+    - "Zigale Semahegn"
+    - "Amare Nega"
+    - "Sewmehone Siraw"
+    - "Adane Gebereyhones"
+    - "Hailemariam Solomon"
+    - "Tokuma Legesse"
+    - "Kidanemaryam Wagaw"
+    - "Temesgene Terresa"
+    - "Solomon Mitiku"
+    - "Yirgalem Tsehaye"
+    - "Moges Mokonen"
+    - "Wakjira Chifra"
+    - "Habte Nida"
+    - "Alemu Tirfessa"
+  source: "American Journal of Plant Sciences"
+  doi: "https://doi.org/10.4236/ajps.2020.1112136"
+  openalex: "https://openalex.org/W3111673790"
+  citations: 7
+  type: "article"
+
