@@ -23,7 +23,7 @@ Google Scholar profile: [Kidanemaryam W. Reta](https://scholar.google.com/citati
 
 Citation counts are fetched from OpenAlex and may differ from Google Scholar or ResearchGate.
 
-## Automatically Updated Publications
+<!---## Automatically Updated Publications
 
 {% for paper in site.data.auto_publications %}
 
@@ -31,8 +31,8 @@ Citation counts are fetched from OpenAlex and may differ from Google Scholar or 
   <h3>{{ paper.title }}</h3>
   <p>
     <strong>{{ paper.year }}</strong>
-    {% if paper.source %} ?? {{ paper.source }}{% endif %}
-    {% if paper.citations %} ?? Citations: {{ paper.citations }}{% endif %}
+    {% if paper.source %} {{ paper.source }}{% endif %}
+    {% if paper.citations %} Citations: {{ paper.citations }}{% endif %}
   </p>
   <p>{{ paper.authors | join: ", " }}</p>
   <p>
@@ -45,7 +45,7 @@ Citation counts are fetched from OpenAlex and may differ from Google Scholar or 
   </p>
 </div>
 
-{% endfor %}
+{% endfor %}--->
 
 ## Scientific Publications
 
