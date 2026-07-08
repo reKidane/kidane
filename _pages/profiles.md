@@ -7,7 +7,7 @@ nav: true
 nav_order: 11
 ---
 
-##(This is a place holder for my future lab establishment)##
+##(This is a placeholder for my future lab establishment)##
 
 ## Principal Researcher
 
