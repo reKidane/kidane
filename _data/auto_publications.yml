@@ -1,5 +1,5 @@
 # Automatically updated from OpenAlex. Edit script settings, not this file.
-# Last updated: 2026-07-13
+# Last updated: 2026-07-20
 - title: "Metabolic network homeostasis and antagonistic stress response drive rootstock-mediated tolerance to combined salinity and water-deficit in grapevine cv. Syrah"
   year: 2026
   date: "2026-06-25"
@@ -26,7 +26,7 @@
   source: "Plant Stress"
   doi: "https://doi.org/10.1016/j.stress.2025.100864"
   openalex: "https://openalex.org/W4409697335"
-  citations: 7
+  citations: 8
   type: "article"
 
 - title: "Canopy management practices in warm environment vineyards to improve grape yield and quality in a changing climate. A review A vademecum to vine canopy management under the challenge of global warming"
@@ -40,8 +40,8 @@
   source: "Scientia Horticulturae"
   doi: "https://doi.org/10.1016/j.scienta.2025.113998"
   openalex: "https://openalex.org/W4407183634"
-  citations: 27
-  type: "review"
+  citations: 30
+  type: "article"
 
 - title: "Distinguishing of Stable Genotypes and Mega Environment for Grain Yield Performance of Sorghum [&amp;lt;i&amp;gt;Sorghum bicolor&amp;lt;/i&amp;gt; (L.) Moench] Genotypes Using Spatial Analysis"
   year: 2021
