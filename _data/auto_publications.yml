@@ -1,48 +1,5 @@
 # Automatically updated from OpenAlex. Edit script settings, not this file.
-# Last updated: 2026-07-20
-- title: "Metabolic network homeostasis and antagonistic stress response drive rootstock-mediated tolerance to combined salinity and water-deficit in grapevine cv. Syrah"
-  year: 2026
-  date: "2026-06-25"
-  authors:
-    - "Kidanemaryam Wagaw"
-    - "Yaniv Lupo"
-    - "Noga Sikron-Persi"
-    - "Tania Acuña"
-    - "Naftali Lazarovitch"
-    - "Aaron Fait"
-  source: "Plant Stress"
-  doi: "https://doi.org/10.1016/j.stress.2026.101456"
-  openalex: "https://openalex.org/W7165957910"
-  citations: 0
-  type: "article"
-
-- title: "Metabolic and physiological analysis reveals distinct salinity tipping point in Vitis vinifera cv. Syrah to enter a stress response mode"
-  year: 2025
-  date: "2025-04-23"
-  authors:
-    - "Kidanemaryam Wagaw"
-    - "Naftali Lazarovitch"
-    - "Aaron Fait"
-  source: "Plant Stress"
-  doi: "https://doi.org/10.1016/j.stress.2025.100864"
-  openalex: "https://openalex.org/W4409697335"
-  citations: 8
-  type: "article"
-
-- title: "Canopy management practices in warm environment vineyards to improve grape yield and quality in a changing climate. A review A vademecum to vine canopy management under the challenge of global warming"
-  year: 2025
-  date: "2025-02-01"
-  authors:
-    - "Kidanemaryam Wagaw"
-    - "Yishai Netzer"
-    - "Naftali Lazarovitch"
-    - "Aaron Fait"
-  source: "Scientia Horticulturae"
-  doi: "https://doi.org/10.1016/j.scienta.2025.113998"
-  openalex: "https://openalex.org/W4407183634"
-  citations: 30
-  type: "article"
-
+# Last updated: 2026-07-27
 - title: "Distinguishing of Stable Genotypes and Mega Environment for Grain Yield Performance of Sorghum [&amp;lt;i&amp;gt;Sorghum bicolor&amp;lt;/i&amp;gt; (L.) Moench] Genotypes Using Spatial Analysis"
   year: 2021
   date: "2021-01-01"
