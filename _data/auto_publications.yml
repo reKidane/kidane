@@ -1,5 +1,21 @@
 # Automatically updated from OpenAlex. Edit script settings, not this file.
-# Last updated: 2026-08-10
+# Last updated: 2026-08-17
+- title: "Metabolic network homeostasis and antagonistic stress response drive rootstock-mediated tolerance to combined salinity and water-deficit in grapevine cv. Syrah"
+  year: 2026
+  date: "2026-06-25"
+  authors:
+    - "Kidanemaryam Wagaw"
+    - "Yaniv Lupo"
+    - "Noga Sikron-Persi"
+    - "Tania Acuña"
+    - "Naftali Lazarovitch"
+    - "Aaron Fait"
+  source: "Plant Stress"
+  doi: "https://doi.org/10.1016/j.stress.2026.101456"
+  openalex: "https://openalex.org/W7165957910"
+  citations: 0
+  type: "article"
+
 - title: "Distinguishing of Stable Genotypes and Mega Environment for Grain Yield Performance of Sorghum [&amp;lt;i&amp;gt;Sorghum bicolor&amp;lt;/i&amp;gt; (L.) Moench] Genotypes Using Spatial Analysis"
   year: 2021
   date: "2021-01-01"
