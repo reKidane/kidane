@@ -1,5 +1,5 @@
 # Automatically updated from OpenAlex. Edit script settings, not this file.
-# Last updated: 2026-08-17
+# Last updated: 2026-08-24
 - title: "Metabolic network homeostasis and antagonistic stress response drive rootstock-mediated tolerance to combined salinity and water-deficit in grapevine cv. Syrah"
   year: 2026
   date: "2026-06-25"
@@ -16,7 +16,7 @@
   citations: 0
   type: "article"
 
-- title: "Distinguishing of Stable Genotypes and Mega Environment for Grain Yield Performance of Sorghum [&amp;lt;i&amp;gt;Sorghum bicolor&amp;lt;/i&amp;gt; (L.) Moench] Genotypes Using Spatial Analysis"
+- title: "Distinguishing of Stable Genotypes and Mega Environment for Grain Yield Performance of Sorghum [Sorghum bicolor (L.) Moench] Genotypes Using Spatial Analysis"
   year: 2021
   date: "2021-01-01"
   authors:
@@ -64,10 +64,10 @@
   source: "African Journal of Plant Science"
   doi: "https://doi.org/10.5897/ajps2019.1813"
   openalex: "https://openalex.org/W3090112541"
-  citations: 7
+  citations: 8
   type: "article"
 
-- title: "Combining Ability and Heterosis of Sorghum (&amp;lt;i&amp;gt;Sorghum bicolor&amp;lt;/i&amp;gt; L. Moench) Hybrids for Grain and Biomass Yield"
+- title: "Combining Ability and Heterosis of Sorghum (Sorghum bicolor L. Moench) Hybrids for Grain and Biomass Yield"
   year: 2020
   date: "2020-01-01"
   authors:
@@ -79,7 +79,7 @@
   citations: 7
   type: "article"
 
-- title: "The MET Analysis of Yield Performance of Advanced Sorghum [&amp;lt;i&amp;gt;Sorghum Bicolor&amp;lt;/i&amp;gt; (L.) Moench] Lines under Moisture Stress Areas Using Spatial Analysis"
+- title: "The MET Analysis of Yield Performance of Advanced Sorghum [Sorghum Bicolor (L.) Moench] Lines under Moisture Stress Areas Using Spatial Analysis"
   year: 2020
   date: "2020-01-01"
   authors:
@@ -95,7 +95,7 @@
   citations: 2
   type: "article"
 
-- title: "Multi-Environment Evaluation and Genotype &amp;#215; Environment Interaction Analysis of Sorghum [&amp;lt;i&amp;gt;Sorghum bicolor&amp;lt;/i&amp;gt; (L.) Moench] Genotypes in Highland Areas of Ethiopia"
+- title: "Multi-Environment Evaluation and Genotype × Environment Interaction Analysis of Sorghum [Sorghum bicolor (L.) Moench] Genotypes in Highland Areas of Ethiopia"
   year: 2020
   date: "2020-01-01"
   authors:
