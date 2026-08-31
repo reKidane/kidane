@@ -1,5 +1,5 @@
 # Automatically updated from OpenAlex. Edit script settings, not this file.
-# Last updated: 2026-08-24
+# Last updated: 2026-08-31
 - title: "Metabolic network homeostasis and antagonistic stress response drive rootstock-mediated tolerance to combined salinity and water-deficit in grapevine cv. Syrah"
   year: 2026
   date: "2026-06-25"
@@ -67,18 +67,6 @@
   citations: 8
   type: "article"
 
-- title: "Combining Ability and Heterosis of Sorghum (Sorghum bicolor L. Moench) Hybrids for Grain and Biomass Yield"
-  year: 2020
-  date: "2020-01-01"
-  authors:
-    - "Kidanemaryam Wagaw"
-    - "Taye Tadesse"
-  source: "American Journal of Plant Sciences"
-  doi: "https://doi.org/10.4236/ajps.2020.1112151"
-  openalex: "https://openalex.org/W3114056180"
-  citations: 7
-  type: "article"
-
 - title: "The MET Analysis of Yield Performance of Advanced Sorghum [Sorghum Bicolor (L.) Moench] Lines under Moisture Stress Areas Using Spatial Analysis"
   year: 2020
   date: "2020-01-01"
@@ -117,6 +105,18 @@
   source: "American Journal of Plant Sciences"
   doi: "https://doi.org/10.4236/ajps.2020.1112136"
   openalex: "https://openalex.org/W3111673790"
+  citations: 7
+  type: "article"
+
+- title: "Combining Ability and Heterosis of Sorghum (Sorghum bicolor L. Moench) Hybrids for Grain and Biomass Yield"
+  year: 2020
+  date: "2020-01-01"
+  authors:
+    - "Kidanemaryam Wagaw"
+    - "Taye Tadesse"
+  source: "American Journal of Plant Sciences"
+  doi: "https://doi.org/10.4236/ajps.2020.1112151"
+  openalex: "https://openalex.org/W3114056180"
   citations: 7
   type: "article"
 
