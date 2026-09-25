@@ -93,12 +93,12 @@ germplasm panel you can replace with your own data.
 The pipeline reads which kind of panel it has been given from the class labels
 in the passport, and changes the analysis accordingly.
 
-| | Divergent selection | Germplasm panel |
-|---|---|---|
-| Recognised when | the labels carry both an upward and a downward direction | they do not |
-| Gradient | signed selection index | position in the ordered filial series |
-| Contrasts | high against low, and each cycle against the base | each class against a reference, and the two ends of the series |
-| A trend means | correlated response to selection | inbreeding depression, where dominance exists |
+|                 | Divergent selection                                      | Germplasm panel                                                |
+| --------------- | -------------------------------------------------------- | -------------------------------------------------------------- |
+| Recognised when | the labels carry both an upward and a downward direction | they do not                                                    |
+| Gradient        | signed selection index                                   | position in the ordered filial series                          |
+| Contrasts       | high against low, and each cycle against the base        | each class against a reference, and the two ends of the series |
+| A trend means   | correlated response to selection                         | inbreeding depression, where dominance exists                  |
 
 Groups with no position on an ordered axis, elite lines, landraces, wild
 relatives, are compared as classes rather than given an invented place on a

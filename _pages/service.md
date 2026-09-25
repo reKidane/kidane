@@ -8,6 +8,7 @@ nav_order: 7
 ---
 
 ## Peer Review
+
 - The Plant Cell
 - PLOS One
 - Plant Physiology and Biochemistry
@@ -17,8 +18,6 @@ nav_order: 7
 - African Journal of Plant Science
 - African Journal of Agricultural Research
 - African Journal of Biotechnology
-
-
 
 ## Professional Memberships
 
