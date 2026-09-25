@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /repositories/
-title: Resources
+title: Scripts & workflows
 description: Data, analysis, protocols, and code resources related to crop physiology and multi-omics research.
 nav: false
 ---

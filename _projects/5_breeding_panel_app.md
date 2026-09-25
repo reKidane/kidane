@@ -3,8 +3,9 @@ layout: page
 title: Breeding Panel Analysis
 description: An open Shiny tool that takes a germplasm or breeding panel from VCF and passport files to population structure, multi-environment trials, AMMI and GGE biplots, genome scans and genomic prediction.
 img: assets/img/breeding-panel/card.jpg
-importance: 3
-category: current
+importance: 1
+category: Software
+permalink: /resources/software/breeding-panel-analysis/
 ---
 
 <!--
