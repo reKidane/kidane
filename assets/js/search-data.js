@@ -30,7 +30,21 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/kidane/projects/";
           },
-        },{id: "nav-presentations",
+        },{id: "dropdown-software",
+              title: "Software",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/kidane/resources/software/";
+              },
+            },{id: "dropdown-scripts-amp-workflows",
+              title: "Scripts &amp; workflows",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/kidane/repositories/";
+              },
+            },{id: "nav-presentations",
           title: "Presentations",
           description: "Oral and poster presentations at international scientific conferences and research meetings.",
           section: "Navigation",
@@ -100,13 +114,6 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/kidane/news/";
               },
-            },{id: "dropdown-resources",
-              title: "Resources",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/kidane/repositories/";
-              },
             },{id: "dropdown-reading-list",
               title: "Reading List",
               description: "",
@@ -155,7 +162,7 @@ ninja.data = [{
           title: 'Breeding Panel Analysis',
           description: "An open Shiny tool that takes a germplasm or breeding panel from VCF and passport files to population structure, multi-environment trials, AMMI and GGE biplots, genome scans and genomic prediction.",
           section: "Projects",handler: () => {
-              window.location.href = "/kidane/projects/5_breeding_panel_app/";
+              window.location.href = "/kidane/resources/software/breeding-panel-analysis/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
