@@ -47,7 +47,18 @@ Citation counts are fetched from OpenAlex and may differ from Google Scholar or 
 
 {% endfor %}--->
 
-## Scientific Publications
+## 1. Preprints
+
+Manuscripts submitted and awaiting a decision, and those being prepared for
+submission. Each moves to the section below once it appears in print.
+
+- **Reta K.**, Caras T., Sikron-Persi N., Bustan A., Lazarovitch N., Paz-Kagan T. and Fait A. Integrative phenotyping, combining metabolomics, molecular biology, and remote sensing, revealed a varietal signature in response to a heatwave event in arid viticulture. Submitted.
+- **Reta K.**, Verma P., Gashu K., Bustan A. and Fait A. Identification of high temperature-induced coordinated metabolic and phenological shifts in a varietal collection of wine grapes. Under preparation for submission to _Plant, Cell & Environment_.
+- **Reta K.**, Lazarovitch N. and Fait A. Comparative machine learning reveals rootstock-modulated metabolic and temporal signatures in grafted grapevine under combined salinity and water deficit. In preparation for _Horticulture Research_.
+- Degu A., Faigenboim A., **Reta K.**, Dynkin I., Fait A. and Reshef N. Functional characterization of grapevine PEPC and cytosolic MDH genes reveals divergent regulation of malate and sugar metabolism. Under review in _Horticulture Research_.
+- Javali A., **Reta K.**, Herzberg M. and Fait A. Engineered multi-ionic irrigation reveals cultivar-specific coordination of root architecture, ion partitioning, and metabolism in grapevine. In preparation.
+
+## 2. Scientific Publications
 
 14. **Reta K.**, Lupo Y., Persi N.S., Acuna T., Lazarovitch N. and Fait A. (2026). Metabolic network homeostasis and antagonistic stress response drive rootstock-mediated tolerance to combined salinity and water-deficit in grapevine _cv_. Syrah. _Plant Stress_,22,101456. doi: 10.1016/j.stress.2026.101456.
 15. **Reta K.**, Lupo Y., Persi N.S., Lazarovitch N. and Fait A. (2025). Modulation of phenology and agronomical performance of Syrah grafted on two rootstocks under combined salinity and water stress conditions: A three-year field study. _Plant Stress_, 18, 101050. doi: 10.1016/j.stress.2025.101050.
@@ -64,7 +75,7 @@ Citation counts are fetched from OpenAlex and may differ from Google Scholar or 
 26. **Wagaw K.**, Bantte K. and Tadesse T. (2020). Gene action, combining ability and heterotic performance of Ethiopian sorghum (_Sorghum bicolor_ (L.) Moench) lines under moisture stress areas in Ethiopia. _African Journal of Plant Science_, 14(9), 372-394. doi: 10.5897/AJPS2019.1813.
 27. **Wagaw K.** (2019). Review on mechanisms of drought tolerance in sorghum (_Sorghum bicolor_ (L.) Moench) basis and breeding methods. _Academic Research Journal of Agricultural Science and Research_, 7(2), 87-99. doi: 10.14662/ARJASR2019.007.
 
-## Additional Google Scholar Indexed Records
+## 3. Additional Google Scholar Indexed Records
 
 1. **Wagaw K.**, Bantte K. and Tadesse T. (2018). Assessment of heterotic performance and combining ability of Ethiopian elite sorghum (_Sorghum bicolor_ (L.) Moench) lines. Jimma University.
 2. **Reta K.**, Lupo Y., Sikron N., Acuna T., Lazarovitch N. and Fait A. (2026). Contrasting metabolic and physiological responses underlie rootstock-mediated tolerance to combined salinity and water-deficit stress in cv. Syrah. _SSRN Electronic Journal_.
@@ -73,22 +84,14 @@ Citation counts are fetched from OpenAlex and may differ from Google Scholar or 
 5. **Reta K.**, Lupo Y., Acuna T., Sikron N., Verma P., Lazarovitch N. and Fait A. (2022). Effect of salinity and water regime, mediated by rootstock, on cv. Syrah must metabolite profile and vine physiology. _Julius Kuehn Institute_, 147-147.
 6. Seyoum A., Tadesse A.N.T., Tadesse D., Jordan D., Kebede Y., Gebreyohannes A., **Wagaw K.**, et al. (2019). Spatial META analysis methods improve heritability and genetic gain of early maturing sorghum [_Sorghum bicolor_ (L.) Moench] genotypes in dry lowland areas of Ethiopia. _Results of Crop Improvement and Management Research 2018_.
 
-## Papers Pending Publication
-
-- **Reta K.**, Caras T., Sikron-Persi N., Bustan A., Lazarovitch N., Paz-Kagan T. and Fait A. Integrative phenotyping, combining metabolomics, molecular biology, and remote sensing, revealed a varietal signature in response to a heatwave event in arid viticulture. Submitted.
-- **Reta K.**, Verma P., Gashu K., Bustan A. and Fait A. Identification of high temperature-induced coordinated metabolic and phenological shifts in a varietal collection of wine grapes. Under preparation for submission to _Plant, Cell & Environment_.
-- **Reta K.**, Lazarovitch N. and Fait A. Comparative machine learning reveals rootstock-modulated metabolic and temporal signatures in grafted grapevine under combined salinity and water deficit. In preparation for _Horticulture Research_.
-- Degu A., Faigenboim A., **Reta K.**, Dynkin I., Fait A. and Reshef N. Functional characterization of grapevine PEPC and cytosolic MDH genes reveals divergent regulation of malate and sugar metabolism. Under review in _Horticulture Research_.
-- Javali A., **Reta K.**, Herzberg M. and Fait A. Engineered multi-ionic irrigation reveals cultivar-specific coordination of root architecture, ion partitioning, and metabolism in grapevine. In preparation.
-
-## Research Manuals, Books, Chapters, And Proceedings
+## 4. Research Manuals, Books, Chapters, And Proceedings
 
 - Seyoum A., Nega A., Tadesse T., Zerihun M., **Wagaw K.**, Gebreyohannes A., et al. (2019). _Sorghum Breeding Manual_. Ethiopian Institute of Agricultural Research. ISBN 978999466658.
 - **Wagaw K.**, Bantte K. and Tadesse T. (2020). _Heterotic Performance and Combining Ability in Sorghum_. LAMBERT Academic Publishing. ISBN 9786203025965.
 - Taye T., Seyoum A., Nega A., Gebreyohannes A., Kebede Y., **Wagaw K.**, Bejiga T., et al. (2019). Major achievements, challenges, and prospects of sorghum and millet research and development. In _Proceedings of the 50th Anniversary of Melkassa Agricultural Research Center_, edited by Gashawbeza Ayalew, 101-124. Ethiopian Institute of Agricultural Research.
 - Tadese D., Seyoum A., Tadesse T., Fikadu Y., Nega A., Gebreyohannes A., Tirfessa A., **Wagaw K.**, et al. (2021). Proceedings of the National Conference on Crop Improvement and Management Research. In _Crop Improvement_, edited by Tadesse T., Addis Ababa, Ethiopia: Ethiopian Institute of Agricultural Research.
 
-## Searchable Selected Publications
+## 5. Searchable Selected Publications
 
 <!-- Bibsearch Feature -->
 

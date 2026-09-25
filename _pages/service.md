@@ -3,8 +3,7 @@ layout: page
 permalink: /service/
 title: Service
 description: Peer review, professional memberships, research coordination, and scientific leadership.
-nav: true
-nav_order: 7
+nav: false
 ---
 
 ## Peer Review

@@ -3,8 +3,7 @@ layout: page
 permalink: /teaching/
 title: Teaching & Mentoring
 description: Training, supervision, mentoring, and technical instruction in crop physiology, plant breeding, and data analysis.
-nav: true
-nav_order: 6
+nav: false
 ---
 
 ## Mentoring And Training
