@@ -51,21 +51,21 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/kidane/presentations/";
           },
-        },{id: "nav-teaching-amp-mentoring",
-          title: "Teaching &amp; Mentoring",
-          description: "Training, supervision, mentoring, and technical instruction in crop physiology, plant breeding, and data analysis.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/kidane/teaching/";
-          },
-        },{id: "nav-service",
-          title: "Service",
-          description: "Peer review, professional memberships, research coordination, and scientific leadership.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/kidane/service/";
-          },
-        },{id: "nav-cv",
+        },{id: "dropdown-service",
+              title: "Service",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/kidane/service/";
+              },
+            },{id: "dropdown-teaching-amp-mentoring",
+              title: "Teaching &amp; Mentoring",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/kidane/teaching/";
+              },
+            },{id: "nav-cv",
           title: "CV",
           description: "Academic CV of Kidanemaryam Wagaw Reta.",
           section: "Navigation",
