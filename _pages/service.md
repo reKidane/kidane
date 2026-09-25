@@ -9,6 +9,7 @@ nav_order: 7
 
 ## Peer Review
 - The Plant Cell
+- PLOS One
 - Plant Physiology and Biochemistry
 - Scientia Horticulturae
 - Cogent Food & Agriculture
