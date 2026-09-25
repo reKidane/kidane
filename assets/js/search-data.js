@@ -151,6 +151,11 @@ ninja.data = [{
           description: "Internationally funded collaborative projects for sorghum value chains, smallholder resilience, and crop improvement modernization.",
           section: "Projects",handler: () => {
               window.location.href = "/kidane/projects/4_project/";
+            },},{id: "projects-breeding-panel-analysis",
+          title: 'Breeding Panel Analysis',
+          description: "An open Shiny tool that takes a germplasm or breeding panel from VCF and passport files to population structure, multi-environment trials, AMMI and GGE biplots, genome scans and genomic prediction.",
+          section: "Projects",handler: () => {
+              window.location.href = "/kidane/projects/5_breeding_panel_app/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
