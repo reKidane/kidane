@@ -11,7 +11,7 @@ nav_order: 3
 
 Google Scholar profile: [Kidanemaryam W. Reta](https://scholar.google.com/citations?user=0C-PTFgAAAAJ&hl=en), Research areas: metabolomics, physiology, genomics, multi-omics, plant breeding, natural variability, photosynthesis, PAM-fluorometry, network analysis, machine learning, combined stress, stress modeling.
 
-## Citation Report
+<!---## Citation Report
 
 {% assign metrics = site.data.publication_metrics %}
 
@@ -23,7 +23,7 @@ Google Scholar profile: [Kidanemaryam W. Reta](https://scholar.google.com/citati
 
 Citation counts are fetched from OpenAlex and may differ from Google Scholar or ResearchGate.
 
-<!---## Automatically Updated Publications
+## Automatically Updated Publications
 
 {% for paper in site.data.auto_publications %}
 
