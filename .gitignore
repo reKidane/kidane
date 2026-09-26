@@ -1,6 +1,6 @@
 _site
 .bundle
-.DS_store
+.DS_Store
 .idea
 .jekyll-cache
 .jekyll-metadata
@@ -14,3 +14,4 @@ Gemfile.lock
 node_modules/
 vendor
 .Rproj.user
+.Rhistory

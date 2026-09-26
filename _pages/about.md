@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a plant scientist with a PhD in plant biotechnology and a research focus on crop physiology, plant metabolism, and trait characterization under complex abiotic stress. My work asks how root system variation, ion partitioning, photosynthesis, water status, metabolism, gene expression, and phenology interact to shape stress resilience and crop productivity.
+I am a plant scientist with a PhD in plant metabolomics and a research focus on crop physiology, plant metabolism, and trait characterization under complex abiotic stress. My work asks how root system variation, ion partitioning, photosynthesis, water status, metabolism, gene expression, and phenology interact to shape stress resilience and crop productivity.
 
 My doctoral research at Ben-Gurion University of the Negev examined **responses of _Vitis vinifera_ grafts to combined abiotic stress**, integrating field, greenhouse, and semi-controlled experiments with metabolomics, ionomics, physiology, transcriptomics, phenomics, and advanced data analysis. I use gas exchange and chlorophyll fluorescence measurements, GC-MS/LC-MS metabolomics, ICP-OES ion profiling, root and shoot phenotyping, network analysis, and machine learning to identify stress-response thresholds and trait-performance relationships.
 
