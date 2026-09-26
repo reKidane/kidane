@@ -44,6 +44,13 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/kidane/repositories/";
               },
+            },{id: "dropdown-protocols",
+              title: "Protocols",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/kidane/resources/protocols/";
+              },
             },{id: "nav-presentations",
           title: "Presentations",
           description: "Oral and poster presentations at international scientific conferences and research meetings.",
@@ -214,6 +221,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://twitter.com/reKidane", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/reKidane", "_blank");
         },
       },{
       id: 'light-theme',
