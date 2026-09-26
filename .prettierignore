@@ -15,3 +15,8 @@ _data/citations.yml
 # Ignore publication data regenerated weekly by update-publications-openalex.yml
 _data/auto_publications.yml
 _data/publication_metrics.yml
+
+# A standalone preview of the Breeding Panel Analysis project page, kept for
+# reference. It is not part of the site's source, so it is not held to the
+# site's formatting.
+preview_project_page.html
