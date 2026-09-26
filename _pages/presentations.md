@@ -9,13 +9,14 @@ nav_order: 5
 
 ## Selected Oral Presentations
 
-1. **The rebirth of heroic viticulture in Israel.** Oral presentation, 52nd Annual Ben-Gurion University Board of Governors Meeting, 18 May 2022, Ben-Gurion University of the Negev, Israel.
-2. **Rootstock-Driven Metabolic, Physiological and Agronomical Responses Determine Scion Tolerance under Combined Salinity and Water-Deficit Stress: A Long-Term Field Experiment.** Oral presentation, DDD: Drylands, Deserts and Desertification 2025, 30 Nov-04 Dec 2025, Ben-Gurion University of the Negev, Israel.
-3. **Rootstock-mediated responses of grapevine _Vitis vinifera_ (L.) metabolism and physiology to combined water deficit and salinity stress in Syrah grafts.** Oral presentation, OENO Macrowine 2023, 10-13 July 2023, Bordeaux, France.
-4. **Combined abiotic stress in cv. Syrah grafted onto different rootstocks: a metabolic and physiological response.** Oral presentation, 44th World Congress of Vine and Wine and 21st General Assembly of the OIV, 5-9 June 2023, Cadiz, Spain.
-5. **Physiological responses of red grapevine varieties to heatwave: insights from monitoring physiological activities and drone-based thermal imagery analysis.** Oral presentation, 44th World Congress of Vine and Wine and 21st General Assembly of the OIV, 5-9 June 2023, Cadiz, Spain.
-6. **Rootstock mediation on grapevine's combined salinity and water deficit stress response: a physiological and metabolic perspective.** Oral presentation, 4th Wine Grapevine Symposium, 15 May 2023, Ariel University, Israel.
-7. **Upshot of salinity and water regime, mediated by rootstock, on cv. Syrah must and wine metabolite profile.** Oral presentation, Gilat and FAAB Arid Agriculture and Biotech Student Symposium, 22 June 2022, Ramat Negev, Israel.
+1. **The resilience of _Vitis vinifera_ to elevated temperature: from physiology to metabolic and hyperspectral phenotyping.** Oral presentation, SUSTAIN Expert Group Meeting, International Organisation of Vine and Wine, 2025, Dijon, France.
+2. **The rebirth of heroic viticulture in Israel.** Oral presentation, 52nd Annual Ben-Gurion University Board of Governors Meeting, 18 May 2022, Ben-Gurion University of the Negev, Israel.
+3. **Rootstock-Driven Metabolic, Physiological and Agronomical Responses Determine Scion Tolerance under Combined Salinity and Water-Deficit Stress: A Long-Term Field Experiment.** Oral presentation, DDD: Drylands, Deserts and Desertification 2025, 30 Nov-04 Dec 2025, Ben-Gurion University of the Negev, Israel.
+4. **Rootstock-mediated responses of grapevine _Vitis vinifera_ (L.) metabolism and physiology to combined water deficit and salinity stress in Syrah grafts.** Oral presentation, OENO Macrowine 2023, 10-13 July 2023, Bordeaux, France.
+5. **Combined abiotic stress in cv. Syrah grafted onto different rootstocks: a metabolic and physiological response.** Oral presentation, 44th World Congress of Vine and Wine and 21st General Assembly of the OIV, 5-9 June 2023, Cadiz, Spain.
+6. **Physiological responses of red grapevine varieties to heatwave: insights from monitoring physiological activities and drone-based thermal imagery analysis.** Oral presentation, 44th World Congress of Vine and Wine and 21st General Assembly of the OIV, 5-9 June 2023, Cadiz, Spain.
+7. **Rootstock mediation on grapevine's combined salinity and water deficit stress response: a physiological and metabolic perspective.** Oral presentation, 4th Wine Grapevine Symposium, 15 May 2023, Ariel University, Israel.
+8. **Upshot of salinity and water regime, mediated by rootstock, on cv. Syrah must and wine metabolite profile.** Oral presentation, Gilat and FAAB Arid Agriculture and Biotech Student Symposium, 22 June 2022, Ramat Negev, Israel.
 
 ## Poster Presentations
 
@@ -29,4 +30,4 @@ nav_order: 5
 
 ## Presentation Themes
 
-These presentations cover rootstock-mediated stress tolerance, grapevine physiology and metabolism, heatwave phenotyping, UAV thermal imagery, must and wine metabolite profiling, phenolics and sugar dynamics, and climate-resilient viticulture.
+These presentations cover rootstock-mediated stress tolerance, grapevine physiology and metabolism, heatwave phenotyping, UAV thermal and hyperspectral imagery, must and wine metabolite profiling, phenolics and sugar dynamics, and climate-resilient viticulture.
