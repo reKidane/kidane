@@ -9,6 +9,8 @@ children:
     permalink: /resources/software/
   - title: Scripts & workflows
     permalink: /repositories/
+  - title: Protocols
+    permalink: /resources/protocols/
 ---
 
 <!--
