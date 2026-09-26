@@ -181,6 +181,13 @@ ninja.data = [{
           section: "Teachings",handler: () => {
               window.location.href = "/kidane/teachings/introduction-to-machine-learning/";
             },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/kidane/assets/pdf/Kidane_CV_25042026.pdf", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
