@@ -5,7 +5,7 @@ description: OIV-funded project linking plant physiology, metabolomics, UAV ther
 img:
 importance: 1
 category: Current
-related_publications: true
+related_publications: false
 ---
 
 This project characterizes varietal responses to heatwave stress in _Vitis vinifera_ by integrating multi-year physiological phenotyping, UAV-based thermal sensing, metabolomics, and gene expression profiling.
@@ -16,3 +16,14 @@ The central goal is to identify resilient genotypes and build predictive models 
 **Funding:** International Organisation of Vine and Wine (OIV), 2023-2026
 
 **Methods:** UAV thermal sensing, gas exchange, chlorophyll fluorescence, metabolomics, gene expression profiling, multivariate analysis, network analysis, and AI-assisted predictive modeling.
+
+## Outputs
+
+### Under review and in preparation
+
+- [Integrative phenotyping reveals a varietal signature of heatwave response in arid viticulture](https://doi.org/10.21203/rs.3.rs-10256443/v1). Research Square preprint, under review. DOI: [10.21203/rs.3.rs-10256443/v1](https://doi.org/10.21203/rs.3.rs-10256443/v1)
+- High temperature induces coordinated metabolic and phenological shifts across a wine grape varietal collection. In preparation for _Plant, Cell & Environment_.
+
+### Published
+
+- [Canopy management offers practical levers to sustain grape yield and quality in warming vineyards](https://doi.org/10.1016/j.scienta.2025.113998). _Scientia Horticulturae_, 2025. Review. DOI: [10.1016/j.scienta.2025.113998](https://doi.org/10.1016/j.scienta.2025.113998)
