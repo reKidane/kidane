@@ -1,6 +1,6 @@
 <header>
   <!-- Nav Bar -->
-  <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
+  <nav id="navbar" class="navbar navbar-light navbar-expand-xl {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container-fluid site-wide-container">
       {% if page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
@@ -47,12 +47,14 @@
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
 
-          <!-- Logo -->
-          <li class="nav-item navbar-logo-item">
-            <a class="nav-link navbar-logo-link" href="{{ '/' | relative_url }}" aria-label="Home">
-              <img src="{{ '/assets/img/Logo.jpg' | relative_url }}" alt="Kidanemaryam Wagaw Reta logo" class="navbar-logo">
-            </a>
-          </li>
+          <!-- Logo (the brand already shows it on inner pages) -->
+          {% if page.permalink == '/' %}
+            <li class="nav-item navbar-logo-item">
+              <a class="nav-link navbar-logo-link" href="{{ '/' | relative_url }}" aria-label="Home">
+                <img src="{{ '/assets/img/Logo.jpg' | relative_url }}" alt="Kidanemaryam Wagaw Reta logo" class="navbar-logo">
+              </a>
+            </li>
+          {% endif %}
 
           <!-- About -->
           <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
@@ -129,7 +131,7 @@
             <!-- Search -->
             <li class="nav-item">
               <button id="search-toggle" title="Search" onclick="openSearchModal()">
-                <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span>
+                <span class="nav-link"><i class="fa-solid fa-magnifying-glass"></i> <kbd class="search-kbd">ctrl k</kbd></span>
               </button>
             </li>
           {% endif %}
