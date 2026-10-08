@@ -34,14 +34,52 @@ check, each usually done in a different script by a different person.
 This is that whole path in one application, running on a simulated barley
 germplasm panel you can replace with your own data.
 
-<div class="ratio ratio-16x9 my-4 border rounded" style="min-height: 620px;">
-  <iframe src="{{ app_url }}" title="Breeding Panel Analysis" loading="lazy"
-          allowfullscreen style="border:0;"></iframe>
+<div class="app-embed" id="app-embed">
+  <div class="app-embed-bar">
+    <span class="app-embed-title"><i class="fa-solid fa-circle app-embed-dot" aria-hidden="true"></i> Breeding Panel Analysis, live</span>
+    <span class="app-embed-actions">
+      <button type="button" class="app-embed-btn" id="app-embed-fullscreen" aria-label="Show the app full screen">
+        <i class="fa-solid fa-expand" aria-hidden="true"></i> Full screen
+      </button>
+      <a class="app-embed-btn" href="{{ app_url }}" target="_blank" rel="noopener">
+        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> New tab
+      </a>
+    </span>
+  </div>
+  <iframe src="{{ app_url }}" title="Breeding Panel Analysis" loading="lazy" allow="fullscreen; clipboard-write" allowfullscreen></iframe>
 </div>
 
+<script>
+  (function () {
+    var wrap = document.getElementById("app-embed");
+    var btn = document.getElementById("app-embed-fullscreen");
+    if (!wrap || !btn) return;
+    if (!(wrap.requestFullscreen || wrap.webkitRequestFullscreen)) {
+      btn.style.display = "none";
+      return;
+    }
+    btn.addEventListener("click", function () {
+      var active = document.fullscreenElement || document.webkitFullscreenElement;
+      if (active) {
+        (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+      } else {
+        (wrap.requestFullscreen || wrap.webkitRequestFullscreen).call(wrap);
+      }
+    });
+    function sync() {
+      var on = !!(document.fullscreenElement || document.webkitFullscreenElement);
+      btn.innerHTML = on
+        ? '<i class="fa-solid fa-compress" aria-hidden="true"></i> Exit full screen'
+        : '<i class="fa-solid fa-expand" aria-hidden="true"></i> Full screen';
+    }
+    document.addEventListener("fullscreenchange", sync);
+    document.addEventListener("webkitfullscreenchange", sync);
+  })();
+</script>
+
 <div class="caption">
-  The application, running live. If the frame above stays blank, the host does
-  not permit embedding: <a href="{{ app_url }}" target="_blank" rel="noopener">open it in a new tab</a> instead.
+  The application, running live. It may take a few seconds to wake up. If the
+  frame stays blank, <a href="{{ app_url }}" target="_blank" rel="noopener">open it in a new tab</a> instead.
 </div>
 
 <div class="row mt-4">

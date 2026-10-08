@@ -1150,3 +1150,167 @@ footer {
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
+
+/* ---------------------------------------------------------------------------
+ * Embedded live apps (Shiny)
+ * Breaks out of the reading column so the app gets close to full width.
+ * ------------------------------------------------------------------------- */
+
+.app-embed {
+  --app-embed-width: min(1680px, calc(100vw - 2.5rem));
+  width: var(--app-embed-width);
+  margin: 2rem 0 0.75rem calc(50% - var(--app-embed-width) / 2);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--global-card-bg-color);
+  box-shadow: var(--kr-shadow);
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: clamp(560px, calc(100vh - 150px), 1100px);
+    border: 0;
+    background: #ffffff;
+  }
+
+  &:fullscreen,
+  &:-webkit-full-screen {
+    width: 100vw;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+
+    iframe {
+      flex: 1 1 auto;
+      height: auto;
+    }
+  }
+}
+
+.app-embed-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0.75rem 0.55rem 1rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  background: var(--kr-surface-2);
+}
+
+.app-embed-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--global-text-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.app-embed-dot {
+  font-size: 0.5rem;
+  vertical-align: 0.2em;
+  margin-right: 0.35rem;
+  color: #3fa56a !important;
+}
+
+.app-embed-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.post article .app-embed-btn,
+.app-embed-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--kr-font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--global-divider-color);
+  background: var(--global-card-bg-color);
+  color: var(--global-text-color);
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease;
+
+  i {
+    color: inherit;
+  }
+
+  &:hover {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .app-embed {
+    --app-embed-width: calc(100vw - 1.5rem);
+
+    iframe {
+      height: 80vh;
+    }
+  }
+
+  .app-embed-title {
+    display: none;
+  }
+
+  .app-embed-bar {
+    justify-content: flex-end;
+  }
+}
+
+/* Content buttons (e.g. "Open the live app") in the site palette */
+.post article .btn {
+  font-family: var(--kr-font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  border-radius: 999px;
+  padding: 0.6rem 1.35rem;
+  margin: 0.25rem 0.35rem 0.25rem 0;
+  box-shadow: none;
+}
+
+.post article .btn-primary {
+  background-color: var(--global-theme-color) !important;
+  border: 1px solid var(--global-theme-color);
+  color: #ffffff !important;
+
+  &:hover,
+  &:focus {
+    background-color: var(--global-hover-color) !important;
+    border-color: var(--global-hover-color);
+    box-shadow: none;
+  }
+}
+
+html[data-theme="dark"] .post article .btn-primary {
+  color: #131d18 !important;
+}
+
+.post article .btn-outline-secondary {
+  background: transparent;
+  border: 1px solid var(--global-divider-color) !important;
+  color: var(--global-text-color) !important;
+
+  &:hover,
+  &:focus {
+    background: var(--kr-leaf-soft) !important;
+    border-color: var(--global-theme-color) !important;
+    color: var(--global-theme-color) !important;
+    box-shadow: none;
+  }
+}
