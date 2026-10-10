@@ -246,7 +246,7 @@ My research examines how crops respond to complex abiotic stress from the cellul
         <ul>
           <li><a href="https://doi.org/10.1016/j.stress.2025.100864" target="_blank" rel="noopener">Integrated metabolomics and ionomics reveal a distinct salinity tipping point in Syrah</a> <span>Plant Stress, 2025</span></li>
           <li><a href="https://doi.org/10.1016/j.stress.2026.101456" target="_blank" rel="noopener">Metabolic network homeostasis drives rootstock-mediated tolerance to combined stress</a> <span>Plant Stress, 2026</span></li>
-          <li><a href="https://doi.org/10.21203/rs.3.rs-10256443/v1" target="_blank" rel="noopener">Multiscale phenomics reveals a varietal signature of grapevine response to heatwaves</a> <span>Preprint, under review</span></li>
+          <li><a href="https://doi.org/10.21203/rs.3.rs-10256443/v1" target="_blank" rel="noopener">Multiscale phenomics reveals a varietal signature of grapevine response to heatwaves</a> <span>Under review, <em>npj Science of Plants</em></span></li>
         </ul>
         <p class="kr-related-projects"><a href="{{ '/projects/2_project/' | relative_url }}">Rootstock project</a> <a href="{{ '/projects/1_project/' | relative_url }}">OIV heatwave project</a></p>
       </div>
@@ -328,7 +328,7 @@ My research examines how crops respond to complex abiotic stress from the cellul
       <div class="kr-panel-related">
         <p class="kr-related-title">Related papers</p>
         <ul>
-          <li><a href="https://doi.org/10.21203/rs.3.rs-10256443/v1" target="_blank" rel="noopener">Multiscale phenomics reveals a varietal signature of grapevine response to heatwaves</a> <span>Preprint, under review</span></li>
+          <li><a href="https://doi.org/10.21203/rs.3.rs-10256443/v1" target="_blank" rel="noopener">Multiscale phenomics reveals a varietal signature of grapevine response to heatwaves</a> <span>Under review, <em>npj Science of Plants</em></span></li>
           <li><a href="https://doi.org/10.1016/j.scienta.2025.113998" target="_blank" rel="noopener">Canopy management offers practical levers to sustain grape yield and quality in warming vineyards</a> <span>Sci. Hortic., 2025</span></li>
           <li><a href="https://doi.org/10.20870/oeno-one.2024.58.1.7148" target="_blank" rel="noopener">A Y-shaped training system improves Gewurztraminer berry and wine quality in an arid climate</a> <span>OENO One, 2024</span></li>
         </ul>
