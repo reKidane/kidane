@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-research",
           title: "Research",
-          description: "Research program in crop stress physiology, plant metabolism, multi-omics integration, and predictive modeling.",
+          description: "Research program in crop stress physiology, plant metabolism, multi-omics integration, crop improvement, and predictive modeling.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/kidane/research/";

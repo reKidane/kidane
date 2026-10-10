@@ -388,7 +388,7 @@
     root.classList.add("is-ready");
     var current = 0;
     var svg = root.querySelector(".kr-scales svg");
-    var order = ["cell", "plant", "vineyard", "climate"];
+    var order = ["cell", "plant", "vineyard", "trials", "climate"];
     var full = svg ? svg.getAttribute("viewBox") : null;
 
     // On narrow screens, zoom the drawing to the scales that are lit.
@@ -409,6 +409,9 @@
       if (!idx.length) return;
       var a = Math.min.apply(null, idx);
       var b = Math.max.apply(null, idx);
+      // Scales that are far apart (genome and field trials) would shrink the
+      // drawing too much on a phone, so show the larger one.
+      if (b - a > 1) a = b;
       svg.setAttribute("viewBox", a * 240 + " 0 " + (b - a + 1) * 240 + " 240");
       root.classList.add("is-zoomed");
     }
@@ -489,6 +492,34 @@
             return;
           }
         }
+      });
+    });
+
+    // Omics layers: pointing at a layer highlights where it sits in the drawing.
+    var omicCards = root.querySelectorAll(".kr-omics [data-omic]");
+    function peek(name) {
+      if (name) root.setAttribute("data-omic-focus", name);
+      else root.removeAttribute("data-omic-focus");
+      zones.forEach(function (z) {
+        z.classList.toggle("is-peek", !!name && !!z.querySelector('[data-omic="' + name + '"]'));
+      });
+    }
+    Array.prototype.forEach.call(omicCards, function (card) {
+      var name = card.getAttribute("data-omic");
+      card.addEventListener("mouseenter", function () {
+        peek(name);
+      });
+      card.addEventListener("mouseleave", function () {
+        peek(null);
+      });
+      card.addEventListener("focus", function () {
+        peek(name);
+      });
+      card.addEventListener("blur", function () {
+        peek(null);
+      });
+      card.addEventListener("click", function () {
+        peek(root.getAttribute("data-omic-focus") === name ? null : name);
       });
     });
 
