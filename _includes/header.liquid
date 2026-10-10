@@ -4,7 +4,8 @@
     <div class="container-fluid site-wide-container">
       {% if page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
-          <img src="{{ '/assets/img/Logo.jpg' | relative_url }}" alt="Kidanemaryam Wagaw Reta logo" class="navbar-logo">
+          <img src="{{ '/assets/img/logo/resiloris-favicon.svg' | relative_url }}" alt="RESILORIS logo" class="navbar-logo only-light"
+          ><img src="{{ '/assets/img/logo/resiloris-favicon-dark.svg' | relative_url }}" alt="" aria-hidden="true" class="navbar-logo only-dark">
           {% if site.title == 'blank' %}
             {% if site.first_name %}
               <span class="font-weight-bold">
@@ -51,7 +52,13 @@
           {% if page.permalink == '/' %}
             <li class="nav-item navbar-logo-item">
               <a class="nav-link navbar-logo-link" href="{{ '/' | relative_url }}" aria-label="Home">
-                <img src="{{ '/assets/img/Logo.jpg' | relative_url }}" alt="Kidanemaryam Wagaw Reta logo" class="navbar-logo">
+                <img src="{{ '/assets/img/logo/resiloris-favicon.svg' | relative_url }}" alt="RESILORIS logo" class="navbar-logo only-light"
+                ><img
+                  src="{{ '/assets/img/logo/resiloris-favicon-dark.svg' | relative_url }}"
+                  alt=""
+                  aria-hidden="true"
+                  class="navbar-logo only-dark"
+                >
               </a>
             </li>
           {% endif %}

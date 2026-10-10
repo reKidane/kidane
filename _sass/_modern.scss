@@ -2595,3 +2595,20 @@ text.kr-env {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Navbar logo: RESILORIS mark, light and dark versions swap with the theme */
+.navbar-logo {
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.navbar img.navbar-logo.only-light,
+.navbar img.navbar-logo.only-dark {
+  width: 30px;
+  height: 30px;
+}
+
+html[data-theme="dark"] .navbar img.navbar-logo.only-light,
+:root:not([data-theme="dark"]) .navbar img.navbar-logo.only-dark {
+  display: none !important;
+}
