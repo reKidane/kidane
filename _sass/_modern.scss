@@ -1617,6 +1617,7 @@ html[data-theme="dark"] .about-page .role-list li:hover {
     display: block;
   }
 
+  .has-kr-toc > article > .kr-toc,
   .kr-toc {
     position: static;
     border-left: 0;
@@ -1801,4 +1802,450 @@ html[data-theme="dark"] .kr-chip[aria-pressed="true"] {
 
 .has-kr-toc > article > .kr-toc + h2 {
   margin-top: 0;
+}
+
+/* ===========================================================================
+ * Research explorer (Research page): themes from cell to climate
+ * ========================================================================= */
+
+:root {
+  --kr-soil: #ece6dc;
+  --kr-root: #9a7656;
+  --kr-wood: #6d5543;
+  --kr-heat: #c8692c;
+}
+
+html[data-theme="dark"] {
+  --kr-soil: #2a2a22;
+  --kr-root: #b89474;
+  --kr-wood: #a68a72;
+  --kr-heat: #e8955a;
+}
+
+.kr-explorer {
+  margin: 1.5rem 0 1rem;
+  padding: clamp(1rem, 2.5vw, 1.75rem);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 18px;
+  background: var(--global-card-bg-color);
+}
+
+/* The drawing */
+.kr-scales {
+  margin: 0 0 1.25rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+.kr-scale-grid line {
+  stroke: var(--global-divider-color);
+  stroke-width: 1;
+  stroke-dasharray: 3 5;
+}
+
+.kr-zone {
+  transition:
+    opacity 0.45s ease,
+    filter 0.45s ease;
+}
+
+.kr-zone-label {
+  font-family: var(--kr-font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  text-anchor: middle;
+  fill: var(--global-text-color-light);
+  transition: fill 0.3s ease;
+}
+
+.kr-cell-wall {
+  fill: var(--kr-leaf-soft);
+  stroke: var(--global-theme-color);
+  stroke-width: 2;
+}
+
+.kr-nucleus {
+  fill: var(--kr-berry-soft);
+  stroke: var(--kr-berry);
+  stroke-width: 1.5;
+}
+
+.kr-chloroplast {
+  fill: var(--global-theme-color);
+  opacity: 0.45;
+}
+
+.kr-network {
+  line {
+    stroke: var(--global-text-color);
+    stroke-width: 1.4;
+    opacity: 0.55;
+  }
+
+  circle {
+    fill: var(--global-text-color);
+  }
+}
+
+.kr-soil {
+  fill: var(--kr-soil);
+}
+
+.kr-roots path {
+  fill: none;
+  stroke: var(--kr-root);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+}
+
+.kr-trunk {
+  fill: none;
+  stroke: var(--kr-wood);
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+
+.kr-cordon {
+  fill: none;
+  stroke: var(--kr-wood);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.kr-graft {
+  fill: none;
+  stroke: var(--kr-berry);
+  stroke-width: 2;
+}
+
+.kr-wire {
+  stroke: var(--global-text-color-light);
+  stroke-width: 1;
+  opacity: 0.6;
+}
+
+.kr-leaves circle {
+  fill: var(--global-theme-color);
+  opacity: 0.85;
+}
+
+.kr-berries circle {
+  fill: var(--kr-berry);
+}
+
+.kr-scan {
+  fill: var(--kr-heat);
+  opacity: 0.16;
+}
+
+.kr-drone {
+  rect,
+  ellipse {
+    fill: var(--global-text-color);
+  }
+
+  line {
+    stroke: var(--global-text-color);
+    stroke-width: 2;
+  }
+}
+
+.kr-sun {
+  circle {
+    fill: var(--kr-heat);
+  }
+
+  line {
+    stroke: var(--kr-heat);
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+}
+
+.kr-axes line {
+  stroke: var(--global-text-color-light);
+  stroke-width: 1.2;
+}
+
+.kr-trend {
+  fill: none;
+  stroke: var(--kr-heat);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.kr-projection {
+  stroke-dasharray: 4 5;
+}
+
+/* Interactive state: only when the script has run */
+.kr-explorer.is-ready {
+  .kr-zone {
+    cursor: pointer;
+    opacity: 0.22;
+    filter: grayscale(0.7);
+
+    &:hover {
+      opacity: 0.45;
+    }
+
+    &.is-on {
+      opacity: 1;
+      filter: none;
+
+      .kr-zone-label {
+        fill: var(--global-theme-color);
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .kr-explorer.is-ready .kr-zone.is-on .kr-network circle {
+    animation: kr-pulse 2.4s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+
+    &:nth-child(odd) {
+      animation-delay: 0.6s;
+    }
+  }
+
+  .kr-explorer.is-ready .kr-zone.is-on .kr-scan {
+    animation: kr-scan 2.8s ease-in-out infinite;
+  }
+}
+
+@keyframes kr-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.45);
+  }
+}
+
+@keyframes kr-scan {
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.28;
+  }
+}
+
+/* Theme selector */
+.kr-explorer-tabs {
+  display: none;
+}
+
+.kr-explorer.is-ready .kr-explorer-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.kr-explorer-tabs [role="tab"] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  text-align: left;
+  padding: 0.7rem 0.85rem 0.75rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--global-text-color);
+  cursor: pointer;
+  position: relative;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--global-theme-color);
+  }
+
+  &[aria-selected="true"] {
+    border-color: var(--global-theme-color);
+    background: var(--kr-leaf-soft);
+
+    .kr-tab-title {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+.kr-tab-scale {
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: var(--global-text-color-light);
+}
+
+.kr-tab-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--global-text-color);
+}
+
+/* Panels: all visible without the script, one at a time with it */
+.kr-panel {
+  max-width: 72ch;
+
+  + .kr-panel {
+    margin-top: 2rem;
+  }
+
+  h3 {
+    font-family: var(--kr-font-serif);
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: var(--global-text-color);
+    margin: 0 0 0.6rem;
+  }
+
+  p {
+    margin-bottom: 0.9rem;
+  }
+}
+
+.kr-explorer.is-ready .kr-panel + .kr-panel {
+  margin-top: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .kr-explorer.is-ready .kr-panel:not([hidden]) {
+    animation: kr-rise 0.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+}
+
+.kr-panel-related {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.1rem 0 0 !important;
+  font-size: 0.9rem;
+
+  > span {
+    font-weight: 600;
+    color: var(--global-text-color-light);
+    margin-right: 0.25rem;
+  }
+
+  a {
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--global-divider-color);
+    color: var(--global-text-color);
+    line-height: 1.35;
+    transition:
+      border-color 0.15s ease,
+      color 0.15s ease;
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+      text-decoration: none !important;
+    }
+  }
+}
+
+/* Step controls */
+.kr-explorer-steps {
+  display: none;
+}
+
+.kr-explorer.is-ready .kr-explorer-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.kr-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--kr-font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid var(--global-divider-color);
+  background: transparent;
+  color: var(--global-text-color);
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    opacity 0.15s ease;
+
+  i {
+    font-size: 0.75em;
+    color: inherit !important;
+  }
+
+  &:hover:not(:disabled) {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+}
+
+.kr-step-count {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+}
+
+@media (max-width: 991.98px) {
+  .kr-explorer.is-ready .kr-explorer-tabs {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+    padding: 0 0.25rem 0.25rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    [role="tab"] {
+      flex: 0 0 auto;
+      width: 11.5rem;
+      scroll-snap-align: center;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .kr-explorer.is-zoomed .kr-zone:not(.is-on) {
+    opacity: 0.15;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .kr-step {
+    font-size: 0.82rem;
+    padding: 0.45rem 0.75rem;
+  }
 }
