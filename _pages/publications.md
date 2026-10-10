@@ -49,14 +49,19 @@ Citation counts are fetched from OpenAlex and may differ from Google Scholar or 
 
 ## 1. Preprints
 
-Manuscripts submitted and awaiting a decision, and those being prepared for
-submission. Each moves to the section below once it appears in print.
+Submitted manuscripts with a public preprint. Each moves to the section below once it appears in print.
 
 - **Reta K.**, Caras T., Sikron-Persi N., Bustan A., Lazarovitch N., Paz-Kagan T. and Fait A. Multiscale Phenomics Reveals a Varietal Signature of Grapevine Response to Heatwaves. Under review in _npj Science of Plants_. Preprint: [10.21203/rs.3.rs-10256443/v1](https://doi.org/10.21203/rs.3.rs-10256443/v1).
+
+{% comment %}
+Hidden until submitted and available as a preprint. To show one, move its line above this comment block.
+Previous section intro: Manuscripts submitted and awaiting a decision, and those being prepared for submission. Each moves to the section below once it appears in print.
+
 - **Reta K.**, Verma P., Gashu K., Bustan A. and Fait A. Identification of high temperature-induced coordinated metabolic and phenological shifts in a varietal collection of wine grapes. Under preparation for submission to _Plant, Cell & Environment_.
 - **Reta K.**, Lazarovitch N. and Fait A. Comparative machine learning reveals rootstock-modulated metabolic and temporal signatures in grafted grapevine under combined salinity and water deficit. In preparation for _Horticulture Research_.
 - Degu A., Faigenboim A., **Reta K.**, Dynkin I., Fait A. and Reshef N. Functional characterization of grapevine PEPC and cytosolic MDH genes reveals divergent regulation of malate and sugar metabolism. Under review in _Journal of Experimental Botany_.
 - Javali A., **Reta K.**, Herzberg M. and Fait A. Engineered multi-ionic irrigation reveals cultivar-specific coordination of root architecture, ion partitioning, and metabolism in grapevine. In preparation.
+{% endcomment %}
 
 ## 2. Scientific Publications
 

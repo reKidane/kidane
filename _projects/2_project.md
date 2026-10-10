@@ -24,9 +24,12 @@ This project draws directly from the thesis work on responses of _Vitis vinifera
 - [Rootstock choice modulates Syrah phenology and agronomic performance under combined salinity and water stress across three seasons](https://doi.org/10.1016/j.stress.2025.101050). _Plant Stress_, 2025. DOI: [10.1016/j.stress.2025.101050](https://doi.org/10.1016/j.stress.2025.101050)
 - [Syrah crosses a distinct salinity tipping point before entering a stress-response mode](https://doi.org/10.1016/j.stress.2025.100864). _Plant Stress_, 2025. DOI: [10.1016/j.stress.2025.100864](https://doi.org/10.1016/j.stress.2025.100864)
 
+{% comment %}
+Hidden until submitted and available as a preprint.
 ### In preparation
 
 - Comparative machine learning reveals rootstock-modulated metabolic and temporal signatures under combined salinity and water deficit. In preparation for _Horticulture Research_.
+{% endcomment %}
 
 ### Conference abstracts
 
