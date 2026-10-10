@@ -24,6 +24,7 @@ The central goal is to identify resilient genotypes and build predictive models 
 - **Reta K.**, Caras T., Sikron-Persi N., Bustan A., Lazarovitch N., Paz-Kagan T. and Fait A. Multiscale Phenomics Reveals a Varietal Signature of Grapevine Response to Heatwaves. Under review in _npj Science of Plants_. Preprint: [10.21203/rs.3.rs-10256443/v1](https://doi.org/10.21203/rs.3.rs-10256443/v1).
 {% comment %}
 Hidden until submitted and available as a preprint.
+
 - High temperature induces coordinated metabolic and phenological shifts across a wine grape varietal collection. In preparation for _Plant, Cell & Environment_.
 {% endcomment %}
 

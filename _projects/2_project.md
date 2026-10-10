@@ -26,6 +26,7 @@ This project draws directly from the thesis work on responses of _Vitis vinifera
 
 {% comment %}
 Hidden until submitted and available as a preprint.
+
 ### In preparation
 
 - Comparative machine learning reveals rootstock-modulated metabolic and temporal signatures under combined salinity and water deficit. In preparation for _Horticulture Research_.
