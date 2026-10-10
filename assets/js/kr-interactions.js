@@ -75,7 +75,7 @@
     if (!article) return;
     if (post.classList.contains("about-page")) return;
     if (document.getElementById("toc-sidebar")) return;
-    if (article.querySelector(".app-embed, .projects")) return;
+    if (article.querySelector(".app-embed, .projects, .kr-explorer")) return;
 
     var headings = Array.prototype.slice.call(article.querySelectorAll(":scope > h2"));
     if (headings.length < 3) return;
@@ -372,11 +372,135 @@
     });
   }
 
+  /* ---------------------------------------------------------------------
+   * 6. Research explorer: themes from cell to climate
+   * ------------------------------------------------------------------- */
+  function researchExplorer() {
+    var root = document.getElementById("research-explorer");
+    if (!root) return;
+    var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
+    var panels = Array.prototype.slice.call(root.querySelectorAll('[role="tabpanel"]'));
+    var zones = Array.prototype.slice.call(root.querySelectorAll(".kr-zone"));
+    var steps = root.querySelectorAll(".kr-step");
+    var count = root.querySelector(".kr-step-count");
+    if (!tabs.length || tabs.length !== panels.length) return;
+
+    root.classList.add("is-ready");
+    var current = 0;
+    var svg = root.querySelector(".kr-scales svg");
+    var order = ["cell", "plant", "vineyard", "climate"];
+    var full = svg ? svg.getAttribute("viewBox") : null;
+
+    // On narrow screens, zoom the drawing to the scales that are lit.
+    function frame(lit) {
+      if (!svg) return;
+      if (window.innerWidth >= 768) {
+        svg.setAttribute("viewBox", full);
+        root.classList.remove("is-zoomed");
+        return;
+      }
+      var idx = lit
+        .map(function (z) {
+          return order.indexOf(z);
+        })
+        .filter(function (i) {
+          return i !== -1;
+        });
+      if (!idx.length) return;
+      var a = Math.min.apply(null, idx);
+      var b = Math.max.apply(null, idx);
+      svg.setAttribute("viewBox", a * 240 + " 0 " + (b - a + 1) * 240 + " 240");
+      root.classList.add("is-zoomed");
+    }
+
+    var resizeTimer;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        frame((tabs[current].getAttribute("data-zones") || "").split(/\s+/));
+      }, 150);
+    });
+
+    function select(i, focus) {
+      current = (i + tabs.length) % tabs.length;
+      tabs.forEach(function (t, j) {
+        var on = j === current;
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        t.tabIndex = on ? 0 : -1;
+        panels[j].hidden = !on;
+      });
+      var lit = (tabs[current].getAttribute("data-zones") || "").split(/\s+/);
+      zones.forEach(function (z) {
+        z.classList.toggle("is-on", lit.indexOf(z.getAttribute("data-zone")) !== -1);
+      });
+      frame(lit);
+      if (count) count.textContent = current + 1 + " of " + tabs.length;
+      if (steps.length === 2) {
+        steps[0].disabled = current === 0;
+        steps[1].disabled = current === tabs.length - 1;
+      }
+      if (focus) tabs[current].focus();
+      if (tabs[current].scrollIntoView && root.querySelector(".kr-explorer-tabs").scrollWidth > root.clientWidth) {
+        tabs[current].scrollIntoView({ block: "nearest", inline: "center", behavior: reduceMotion ? "auto" : "smooth" });
+      }
+    }
+
+    tabs.forEach(function (t, i) {
+      t.addEventListener("click", function () {
+        select(i);
+      });
+      t.addEventListener("keydown", function (e) {
+        var k = e.key;
+        if (k === "ArrowRight" || k === "ArrowDown") {
+          e.preventDefault();
+          select(current + 1, true);
+        } else if (k === "ArrowLeft" || k === "ArrowUp") {
+          e.preventDefault();
+          select(current - 1, true);
+        } else if (k === "Home") {
+          e.preventDefault();
+          select(0, true);
+        } else if (k === "End") {
+          e.preventDefault();
+          select(tabs.length - 1, true);
+        }
+      });
+    });
+
+    Array.prototype.forEach.call(steps, function (b) {
+      b.addEventListener("click", function () {
+        select(current + parseInt(b.getAttribute("data-step"), 10));
+      });
+    });
+
+    // Clicking a scale in the drawing jumps to the first theme at that scale.
+    zones.forEach(function (z) {
+      z.addEventListener("click", function () {
+        var name = z.getAttribute("data-zone");
+        for (var e = 0; e < tabs.length; e++) {
+          if ((tabs[e].getAttribute("data-zones") || "").trim() === name) {
+            select(e);
+            return;
+          }
+        }
+        for (var i = 0; i < tabs.length; i++) {
+          if ((tabs[i].getAttribute("data-zones") || "").split(/\s+/).indexOf(name) !== -1) {
+            select(i);
+            return;
+          }
+        }
+      });
+    });
+
+    select(0);
+  }
+
   ready(function () {
     navbarOnScroll();
     pageToc();
     listFilter();
     copyEmail();
     revealOnScroll();
+    researchExplorer();
   });
 })();
