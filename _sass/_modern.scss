@@ -2604,8 +2604,16 @@ text.kr-env {
 
 .navbar img.navbar-logo.only-light,
 .navbar img.navbar-logo.only-dark {
-  width: 30px;
-  height: 30px;
+  width: 42px;
+  height: 42px;
+}
+
+@media (max-width: 575.98px) {
+  .navbar img.navbar-logo.only-light,
+  .navbar img.navbar-logo.only-dark {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 html[data-theme="dark"] .navbar img.navbar-logo.only-light,
