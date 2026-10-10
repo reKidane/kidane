@@ -2049,7 +2049,7 @@ html[data-theme="dark"] {
 
 .kr-explorer.is-ready .kr-explorer-tabs {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 0.5rem;
   margin-bottom: 1.5rem;
 }
@@ -2126,38 +2126,6 @@ html[data-theme="dark"] {
 @media (prefers-reduced-motion: no-preference) {
   .kr-explorer.is-ready .kr-panel:not([hidden]) {
     animation: kr-rise 0.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  }
-}
-
-.kr-panel-related {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 1.1rem 0 0 !important;
-  font-size: 0.9rem;
-
-  > span {
-    font-weight: 600;
-    color: var(--global-text-color-light);
-    margin-right: 0.25rem;
-  }
-
-  a {
-    padding: 0.35rem 0.8rem;
-    border-radius: 999px;
-    border: 1px solid var(--global-divider-color);
-    color: var(--global-text-color);
-    line-height: 1.35;
-    transition:
-      border-color 0.15s ease,
-      color 0.15s ease;
-
-    &:hover {
-      border-color: var(--global-theme-color);
-      color: var(--global-theme-color);
-      text-decoration: none !important;
-    }
   }
 }
 
@@ -2247,5 +2215,333 @@ html[data-theme="dark"] {
   .kr-step {
     font-size: 0.82rem;
     padding: 0.45rem 0.75rem;
+  }
+}
+
+/* Research explorer, second pass: omics layers, breeding trials, related lists */
+:root {
+  --kr-ion: #3c7ea8;
+}
+
+html[data-theme="dark"] {
+  --kr-ion: #7fb6d9;
+}
+
+.kr-dna {
+  path {
+    fill: none;
+    stroke: var(--kr-berry);
+    stroke-width: 2;
+  }
+
+  line {
+    stroke: var(--kr-berry);
+    stroke-width: 1.4;
+    opacity: 0.7;
+  }
+}
+
+.kr-mrna {
+  path {
+    fill: none;
+    stroke: var(--kr-heat);
+    stroke-width: 2.2;
+    stroke-linecap: round;
+  }
+
+  line {
+    stroke: var(--kr-heat);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+  }
+}
+
+.kr-ions {
+  circle {
+    fill: var(--kr-ion);
+  }
+
+  text {
+    font-family: var(--kr-font-sans);
+    font-size: 9px;
+    font-weight: 700;
+    text-anchor: middle;
+    fill: #ffffff;
+  }
+}
+
+.kr-camera {
+  path {
+    fill: none;
+    stroke: var(--global-text-color);
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  rect {
+    fill: var(--global-text-color);
+  }
+
+  circle {
+    fill: var(--global-card-bg-color);
+  }
+}
+
+.kr-chromosome {
+  rect {
+    fill: var(--kr-berry-soft);
+    stroke: var(--kr-berry);
+    stroke-width: 1.4;
+  }
+
+  line {
+    stroke: var(--kr-berry);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+  }
+}
+
+.kr-plot-bed {
+  fill: var(--kr-root);
+  opacity: 0.35;
+}
+
+.kr-stalk {
+  stroke: var(--global-theme-color);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+}
+
+.kr-panicle {
+  fill: var(--kr-wood);
+}
+
+.kr-plot:nth-of-type(2) .kr-panicle {
+  fill: var(--kr-berry);
+}
+
+.kr-plot:nth-of-type(3) .kr-panicle {
+  fill: var(--kr-heat);
+}
+
+text.kr-env {
+  font-family: var(--kr-font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-anchor: middle;
+  fill: var(--global-text-color-light);
+}
+
+/* An omics layer under the pointer: its zone shows, other layers step back */
+.kr-explorer.is-ready .kr-zone.is-peek {
+  opacity: 1;
+  filter: none;
+}
+
+.kr-omic-el {
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.kr-explorer[data-omic-focus] .kr-omic-el {
+  opacity: 0.18;
+}
+
+@each $omic in genomics, transcriptomics, metabolomics, ionomics, phenomics {
+  .kr-explorer[data-omic-focus="#{$omic}"] .kr-omic-el[data-omic="#{$omic}"] {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+
+  .kr-explorer[data-omic-focus="#{$omic}"] .kr-omics [data-omic="#{$omic}"] {
+    border-color: var(--global-theme-color);
+    background: var(--kr-leaf-soft);
+  }
+}
+
+/* Omics cards */
+.kr-omics {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.6rem;
+  max-width: none;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.8rem 0.95rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 12px;
+    cursor: default;
+    transition:
+      border-color 0.2s ease,
+      background-color 0.2s ease;
+
+    &:hover {
+      border-color: var(--global-theme-color);
+    }
+
+    strong {
+      font-size: 0.95rem;
+      color: var(--global-theme-color);
+    }
+
+    span {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: var(--global-text-color-light);
+    }
+  }
+}
+
+.kr-explorer.is-ready .kr-panel {
+  max-width: none;
+
+  > p {
+    max-width: 75ch;
+  }
+}
+
+/* Cell-to-plant chain: a real causal sequence, so it is numbered */
+.kr-chain {
+  list-style: none;
+  counter-reset: kr-chain;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 1.25rem 0 0.5rem;
+
+  li {
+    counter-increment: kr-chain;
+    position: relative;
+    flex: 1 1 10rem;
+    padding: 0.7rem 0.9rem 0.7rem 2.6rem;
+    border-radius: 12px;
+    background: var(--kr-surface-2);
+    border: 1px solid var(--global-divider-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.35;
+
+    &::before {
+      content: counter(kr-chain);
+      position: absolute;
+      left: 0.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.35rem;
+      height: 1.35rem;
+      border-radius: 50%;
+      background: var(--global-theme-color);
+      color: var(--global-card-bg-color);
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+/* Crops */
+.kr-crops {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 1rem 0 0.25rem;
+
+  li {
+    font-size: 0.86rem;
+    font-weight: 600;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background: var(--kr-leaf-soft);
+    color: var(--global-theme-color);
+  }
+}
+
+/* Related papers and projects */
+.kr-panel-related {
+  display: block;
+  margin-top: 1.5rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--global-divider-color);
+  font-size: 0.93rem;
+
+  .kr-related-title {
+    font-family: var(--kr-font-serif);
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 0 0 0.6rem;
+    color: var(--global-text-color);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.9rem;
+
+    li {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.15rem 1rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px dashed var(--global-divider-color);
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      a {
+        flex: 1 1 22rem;
+        font-weight: 500;
+        border: 0;
+        padding: 0;
+        border-radius: 0;
+      }
+
+      span {
+        font-size: 0.82rem;
+        color: var(--global-text-color-light);
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .kr-related-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: 0;
+
+    a {
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--global-divider-color);
+      color: var(--global-text-color);
+      font-size: 0.86rem;
+      font-weight: 600;
+      transition:
+        border-color 0.15s ease,
+        color 0.15s ease;
+
+      &:hover {
+        border-color: var(--global-theme-color);
+        color: var(--global-theme-color);
+        text-decoration: none !important;
+      }
+    }
   }
 }
