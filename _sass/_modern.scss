@@ -2350,7 +2350,7 @@ text.kr-env {
   opacity: 0.18;
 }
 
-@each $omic in genomics, transcriptomics, metabolomics, ionomics, phenomics {
+@each $omic in genomics, transcriptomics, metabolomics, volatilomics, ionomics, phenomics {
   .kr-explorer[data-omic-focus="#{$omic}"] .kr-omic-el[data-omic="#{$omic}"] {
     opacity: 1;
     transform: scale(1.12);
@@ -2368,7 +2368,7 @@ text.kr-env {
   padding: 0;
   margin: 1.25rem 0 0.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.6rem;
   max-width: none;
 
@@ -2543,5 +2543,55 @@ text.kr-env {
         text-decoration: none !important;
       }
     }
+  }
+}
+
+.kr-volatiles {
+  path {
+    fill: none;
+    stroke: var(--kr-berry);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-dasharray: 3 4;
+  }
+
+  circle {
+    fill: none;
+    stroke: var(--kr-berry);
+    stroke-width: 1.4;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .kr-explorer.is-ready .kr-zone.is-on .kr-volatiles circle {
+    animation: kr-drift 3.2s ease-in-out infinite;
+
+    &:nth-child(odd) {
+      animation-delay: 1.1s;
+    }
+  }
+}
+
+@keyframes kr-drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(3px, -5px);
+    opacity: 0.45;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .kr-omics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .kr-omics {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

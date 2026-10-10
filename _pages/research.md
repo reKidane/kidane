@@ -9,7 +9,7 @@ nav_order: 2
 
 ## Research Vision
 
-My research examines how crops respond to complex abiotic stress from the cellular scale to whole-plant and field performance. I integrate physiology, metabolomics, ionomics, transcriptomics, phenomics, root-shoot traits, and computational modeling to identify mechanisms, thresholds, and predictive signatures of resilience.
+My research examines how crops respond to complex abiotic stress from the cellular scale to whole-plant and field performance. I integrate physiology, metabolomics, volatilomics, ionomics, transcriptomics, phenomics, root-shoot traits, and computational modeling to identify mechanisms, thresholds, and predictive signatures of resilience.
 
 ## Major Themes
 
@@ -55,6 +55,13 @@ My research examines how crops respond to complex abiotic stress from the cellul
           <circle cx="132" cy="158" r="4" />
           <circle cx="104" cy="168" r="5" />
           <circle cx="90" cy="188" r="3.5" />
+        </g>
+        <g class="kr-omic-el kr-volatiles" data-omic="volatilomics">
+          <path d="M194 72 C 202 66, 198 58, 206 52 S 212 40, 220 36" />
+          <circle cx="210" cy="70" r="3.2" />
+          <circle cx="222" cy="58" r="2.6" />
+          <circle cx="228" cy="44" r="2" />
+          <circle cx="200" cy="44" r="2.4" />
         </g>
         <g class="kr-omic-el kr-ions" data-omic="ionomics">
           <circle cx="44" cy="118" r="10" /><text x="44" y="121.5">Na⁺</text>
@@ -235,9 +242,10 @@ My research examines how crops respond to complex abiotic stress from the cellul
       <p>My work uses GC-MS, LC-MS, HS-SPME-GC-MS, ICP-OES, and transcriptomic integration to identify biochemical signatures of stress response. I am especially interested in central carbon metabolism, specialized metabolism, ion partitioning, and pathway-level regulation under combined stress.</p>
       <p>Each omics layer answers a different question about the same stressed tissue, so the layers are measured on the same plants and read together. Point at a layer to find it in the drawing.</p>
       <ul class="kr-omics">
+        <li tabindex="0" data-omic="metabolomics"><strong>Metabolomics</strong><span>How carbon is rerouted. GC-MS and LC-MS profiling of central carbon and specialized metabolism.</span></li>
+        <li tabindex="0" data-omic="volatilomics"><strong>Volatilomics</strong><span>How stress reshapes aroma and specialized responses. HS-SPME-GC-MS volatile profiling links stress to berry and wine quality.</span></li>
         <li tabindex="0" data-omic="genomics"><strong>Genomics</strong><span>Which genetic variants underlie a trait. GBS and SNP genotyping, QTL mapping, GWAS, and marker-assisted selection.</span></li>
         <li tabindex="0" data-omic="transcriptomics"><strong>Transcriptomics</strong><span>Which genes are switched on or off under stress. Gene expression profiling integrated with metabolite and ion data.</span></li>
-        <li tabindex="0" data-omic="metabolomics"><strong>Metabolomics</strong><span>How carbon is rerouted. GC-MS and LC-MS profiling of central carbon and specialized metabolism, and HS-SPME-GC-MS for volatiles.</span></li>
         <li tabindex="0" data-omic="ionomics"><strong>Ionomics</strong><span>Where sodium, chloride and potassium accumulate. ICP-OES ion profiling of roots, leaves and berries.</span></li>
         <li tabindex="0" data-omic="phenomics"><strong>Phenomics</strong><span>What the whole plant does. Gas exchange, chlorophyll fluorescence, root and shoot phenotyping, and UAV thermal imaging.</span></li>
       </ul>
