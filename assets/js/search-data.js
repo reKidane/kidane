@@ -88,7 +88,7 @@ ninja.data = [{
           },
         },{id: "nav-gallery",
           title: "Gallery",
-          description: "Photos and visual placeholders for fieldwork, phenotyping, crops, and research activities.",
+          description: "Figures from published papers, from leaf metabolism to vineyard climate and sorghum trials.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/kidane/gallery/";
