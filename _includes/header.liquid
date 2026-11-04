@@ -1,31 +1,57 @@
 <header>
+  <!-- One-time loading screen (skipped after the first page in a visit, and with reduced motion) -->
+  <script>
+    try {
+      if (sessionStorage.getItem('krSeen') || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('kr-seen');
+      }
+    } catch (e) {
+      document.documentElement.classList.add('kr-seen');
+    }
+  </script>
+  <div id="kr-loader" aria-hidden="true">
+    <img src="{{ '/assets/img/logo/resiloris-emblem-dark.svg' | relative_url }}" alt="" width="120" height="120">
+    <span>
+      {{- site.first_name }}
+      {{ site.middle_name }}
+      {{ site.last_name -}}
+    </span>
+  </div>
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-xl {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
-    <div class="container-fluid site-wide-container">
-      {% if page.permalink != '/' %}
-        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
-          <img src="{{ '/assets/img/logo/resiloris-emblem-light.svg' | relative_url }}" alt="RESILORIS logo" class="navbar-logo only-light"
-          ><img src="{{ '/assets/img/logo/resiloris-emblem-dark.svg' | relative_url }}" alt="" aria-hidden="true" class="navbar-logo only-dark">
-          {% if site.title == 'blank' %}
-            {% if site.first_name %}
-              <span class="font-weight-bold">
-                {{- site.first_name -}}
-              </span>
-            {% endif %}
-            {% if site.middle_name %}
-              {{- site.middle_name -}}
-            {% endif %}
-            {% if site.last_name %}
-              {{- site.last_name -}}
-            {% endif %}
-          {% else %}
-            {{- site.title -}}
+    <div class="kr-topbar">
+      <div class="container-fluid site-wide-container">
+        <span class="kr-topbar-note">Integrated plant systems for climate resilience</span>
+        <span class="kr-topbar-links">
+          {% if site.data.socials.scholar_userid %}
+            <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener"
+              >Google Scholar</a
+            >
           {% endif %}
-        </a>
-      {% elsif site.enable_navbar_social %}
-        <!-- Social Icons -->
-        <div class="navbar-brand social">{% social_links %}</div>
-      {% endif %}
+          {% if site.data.socials.cv_pdf %}
+            <a href="{{ site.data.socials.cv_pdf | relative_url }}" target="_blank" rel="noopener">Download CV</a>
+          {% endif %}
+        </span>
+      </div>
+    </div>
+    <div class="container-fluid site-wide-container">
+      <a class="navbar-brand kr-brand" href="{{ site.baseurl }}/">
+        <img src="{{ '/assets/img/logo/resiloris-emblem-light.svg' | relative_url }}" alt="RESILORIS logo" class="navbar-logo only-light"
+        ><img src="{{ '/assets/img/logo/resiloris-emblem-dark.svg' | relative_url }}" alt="" aria-hidden="true" class="navbar-logo only-dark">
+        <span class="kr-brand-text">
+          <span class="kr-brand-name">
+            {%- if site.title == 'blank' -%}
+              {{- site.first_name }}
+              {{ site.last_name -}}
+            {%- else -%}
+              {{- site.title -}}
+            {%- endif -%}
+          </span>
+          <span class="kr-brand-tag kr-rotator" data-words="{{ site.data.home.hero.rotating | join: '|' }}">
+            {{- site.data.home.hero.rotating | first -}}
+          </span>
+        </span>
+      </a>
       <!-- Navbar Toggle -->
       <button
         class="navbar-toggler collapsed ml-auto"
@@ -47,21 +73,6 @@
           {% for page in site.pages %}
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
-
-          <!-- Logo (the brand already shows it on inner pages) -->
-          {% if page.permalink == '/' %}
-            <li class="nav-item navbar-logo-item">
-              <a class="nav-link navbar-logo-link" href="{{ '/' | relative_url }}" aria-label="Home">
-                <img src="{{ '/assets/img/logo/resiloris-emblem-light.svg' | relative_url }}" alt="RESILORIS logo" class="navbar-logo only-light"
-                ><img
-                  src="{{ '/assets/img/logo/resiloris-emblem-dark.svg' | relative_url }}"
-                  alt=""
-                  aria-hidden="true"
-                  class="navbar-logo only-dark"
-                >
-              </a>
-            </li>
-          {% endif %}
 
           <!-- About -->
           <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">

@@ -347,7 +347,7 @@
    * ------------------------------------------------------------------- */
   function revealOnScroll() {
     if (reduceMotion || !("IntersectionObserver" in window)) return;
-    var targets = document.querySelectorAll(".about-section, .about-page .social, .projects .col, .news tr");
+    var targets = document.querySelectorAll(".about-section, .projects .col, .news tr, .kr-intro, .kr-about, .kr-stories, .kr-connect");
     if (!targets.length) return;
     var io = new IntersectionObserver(
       function (entries) {
@@ -443,8 +443,13 @@
         steps[1].disabled = current === tabs.length - 1;
       }
       if (focus) tabs[current].focus();
-      if (tabs[current].scrollIntoView && root.querySelector(".kr-explorer-tabs").scrollWidth > root.clientWidth) {
-        tabs[current].scrollIntoView({ block: "nearest", inline: "center", behavior: reduceMotion ? "auto" : "smooth" });
+      // Scroll only the tab strip sideways; never move the page.
+      var strip = root.querySelector(".kr-explorer-tabs");
+      if (strip && strip.scrollWidth > strip.clientWidth) {
+        var t = tabs[current];
+        var left = strip.scrollLeft + t.getBoundingClientRect().left - strip.getBoundingClientRect().left - (strip.clientWidth - t.offsetWidth) / 2;
+        if (strip.scrollTo) strip.scrollTo({ left: left, behavior: reduceMotion ? "auto" : "smooth" });
+        else strip.scrollLeft = left;
       }
     }
 
@@ -523,7 +528,167 @@
       });
     });
 
-    select(0);
+    var fromHash = -1;
+    tabs.forEach(function (t, i) {
+      if (window.location.hash && "#" + t.getAttribute("aria-controls") === window.location.hash) fromHash = i;
+    });
+    select(fromHash >= 0 ? fromHash : 0);
+    if (fromHash >= 0) {
+      setTimeout(function () {
+        root.scrollIntoView({ block: "start", behavior: reduceMotion ? "auto" : "smooth" });
+      }, 150);
+    }
+  }
+
+  /* ---------------------------------------------------------------------
+   * 7. Loading screen, shown once per visit
+   * ------------------------------------------------------------------- */
+  function loader() {
+    var el = document.getElementById("kr-loader");
+    if (!el) return;
+    function hide() {
+      el.classList.add("is-done");
+      try {
+        sessionStorage.setItem("krSeen", "1");
+      } catch (e) {}
+      setTimeout(function () {
+        if (el.parentNode) el.parentNode.removeChild(el);
+      }, 700);
+    }
+    if (document.documentElement.classList.contains("kr-seen")) {
+      if (el.parentNode) el.parentNode.removeChild(el);
+      return;
+    }
+    var start = Date.now();
+    function done() {
+      setTimeout(hide, Math.max(0, 900 - (Date.now() - start)));
+    }
+    if (document.readyState === "complete") done();
+    else window.addEventListener("load", done);
+    setTimeout(hide, 2600); // never block the page for long
+  }
+
+  /* ---------------------------------------------------------------------
+   * 8. Rotating words (header tagline and hero role)
+   * ------------------------------------------------------------------- */
+  function rotators() {
+    var els = document.querySelectorAll(".kr-rotator[data-words]");
+    Array.prototype.forEach.call(els, function (el) {
+      var words = el.getAttribute("data-words").split("|").filter(Boolean);
+      if (words.length < 2) return;
+      var i = 0;
+      if (reduceMotion) return;
+      setInterval(function () {
+        el.classList.add("is-out");
+        setTimeout(function () {
+          i = (i + 1) % words.length;
+          el.textContent = words[i];
+          el.classList.remove("is-out");
+        }, 380);
+      }, 2800);
+    });
+  }
+
+  /* ---------------------------------------------------------------------
+   * 9. Home: header sits over the hero until the page scrolls
+   * ------------------------------------------------------------------- */
+  function heroHeader() {
+    if (!document.body.classList.contains("kr-home")) return;
+    var hero = document.querySelector(".kr-hero");
+    if (!hero) return;
+    function update() {
+      var past = window.scrollY > Math.max(80, hero.offsetHeight - 140);
+      document.body.classList.toggle("kr-over-hero", !past);
+    }
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  }
+
+  /* ---------------------------------------------------------------------
+   * 10. Research in numbers: pinned section that scrolls sideways
+   * ------------------------------------------------------------------- */
+  function numbersScroller() {
+    var section = document.querySelector(".kr-numbers");
+    if (!section) return;
+    var track = section.querySelector(".kr-numbers-track");
+    var dots = section.querySelectorAll(".kr-numbers-dots span");
+    var cards = track ? track.children : [];
+    if (!track || !cards.length) return;
+
+    var wide = window.matchMedia("(min-width: 992px)");
+    function setup() {
+      var on = wide.matches && !reduceMotion;
+      section.classList.toggle("is-pinned", on);
+      if (!on) {
+        section.style.height = "";
+        track.style.transform = "";
+        return;
+      }
+      // Section is as tall as the sideways distance plus one screen.
+      var distance = track.scrollWidth - track.clientWidth;
+      section.style.height = window.innerHeight + Math.max(0, distance) + "px";
+      section.setAttribute("data-distance", distance);
+      tick();
+    }
+    var ticking = false;
+    function tick() {
+      ticking = false;
+      var distance = parseFloat(section.getAttribute("data-distance") || 0);
+      var r = section.getBoundingClientRect();
+      var span = section.offsetHeight - window.innerHeight;
+      var p = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 0;
+      if (section.classList.contains("is-pinned")) track.style.transform = "translate3d(" + -p * distance + "px,0,0)";
+      var active = Math.min(cards.length - 1, Math.round(p * (cards.length - 1)));
+      if (!section.classList.contains("is-pinned")) {
+        // stacked layout: active card is the one nearest the middle of the screen
+        var mid = window.innerHeight / 2,
+          best = 1e9;
+        Array.prototype.forEach.call(cards, function (c, i) {
+          var cr = c.getBoundingClientRect();
+          var d = Math.abs(cr.top + cr.height / 2 - mid);
+          if (d < best) {
+            best = d;
+            active = i;
+          }
+        });
+      }
+      Array.prototype.forEach.call(dots, function (d, i) {
+        d.classList.toggle("is-active", i === active);
+      });
+    }
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(tick);
+        }
+      },
+      { passive: true }
+    );
+    var rt;
+    window.addEventListener("resize", function () {
+      clearTimeout(rt);
+      rt = setTimeout(setup, 150);
+    });
+    window.addEventListener("load", setup);
+    setup();
+  }
+
+  /* ---------------------------------------------------------------------
+   * 11. Story cards: one open at a time
+   * ------------------------------------------------------------------- */
+  function storyCards() {
+    var items = document.querySelectorAll(".kr-story");
+    Array.prototype.forEach.call(items, function (d) {
+      d.addEventListener("toggle", function () {
+        if (!d.open) return;
+        Array.prototype.forEach.call(items, function (o) {
+          if (o !== d) o.open = false;
+        });
+      });
+    });
   }
 
   ready(function () {
@@ -533,5 +698,10 @@
     copyEmail();
     revealOnScroll();
     researchExplorer();
+    loader();
+    rotators();
+    heroHeader();
+    numbersScroller();
+    storyCards();
   });
 })();

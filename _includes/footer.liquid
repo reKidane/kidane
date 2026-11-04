@@ -18,13 +18,71 @@
     </div>
   </footer>
 {% else %}
-  <footer class="sticky-bottom mt-5" role="contentinfo">
+  <footer class="sticky-bottom kr-footer" role="contentinfo">
     {% if site.newsletter.enabled %}
       {% include newsletter.liquid %}
     {% endif %}
 
     <div class="container-fluid site-wide-container">
-      {{ footer_contents }}
+      <a class="kr-footer-brand" href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/img/logo/resiloris-emblem-dark.svg' | relative_url }}" alt="RESILORIS emblem" width="96" height="96">
+        <span>
+          {{- site.first_name }}
+          {{ site.middle_name }}
+          {{ site.last_name -}}
+        </span>
+      </a>
+
+      <!-- Every page in the navigation, in two columns -->
+      <nav class="kr-footer-links" aria-label="Site pages">
+        {% assign sorted_pages = site.pages | sort: 'nav_order' %}
+        {% for p in sorted_pages %}
+          {% if p.permalink == '/' %}
+            <a href="{{ '/' | relative_url }}">{{ p.title }}</a>
+          {% endif %}
+        {% endfor %}
+        {% for p in sorted_pages %}
+          {% if p.nav and p.autogen == null %}
+            {% if p.dropdown %}
+              {% for child in p.children %}
+                {% unless child.title == 'divider' %}
+                  <a href="{% if child.permalink contains '://' %}{{ child.permalink }}{% else %}{{ child.permalink | relative_url }}{% endif %}">
+                    {{- child.title -}}
+                  </a>
+                {% endunless %}
+              {% endfor %}
+            {% else %}
+              {%- if p.permalink contains '://' -%}
+                {%- assign url = p.permalink -%}
+              {%- elsif p.permalink contains '/blog/' -%}
+                {%- assign url = '/blog/' -%}
+              {%- else -%}
+                {%- assign url = p.url -%}
+              {%- endif %}
+              <a href="{{ url | relative_url }}">{{ p.title }}</a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </nav>
+
+      <div class="kr-footer-pills">
+        {% if site.data.socials.scholar_userid %}
+          <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener">Google Scholar</a>
+        {% endif %}
+        {% if site.data.socials.orcid_id %}
+          <a href="https://orcid.org/{{ site.data.socials.orcid_id }}" target="_blank" rel="noopener">ORCID</a>
+        {% endif %}
+        {% if site.data.socials.cv_pdf %}
+          <a href="{{ site.data.socials.cv_pdf | relative_url }}" target="_blank" rel="noopener">Download CV</a>
+        {% endif %}
+      </div>
+
+      <p class="kr-footer-note">{{ site.contact_note }}</p>
+
+      <div class="kr-footer-bottom">
+        <div class="kr-footer-copy">{{ footer_contents }}</div>
+        <div class="kr-footer-social contact-icons">{% social_links %}</div>
+      </div>
     </div>
   </footer>
 {% endif %}

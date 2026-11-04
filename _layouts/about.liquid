@@ -1,42 +1,70 @@
 ---
 layout: default
 ---
-<div class="post about-page">
-  <div class="about-hero">
-    <header class="post-header about-intro">
-      <h1 class="post-title">
-        {% if site.title == 'blank' %}
-          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-          {{ site.last_name }}
-        {% else %}
-          {{ site.title }}
+{% assign home = site.data.home %}
+<div class="post about-page kr-home-page">
+  <!-- Hero: full-screen, deep green, emblem, name and a rotating role -->
+  <section class="kr-hero" aria-label="Introduction">
+    <div class="kr-hero-inner">
+      <div class="kr-hero-text">
+        <img
+          class="kr-hero-emblem"
+          src="{{ '/assets/img/logo/resiloris-emblem-dark.svg' | relative_url }}"
+          alt="RESILORIS emblem"
+          width="160"
+          height="160"
+        >
+        <h1 class="kr-hero-name">
+          {% if site.title == 'blank' %}
+            {{ site.first_name }}
+            <span>
+              {{- site.middle_name }}
+              {{ site.last_name -}}
+            </span>
+          {% else %}
+            {{ site.title }}
+          {% endif %}
+        </h1>
+        <p class="kr-hero-role">
+          <span class="kr-rotator" data-words="{{ home.hero.rotating | join: '|' }}" aria-live="polite">{{ home.hero.rotating | first }}</span>
+        </p>
+        {% if page.subtitle %}
+          {% assign roles = page.subtitle | split: '|' %}
+          <ul class="role-list kr-hero-roles" aria-label="Research areas">
+            {% for role in roles %}
+              {% assign role_clean = role | strip %}
+              {% if role_clean != '' %}
+                <li>{{ role_clean }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
         {% endif %}
-      </h1>
-      {% if page.subtitle %}
-        {% assign roles = page.subtitle | split: '|' %}
-        <ul class="role-list desc" aria-label="Research areas">
-          {% for role in roles %}
-            {% assign role_clean = role | strip %}
-            {% if role_clean != '' %}
-              <li>{{ role_clean }}</li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      {% endif %}
-    </header>
+      </div>
+      <figure class="kr-hero-photo">
+        <img src="{{ home.hero.image | prepend: '/assets/img/' | relative_url }}" alt="{{ home.hero.image_alt }}" loading="eager">
+      </figure>
+    </div>
+    <a class="kr-scroll-cue" href="#kr-intro">Scroll</a>
+  </section>
 
+  <!-- Intro: one clear statement and two ways forward -->
+  <section class="kr-intro" id="kr-intro">
+    <h2 class="kr-intro-heading">{{ home.intro.heading }}</h2>
+    <div class="kr-intro-actions">
+      <a class="kr-btn kr-btn-solid" href="{{ '/research/' | relative_url }}">Explore my research</a>
+      <a class="kr-btn kr-btn-outline" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- About: portrait, affiliation and the full biography -->
+  <div class="about-hero kr-about">
     {% if page.profile %}
       <div class="profile">
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid' %}
-          {% endif %}
           {% capture sizes %}(min-width: 992px) 340px, (min-width: 576px) 45vw, 90vw{% endcapture %}
           {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+            include figure.liquid loading="lazy" path=profile_image_path class="img-fluid" sizes=sizes alt="Portrait of Kidanemaryam W. Reta"
             cache_bust=true
           %}
         {% endif %}
@@ -45,11 +73,58 @@ layout: default
         {% endif %}
       </div>
     {% endif %}
-
     <article class="about-bio">
+      <h2 class="section-heading kr-plain-heading">About</h2>
       <div class="clearfix">{{ content }}</div>
     </article>
   </div>
+
+  <!-- Research in numbers: scrolls sideways while the section is pinned -->
+  {% if home.numbers %}
+    <section class="kr-numbers" aria-label="{{ home.numbers.title }}">
+      <div class="kr-numbers-pin">
+        <div class="kr-numbers-head">
+          <h2>{{ home.numbers.title }}</h2>
+          <div class="kr-numbers-dots" aria-hidden="true">
+            {% for item in home.numbers.items -%}
+              <span></span>
+            {%- endfor %}
+          </div>
+        </div>
+        <div class="kr-numbers-track">
+          {% for item in home.numbers.items %}
+            <a class="kr-number" href="{{ item.link | relative_url }}">
+              <div class="kr-number-text">
+                <p class="kr-number-value">{{ item.value }}</p>
+                <p class="kr-number-label">{{ item.label }}</p>
+              </div>
+              <figure class="kr-number-photo{% if item.contain %} is-contain{% endif %}">
+                <img src="{{ item.image | prepend: '/assets/img/' | relative_url }}" alt="{{ item.image_alt }}" loading="lazy">
+              </figure>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- One connected research program: stacked earth-toned cards -->
+  {% if home.themes %}
+    <section class="kr-stories" aria-label="{{ home.themes.title }}">
+      <h2 class="kr-stories-title">{{ home.themes.title }}</h2>
+      <div class="kr-stories-list">
+        {% for item in home.themes.items %}
+          <details class="kr-story tone-{{ item.tone }}">
+            <summary>{{ item.name }}</summary>
+            <div class="kr-story-body">
+              <p>{{ item.text }}</p>
+              <a href="{{ item.link | relative_url }}">Explore this theme</a>
+            </div>
+          </details>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
 
   <div class="about-sections">
     <!-- News -->
@@ -81,18 +156,22 @@ layout: default
         {% include selected_papers.liquid %}
       </section>
     {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <section class="social">
-        <div class="contact-icons">{% social_links %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </section>
-    {% endif %}
-
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
   </div>
+
+  <!-- Work with me: pathways into the site -->
+  {% if home.connect %}
+    <section class="kr-connect">
+      <h2>{{ home.connect.title }}</h2>
+      <p>{{ home.connect.text }}</p>
+      <div class="kr-connect-grid">
+        {% for item in home.connect.links %}
+          <a class="kr-btn kr-btn-outline" href="{{ item.url | relative_url }}">{{ item.label }}</a>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+    {% include newsletter.liquid center=true %}
+  {% endif %}
 </div>
