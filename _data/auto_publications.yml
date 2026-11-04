@@ -1,56 +1,149 @@
 # Automatically updated from OpenAlex. Edit script settings, not this file.
-# Last updated: 2026-10-05
-- title: "Metabolic network homeostasis and antagonistic stress response drive rootstock-mediated tolerance to combined salinity and water-deficit in grapevine cv. Syrah"
+# Last updated: 2026-11-02
+- title: "Multiscale Phenomics Reveals a Varietal Signature of Grapevine Response to Heatwaves"
   year: 2026
-  date: "2026-06-25"
+  date: "2026-07-22"
   authors:
-    - "Kidanemaryam Wagaw"
+    - "Kidanemaryam Reta"
+    - "Tamir Caras"
+    - "Pankaj Verma"
+    - "Noga Sikon-Persi"
+    - "Nang Cherry"
+    - "Amnon Bustan"
+    - "Naftali Lazarovitch"
+    - "Tarin Paz‐Kagan"
+    - "Aaron Fait"
+  source: "Research Square"
+  doi: "https://doi.org/10.21203/rs.3.rs-10256443/v1"
+  openalex: "https://openalex.org/W7170043819"
+  citations: 0
+  type: "preprint"
+
+- title: "Contrasting metabolic and physiological responses underlie rootstock-mediated tolerance to combined salinity and water-deficit stress in cv. Syrah"
+  year: 2026
+  date: "2026-01-01"
+  authors:
+    - "Kidanemaryam Reta"
     - "Yaniv Lupo"
-    - "Noga Sikron-Persi"
+    - "Noga Sikron"
     - "Tania Acuña"
     - "Naftali Lazarovitch"
     - "Aaron Fait"
-  source: "Plant Stress"
-  doi: "https://doi.org/10.1016/j.stress.2026.101456"
-  openalex: "https://openalex.org/W7165957910"
+  source: "SSRN Electronic Journal"
+  doi: "https://doi.org/10.2139/ssrn.6395920"
+  openalex: "https://openalex.org/W7135039750"
   citations: 0
-  type: "article"
+  type: "preprint"
 
-- title: "Evaluating the Genetic Variations Among Improved Haricot Bean Varieties (Phaseolus vulgaris L.) Based on Their Agronomic Traits and Performing Their Half Diallel Cross"
-  year: 2021
-  date: "2021-01-01"
+- title: "Contrasting metabolic and physiological responses underlie rootstock-mediated tolerance to combined salinity and water-deficit stress in cv. Syrah"
+  year: 2026
+  date: "2026-01-01"
   authors:
-    - "Getahun Bekana"
-    - "Endashaw Girma"
-    - "Abenezer Abebe"
-    - "Alemnesh Sisay"
-    - "Desalegn Alemayehu"
-    - "Kidanemaryam Wagaw"
-    - "Awol Beshir"
-    - "Desalegn Chalchisa"
-    - "Fassil Hailu"
-    - "Deressa Tesfaye"
-  source: "American Journal of BioScience"
-  doi: "https://doi.org/10.11648/j.ajbio.20210905.13"
-  openalex: "https://openalex.org/W3205222450"
-  citations: 3
-  type: "article"
+    - "Kidanemaryam Reta"
+    - "Yaniv Lupo"
+    - "Noga Sikron"
+    - "Tania Acuña"
+    - "Naftali Lazarovitch"
+    - "Aaron Fait"
+  source: "SSRN Electronic Journal"
+  doi: "https://doi.org/10.2139/ssrn.6443060"
+  openalex: "https://openalex.org/W7138866858"
+  citations: 0
+  type: "preprint"
 
-- title: "Multi-environment trial and spatial analysis for yield performance of sorghum [Sorghum bicolor (L.) Moench] hybrids in dry lowland sorghum growing areas of Ethiopia"
-  year: 2020
-  date: "2020-10-31"
+- title: "Modulation of phenology and agronomical performance of Syrah grafted on two rootstocks under combined salinity and water stress conditions: A three-year field study"
+  year: 2025
+  date: "2025-09-24"
   authors:
-    - "Kidanemaryam Wagaw"
-    - "Amare Seyoum"
-    - "Amare Nega"
-    - "Taye Tadesse"
-    - "Daniel Nadew"
-    - "Habte Nida"
-    - "Alemu Tirfessa"
-    - "A Gebre-Yohannes"
-  source: "Journal of Plant Breeding and Crop Science"
-  doi: "https://doi.org/10.5897/jpbcs2019.0850"
-  openalex: "https://openalex.org/W3092823050"
+    - "Kidanemaryam Reta"
+    - "Yaniv Lupo"
+    - "Noga Sikron Persi"
+    - "Naftali Lazarovitch"
+    - "Aaron Fait"
+  source: "Plant Stress"
+  doi: "https://doi.org/10.1016/j.stress.2025.101050"
+  openalex: "https://openalex.org/W4414475689"
   citations: 4
   type: "article"
+
+- title: "Metabolic and Physiological Analysis Reveals Distinct Salinity Tipping Point in Vitis Vinifera Cv. Syrah to Enter a Stress Response Mode"
+  year: 2025
+  date: "2025-01-01"
+  authors:
+    - "Kidanemaryam Reta"
+    - "Naftali Lazarovitch"
+    - "Aaron Fait"
+  source: "SSRN Electronic Journal"
+  doi: "https://doi.org/10.2139/ssrn.5109238"
+  openalex: "https://openalex.org/W4406750151"
+  citations: 0
+  type: "preprint"
+
+- title: "Modulation of Grafted Syrah Grapevine Phenology and Agronomical Performance on Two Rootstocks Under Combined Salinity and Water Stress Conditions: A Three-Year Field Study"
+  year: 2025
+  date: "2025-01-01"
+  authors:
+    - "Kidanemaryam Reta"
+    - "Yaniv Lupo"
+    - "Noga Sikron"
+    - "Naftali Lazarovitch"
+    - "Aaron Fait"
+  source: "SSRN Electronic Journal"
+  doi: "https://doi.org/10.2139/ssrn.5291409"
+  openalex: "https://openalex.org/W4411258123"
+  citations: 0
+  type: "preprint"
+
+- title: "Improved berry and wine quality of Vitis vinifera L. cv. Gewürztraminer grown in an arid climate using a Y-shaped training system"
+  year: 2024
+  date: "2024-03-12"
+  authors:
+    - "Yaara Zohar"
+    - "Kidanemaryam Reta"
+    - "Elyashiv Drori"
+    - "Udi Gliksman"
+    - "Shiki Rauchberger"
+    - "Einat Bar"
+    - "Efraim Lewinsohn"
+    - "Nurit Agam"
+    - "Aaron Fait"
+  source: "OENO One"
+  doi: "https://doi.org/10.20870/oeno-one.2024.58.1.7148"
+  openalex: "https://openalex.org/W4392748351"
+  citations: 7
+  type: "article"
+
+- title: "Metabolic and Physiological Analysis Reveals Distinct Salinity Tipping Point in Vitis Vinifera Cv. Syrah to Enter a Stress Response Mode"
+  year: 2024
+  date: "2024-01-01"
+  authors:
+    - "Kidanemaryam Reta"
+    - "Yuval Shani"
+    - "Liron Summerfield"
+    - "Noga Sikron"
+    - "Tania Acuña"
+    - "Naftali Lazarovitch"
+    - "Aaron Fait"
+  source: "SSRN Electronic Journal"
+  doi: "https://doi.org/10.2139/ssrn.5031895"
+  openalex: "https://openalex.org/W4404648331"
+  citations: 0
+  type: "preprint"
+
+- title: "Effect of salinity and water regime, mediated by rootstock, on cv ‘Syrah’ must metabolite profile and vine physiology"
+  year: 2022
+  date: "2022-01-01"
+  authors:
+    - "Kidanemaryam Reta"
+    - "Yaniv Lupo"
+    - "Tania Acuña"
+    - "Noga Sikron"
+    - "Pankaj Verma"
+    - "Naftali Lazarovitch"
+    - "Aaron Fait"
+  source: "OpenAgrar"
+  doi: ""
+  openalex: "https://openalex.org/W7132530728"
+  citations: 0
+  type: "conference-abstract"
 
