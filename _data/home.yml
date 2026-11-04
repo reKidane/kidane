@@ -15,6 +15,24 @@ hero:
 intro:
   heading: How crops respond to combined stress, from the cell to the field.
 
+# Words that glide across the ribbon under the intro.
+ribbon:
+  - metabolomics
+  - volatilomics
+  - ionomics
+  - transcriptomics
+  - genomics
+  - phenomics
+  - heat
+  - drought
+  - salinity
+  - grapevine
+  - sorghum
+  - cereals
+  - rootstocks
+  - network inference
+  - machine learning
+
 # Big numbers shown in the sideways-scrolling section. Keep them factual.
 numbers:
   title: Research in numbers

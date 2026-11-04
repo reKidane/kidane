@@ -249,6 +249,7 @@ My research examines how crops respond to complex abiotic stress from the cellul
         <li tabindex="0" data-omic="ionomics"><strong>Ionomics</strong><span>Where sodium, chloride and potassium accumulate. ICP-OES ion profiling of roots, leaves and berries.</span></li>
         <li tabindex="0" data-omic="phenomics"><strong>Phenomics</strong><span>What the whole plant does. Gas exchange, chlorophyll fluorescence, root and shoot phenotyping, and UAV thermal imaging.</span></li>
       </ul>
+      {% include kr-evidence.liquid theme="omics" %}
       <div class="kr-panel-related">
         <p class="kr-related-title">Related papers</p>
         <ul>
@@ -269,6 +270,7 @@ My research examines how crops respond to complex abiotic stress from the cellul
         <li>Photosynthesis and water status</li>
         <li>Growth, phenology and yield</li>
       </ol>
+      {% include kr-evidence.liquid theme="thresholds" %}
       <div class="kr-panel-related">
         <p class="kr-related-title">Related papers</p>
         <ul>
@@ -281,6 +283,7 @@ My research examines how crops respond to complex abiotic stress from the cellul
     <section class="kr-panel" role="tabpanel" id="rt-rootstock" aria-labelledby="rt-tab-rootstock" data-zones="plant">
       <h3>Rootstock-Mediated Stress Resilience</h3>
       <p>I study how belowground traits influence scion physiology and whole-plant performance. Key questions include how root system architecture, ion selectivity, and root-shoot signaling shape stress acclimation and yield stability.</p>
+      {% include kr-evidence.liquid theme="rootstock" %}
       <div class="kr-panel-related">
         <p class="kr-related-title">Related papers</p>
         <ul>
@@ -293,6 +296,7 @@ My research examines how crops respond to complex abiotic stress from the cellul
     <section class="kr-panel" role="tabpanel" id="rt-combined" aria-labelledby="rt-tab-combined" data-zones="plant vineyard">
       <h3>Combined Abiotic Stress In Grapevine</h3>
       <p>My PhD research focused on <em>Vitis vinifera</em> grafts exposed to combined salinity, water deficit, and heat-related stress. The work links rootstock variation with ion regulation, photosynthesis, water status, metabolism, phenology, and agronomic performance.</p>
+      {% include kr-evidence.liquid theme="combined" %}
       <div class="kr-panel-related">
         <p class="kr-related-title">Related papers</p>
         <ul>
@@ -314,6 +318,7 @@ My research examines how crops respond to complex abiotic stress from the cellul
         <li>Barley</li>
         <li>Haricot bean</li>
       </ul>
+      {% include kr-evidence.liquid theme="breeding" %}
       <div class="kr-panel-related">
         <p class="kr-related-title">Related papers</p>
         <ul>
@@ -333,6 +338,7 @@ My research examines how crops respond to complex abiotic stress from the cellul
     <section class="kr-panel" role="tabpanel" id="rt-climate" aria-labelledby="rt-tab-climate" data-zones="vineyard climate">
       <h3>Climate-Informed Predictive Modeling</h3>
       <p>Current postdoctoral work integrates multi-year physiological phenotyping, UAV-based thermal sensing, metabolomics, gene expression, and climate data to predict varietal performance under heatwave stress and future climate scenarios.</p>
+      {% include kr-evidence.liquid theme="climate" %}
       <div class="kr-panel-related">
         <p class="kr-related-title">Related papers</p>
         <ul>

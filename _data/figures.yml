@@ -1,0 +1,225 @@
+# Figures reused from published papers, shown on the Gallery and Research pages.
+# Every paper below is open access; each figure carries its credit and licence.
+# Images live in assets/img/figures/<id>.jpg (full) and <id>-thumb.jpg (card).
+# themes: research explorer panels (omics, thresholds, rootstock, combined, breeding, climate)
+# tags: gallery filters (grapevine, sorghum, networks, thresholds, omics, field)
+
+papers:
+  tipping:
+    label: Syrah crosses a distinct salinity tipping point before entering a stress-response mode
+    short: Reta et al. 2025
+    journal: Plant Stress
+    year: 2025
+    doi: 10.1016/j.stress.2025.100864
+    license: CC BY-NC-ND 4.0
+    license_url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+  rootstock:
+    label: Metabolic network homeostasis drives rootstock-mediated tolerance to combined stress
+    short: Reta et al. 2026
+    journal: Plant Stress
+    year: 2026
+    doi: 10.1016/j.stress.2026.101456
+    license: CC BY-NC-ND 4.0
+    license_url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+  field:
+    label: Rootstock choice modulates Syrah phenology and yield across three field seasons
+    short: Reta et al. 2025
+    journal: Plant Stress
+    year: 2025
+    doi: 10.1016/j.stress.2025.101050
+    license: CC BY-NC-ND 4.0
+    license_url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+  heatwave:
+    label: Multiscale phenomics reveals a varietal signature of grapevine response to heatwaves
+    short: Reta et al. 2026
+    journal: Preprint, under review
+    year: 2026
+    doi: 10.21203/rs.3.rs-10256443/v1
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0/
+  ytrellis:
+    label: A Y-shaped training system improves Gewurztraminer berry and wine quality in an arid climate
+    short: Zohar, Reta et al. 2024
+    journal: OENO One
+    year: 2024
+    doi: 10.20870/oeno-one.2024.58.1.7148
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0/
+  sorghum_met:
+    label: Spatial analysis separates stable sorghum genotypes and mega-environments for grain yield
+    short: Wagaw et al. 2021
+    journal: American Journal of Plant Sciences
+    year: 2021
+    doi: 10.4236/ajps.2021.123027
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0/
+  sorghum_gca:
+    label: Gene action, combining ability and heterosis characterized in Ethiopian sorghum lines under moisture stress
+    short: Wagaw et al. 2020
+    journal: African Journal of Plant Science
+    year: 2020
+    doi: 10.5897/AJPS2019.1813
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0/
+
+figures:
+  - id: tipping-breakpoints
+    paper: tipping
+    fig: Fig. 4
+    title: Leaf chloride and sodium set breakpoints for water status and stomatal conductance
+    caption: Segmented regression of stem water potential and stomatal conductance against leaf Cl⁻ and Na⁺. Two breakpoints mark where Syrah shifts into a stress-response mode.
+    width: 1920
+    height: 2000
+    tags: [grapevine, thresholds]
+    themes: [thresholds, combined]
+    featured: true
+  - id: tipping-network
+    paper: tipping
+    fig: Fig. 6
+    title: Salinity rewires the links between ions, metabolites and physiology
+    caption: Correlation and bipartite networks of leaf metabolites, ions and physiological traits under control, low and high salinity.
+    width: 1478
+    height: 830
+    tags: [grapevine, networks, omics]
+    themes: [thresholds, omics]
+    featured: true
+  - id: tipping-heatmap
+    paper: tipping
+    fig: Fig. 5
+    title: Salinity reshapes central metabolism in Syrah leaves over time
+    caption: Log₂ fold-change of leaf metabolites relative to the control across salinity levels and time points, with distribution and coefficient of variation.
+    width: 2000
+    height: 1132
+    tags: [grapevine, omics]
+    themes: [omics]
+  - id: tipping-ions
+    paper: tipping
+    fig: Fig. 3
+    title: Leaf ions accumulate in step with rising salinity
+    caption: Sodium, calcium, copper, zinc, chloride, magnesium, iron and potassium in Syrah leaves across salinity treatments.
+    width: 2000
+    height: 1316
+    tags: [grapevine, omics]
+    themes: [omics]
+  - id: rootstock-network
+    paper: rootstock
+    fig: Fig. 7
+    title: Rootstocks decide how metabolism and physiology stay coordinated under salinity
+    caption: Correlation networks of central metabolites, physiological and agronomic traits in Syrah grafted on SO4 and PL1103, under non-saline and high-saline conditions.
+    width: 1490
+    height: 873
+    tags: [grapevine, networks, omics]
+    themes: [rootstock, thresholds]
+    featured: true
+  - id: rootstock-pca
+    paper: rootstock
+    fig: Fig. 1
+    title: Rootstock and treatment separate physiological and agronomic responses
+    caption: Principal component analysis of physiology, phenology, water potential, leaf chloride and soil traits for SO4 and PL1103 grafts across seasons.
+    width: 2000
+    height: 1462
+    tags: [grapevine, field]
+    themes: [rootstock]
+  - id: field-yield-threshold
+    paper: field
+    fig: Fig. 8
+    title: Yield falls beyond a rootstock-specific soil salinity threshold
+    caption: Maas-Hoffman piecewise regression of fruit yield on soil salinity. The breakpoint sits at 3.47 dS m⁻¹ for PL1103 and 2.71 dS m⁻¹ for SO4.
+    width: 1941
+    height: 1231
+    tags: [grapevine, thresholds, field]
+    themes: [thresholds, combined, rootstock]
+    featured: true
+  - id: field-correlation
+    paper: field
+    fig: Fig. 6
+    title: Soil salinity and chloride track phenology, fluorescence and yield
+    caption: Correlation matrix and network linking phenological, agronomic, morphological, chlorophyll fluorescence and soil traits in SO4 grafts.
+    width: 1808
+    height: 1636
+    tags: [grapevine, networks, field]
+    themes: [combined]
+  - id: field-pca
+    paper: field
+    fig: Fig. 7
+    title: Each rootstock follows its own response path across treatments
+    caption: Principal component analysis of phenological, agronomic, morphological and soil traits for SO4 and PL1103 over three field seasons.
+    width: 1949
+    height: 1583
+    tags: [grapevine, field]
+    themes: [combined, rootstock]
+  - id: heatwave-networks
+    paper: heatwave
+    fig: Figure 8
+    title: Each grape variety builds its own heat-stress network
+    caption: Correlation networks linking metabolites, canopy temperature, sugar metabolism genes and physiology in the leaves of six red grapevine varieties.
+    width: 3600
+    height: 2171
+    tags: [grapevine, networks, omics]
+    themes: [climate, omics]
+    featured: true
+  - id: heatwave-metabolism
+    paper: heatwave
+    fig: Figure 6
+    title: Varieties differ in central metabolism under heatwave stress
+    caption: Relative content of central metabolites across red grapevine varieties under heatwaves, with PLS-DA separation for each season.
+    width: 878
+    height: 1086
+    tags: [grapevine, omics]
+    themes: [climate]
+  - id: heatwave-temperature
+    paper: heatwave
+    fig: Figure 1
+    title: Three seasons of maximum temperatures frame the heatwave sampling
+    caption: Range of daily maximum temperatures with sampling days marked, the number of heatwave days over eight years, and the vineyard layout.
+    width: 884
+    height: 528
+    tags: [grapevine, field]
+    themes: [climate]
+  - id: ytrellis
+    paper: ytrellis
+    fig: Figure 1
+    title: A Y-shaped canopy for Gewurztraminer in an arid climate
+    caption: In-row drawings of the SAYM and VSP training systems, with photos of the open Y structure and its closing after harvest.
+    width: 2000
+    height: 845
+    tags: [grapevine, field]
+    themes: [climate]
+    featured: true
+  - id: sorghum-gge-ranking
+    paper: sorghum_met
+    fig: Figure 2
+    title: A GGE biplot ranks sorghum genotypes for yield and stability
+    caption: Ranking biplot of sorghum genotypes for grain yield and stability across seven environments in Ethiopia.
+    width: 1181
+    height: 1317
+    tags: [sorghum]
+    themes: [breeding]
+    featured: true
+  - id: sorghum-mega-environment
+    paper: sorghum_met
+    fig: Figure 5
+    title: Testing sites group into sorghum mega-environments
+    caption: Polygon view of genotype-by-environment interaction that groups seven testing environments into mega-environments.
+    width: 1181
+    height: 1451
+    tags: [sorghum, field]
+    themes: [breeding]
+  - id: sorghum-dendrogram
+    paper: sorghum_gca
+    fig: Figure 4
+    title: Male inbred lines cluster by their combining ability
+    caption: Ward dendrogram of 35 sorghum male inbred lines built from general combining ability effects for grain yield and other traits.
+    width: 591
+    height: 481
+    tags: [sorghum]
+    themes: [breeding]
+  - id: sorghum-gene-action
+    paper: sorghum_gca
+    fig: Figure 2
+    title: Additive and dominance effects differ by trait
+    caption: Additive variance, dominance variance and degree of dominance estimated for grain yield and agronomic traits.
+    width: 713
+    height: 385
+    tags: [sorghum]
+    themes: [breeding]

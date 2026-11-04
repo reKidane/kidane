@@ -56,6 +56,21 @@ layout: default
     </div>
   </section>
 
+  <!-- Ribbon: research keywords gliding across the page -->
+  {% if home.ribbon %}
+    <div class="kr-ribbon" aria-hidden="true">
+      <div class="kr-ribbon-track">
+        {% for copy in (1..2) %}
+          <ul>
+            {% for word in home.ribbon %}
+              <li>{{ word }}</li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
   <!-- About: portrait, affiliation and the full biography -->
   <div class="about-hero kr-about">
     {% if page.profile %}

@@ -1,0 +1,36 @@
+{% comment %}
+  One figure card. Pass fig=<entry from site.data.figures.figures>.
+  The link opens the full image without JavaScript; with it, the viewer opens instead.
+{% endcomment %}
+{% assign fig = include.fig %}
+{% assign paper = site.data.figures.papers[fig.paper] %}
+{% capture full %}{{ '/assets/img/figures/' | append: fig.id | append: '.jpg' | relative_url }}{% endcapture %}
+{% capture credit %}<a href="https://doi.org/{{ paper.doi }}" target="_blank" rel="noopener">{{ paper.short }}, {{ paper.journal }}, {{ fig.fig }}</a>. Reproduced under <a href="{{ paper.license_url }}" target="_blank" rel="noopener">{{ paper.license }}</a>.{% endcapture %}
+<a
+  class="kr-fig{% if include.size %} kr-fig-{{ include.size }}{% endif %}"
+  href="{{ full }}"
+  data-kr-fig
+  data-full="{{ full }}"
+  data-title="{{ fig.title | escape }}"
+  data-caption="{{ fig.caption | escape }}"
+  data-paper="{{ paper.label | escape }}"
+  data-credit="{{ credit | escape }}"
+  data-tags="{{ fig.tags | join: ' ' }}"
+  style="--kr-ar: {{ fig.width }} / {{ fig.height }}"
+>
+  <span class="kr-fig-mat">
+    <img
+      src="{{ '/assets/img/figures/' | append: fig.id | append: '-thumb.jpg' | relative_url }}"
+      alt="{{ fig.title | escape }}"
+      width="{{ fig.width }}"
+      height="{{ fig.height }}"
+      loading="lazy"
+      decoding="async"
+    >
+    <span class="kr-fig-open" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+  </span>
+  <span class="kr-fig-meta">
+    <span class="kr-fig-kicker">{{ paper.journal }} · {{ paper.year }} · {{ fig.fig }}</span>
+    <span class="kr-fig-title">{{ fig.title }}</span>
+  </span>
+</a>

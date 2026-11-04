@@ -1,0 +1,16 @@
+{% comment %}
+  Figures from the papers for one research theme. Pass theme=<panel key>.
+{% endcomment %}
+<div class="kr-evidence" data-kr-gallery>
+  <div class="kr-evidence-head">
+    <p class="kr-related-title">Evidence from the papers</p>
+    <a class="kr-evidence-all" href="{{ '/gallery/' | relative_url }}">All figures</a>
+  </div>
+  <div class="kr-evidence-track">
+    {% for fig in site.data.figures.figures %}
+      {% if fig.themes contains include.theme %}
+        {% include kr-fig-card.liquid fig=fig size="sm" %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
