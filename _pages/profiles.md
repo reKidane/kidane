@@ -13,7 +13,7 @@ nav_order: 11
 
 <div class="row align-items-start mb-4">
   <div class="col-md-3">
-    {% include figure.liquid path="assets/img/2.jpg" title="Kidanemaryam Wagaw Reta" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/lab-uplc.jpg" title="Kidanemaryam Wagaw Reta" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-md-9">
     <h3>Kidanemaryam Wagaw Reta</h3>

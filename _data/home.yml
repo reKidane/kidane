@@ -9,8 +9,8 @@ hero:
     - crop stress biologist
     - multi-omics integrator
     - predictive modeler
-  image: 2.jpg
-  image_alt: Working at the microscope in the laboratory
+  image: lab-uplc.jpg
+  image_alt: Loading samples into a UPLC system for metabolomics in the laboratory
 
 intro:
   heading: How crops respond to combined stress, from the cell to the field.
@@ -44,8 +44,8 @@ numbers:
       link: /publications/
     - value: "6"
       label: omics layers read together, from genome to phenotype
-      image: 2.jpg
-      image_alt: Laboratory work at the microscope
+      image: lab-uplc.jpg
+      image_alt: Loading samples into a UPLC system for metabolomics
       link: /research/
     - value: "3"
       label: seasons of field data on grafted Syrah under combined salinity and water deficit

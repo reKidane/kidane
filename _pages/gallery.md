@@ -68,7 +68,7 @@ nav_order: 10
     {% include figure.liquid path="assets/img/1.jpg" title="Field research placeholder" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm-6 col-md-4 mt-3">
-    {% include figure.liquid path="assets/img/2.jpg" title="Crop phenotyping placeholder" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/lab-uplc.jpg" title="Loading samples for UPLC metabolomics" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm-6 col-md-4 mt-3">
     {% include figure.liquid path="assets/img/Logo.jpg" title="Plant physiology placeholder" class="img-fluid rounded z-depth-1" %}
