@@ -5,6 +5,8 @@ title: Team
 description: Research team members, staff, trainees, and alumni.
 nav: true
 nav_order: 11
+# Hidden until the lab is established: set to true (or delete this line) to bring the Team tab back.
+published: false
 ---
 
 ##(This is a placeholder for my future lab establishment)##
