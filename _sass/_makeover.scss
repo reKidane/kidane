@@ -2394,3 +2394,247 @@ html.kr-lb-lock body {
 .post article > .kr-gallery:first-child {
   margin-top: -8px;
 }
+
+/* ======================================================================
+ * Photo title band (set header_image in a page's front matter)
+ * ==================================================================== */
+[role="main"] > .post > .post-header.kr-photo-band:not(.about-intro) {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(300px, 34vw, 460px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--kr-forest-deep);
+  isolation: isolate;
+
+  /* the photo, mirrored so the seedling sits on the right, with a slow drift */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -6% -2%;
+    z-index: -2;
+    background: var(--kr-band-img) center 58% / cover no-repeat;
+    transform: scaleX(-1) scale(1.06);
+    animation: kr-band-drift 26s ease-in-out infinite alternate;
+  }
+
+  /* green veil, darkest behind the title */
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(90deg, rgba(15, 29, 21, 0.94) 0%, rgba(15, 29, 21, 0.78) 34%, rgba(15, 29, 21, 0.22) 68%, rgba(15, 29, 21, 0.05) 100%),
+      linear-gradient(0deg, rgba(15, 29, 21, 0.55), transparent 40%);
+  }
+
+  .post-title,
+  .post-description {
+    max-width: min(620px, 55vw);
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+  }
+
+  .post-description {
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 1.08rem;
+    line-height: 1.6;
+  }
+}
+
+@keyframes kr-band-drift {
+  from {
+    transform: scaleX(-1) scale(1.06) translateX(0);
+  }
+
+  to {
+    transform: scaleX(-1) scale(1.12) translateX(1.5%);
+  }
+}
+
+@media (max-width: 767.98px) {
+  [role="main"] > .post > .post-header.kr-photo-band:not(.about-intro) {
+    &::after {
+      background: linear-gradient(0deg, rgba(15, 29, 21, 0.92) 10%, rgba(15, 29, 21, 0.55) 60%, rgba(15, 29, 21, 0.25) 100%);
+    }
+
+    justify-content: flex-end;
+
+    .post-title,
+    .post-description {
+      max-width: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [role="main"] > .post > .post-header.kr-photo-band::before {
+    animation: none;
+  }
+}
+
+/* ======================================================================
+ * Growth under stress animation (Research page)
+ * ==================================================================== */
+.kr-growth {
+  margin: 1.5rem 0 3rem;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--kr-forest-deep);
+  color: #ffffff;
+  box-shadow: 0 40px 80px -50px rgba(16, 36, 24, 0.8);
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: 420px;
+  }
+}
+
+.kr-growth-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem 1.4rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.kr-growth-stress {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+
+  button {
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    border: 1.5px solid rgba(255, 255, 255, 0.22);
+    background: transparent;
+    color: #ffffff;
+    font-family: var(--kr-font-head);
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      border-color 0.25s ease,
+      transform 0.3s var(--kr-ease-out);
+
+    &:hover {
+      border-color: var(--kr-gold);
+      transform: translateY(-2px);
+    }
+
+    &[aria-pressed="true"] {
+      background: var(--kr-gold);
+      border-color: var(--kr-gold);
+      color: var(--kr-forest-deep);
+    }
+  }
+}
+
+.kr-growth-time {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex: 1 1 260px;
+  max-width: 440px;
+
+  input[type="range"] {
+    flex: 1;
+    accent-color: var(--kr-gold);
+  }
+}
+
+.kr-growth-play {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+
+  .fa-play {
+    display: none;
+  }
+
+  &:hover {
+    background: var(--kr-gold);
+    color: var(--kr-forest-deep);
+  }
+}
+
+.kr-growth.is-paused .kr-growth-play {
+  .fa-play {
+    display: inline;
+  }
+
+  .fa-pause {
+    display: none;
+  }
+}
+
+.kr-growth-dayout {
+  min-width: 4.2em;
+  font-family: var(--kr-font-head);
+  font-weight: 700;
+  color: var(--kr-gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.kr-growth-readouts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.4rem 1.4rem;
+    margin: 0;
+    padding: 0.9rem 1.25rem;
+
+    & + dl {
+      border-left: 1px solid rgba(226, 179, 74, 0.35);
+    }
+  }
+
+  dt {
+    flex: 1 0 100%;
+    font-family: var(--kr-font-head);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--kr-gold);
+  }
+
+  dd {
+    margin: 0;
+    color: #ffffff;
+
+    span {
+      font-family: var(--kr-font-head);
+      font-weight: 700;
+      font-size: 1.25rem;
+      font-variant-numeric: tabular-nums;
+      color: #ffffff;
+    }
+
+    small {
+      margin-left: 0.3rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+.kr-growth-note {
+  margin: 0;
+  padding: 0.8rem 1.25rem 1.1rem;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6) !important;
+}

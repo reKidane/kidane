@@ -5,11 +5,49 @@ title: Research
 description: Research program in crop stress physiology, plant metabolism, multi-omics integration, crop improvement, and predictive modeling.
 nav: true
 nav_order: 2
+header_image: research-header.webp
 ---
 
 ## Research Vision
 
 My research examines how crops respond to complex abiotic stress from the cellular scale to whole-plant and field performance. I integrate physiology, metabolomics, volatilomics, ionomics, transcriptomics, phenomics, root-shoot traits, and computational modeling to identify mechanisms, thresholds, and predictive signatures of resilience.
+
+## Growth Under Stress
+
+<div class="kr-growth" data-kr-growth data-stress="combined">
+  <div class="kr-growth-bar">
+    <div class="kr-growth-stress" role="group" aria-label="Choose the stress for the right-hand plant">
+      <button type="button" data-stress="drought" aria-pressed="false">Drought</button>
+      <button type="button" data-stress="salinity" aria-pressed="false">Salinity</button>
+      <button type="button" data-stress="heat" aria-pressed="false">Heat</button>
+      <button type="button" data-stress="combined" aria-pressed="true">Combined</button>
+    </div>
+    <div class="kr-growth-time">
+      <button type="button" class="kr-growth-play" aria-label="Pause" aria-pressed="false">
+        <i class="fa-solid fa-pause" aria-hidden="true"></i><i class="fa-solid fa-play" aria-hidden="true"></i>
+      </button>
+      <input class="kr-growth-day" type="range" min="0" max="60" step="0.1" value="0" aria-label="Day of growth">
+      <span class="kr-growth-dayout">Day 0</span>
+    </div>
+  </div>
+  <canvas role="img" aria-label="Animation of two plants growing over 60 days: one well watered, one under the selected stress, with shorter stems, fewer and yellowing leaves, wilting and roots that change with the stress."></canvas>
+  <div class="kr-growth-readouts">
+    <dl data-side="left">
+      <dt class="kr-growth-name">Well watered</dt>
+      <dd><span data-k="height">0 cm</span><small>height</small></dd>
+      <dd><span data-k="leaves">0</span><small>leaves</small></dd>
+      <dd><span data-k="green">100%</span><small>greenness</small></dd>
+    </dl>
+    <dl data-side="right">
+      <dt class="kr-growth-name">Combined stress</dt>
+      <dd><span data-k="height">0 cm</span><small>height</small></dd>
+      <dd><span data-k="leaves">0</span><small>leaves</small></dd>
+      <dd><span data-k="green">100%</span><small>greenness</small></dd>
+    </dl>
+  </div>
+  <p class="kr-growth-note">Illustrative model, not measured data. Stress starts on day 12; drought dries and cracks the soil and deepens roots, salinity leaves salt in the soil and burns leaf tips, heat pales and curls leaves, and combined stress compounds all three.</p>
+</div>
+<script defer src="{{ '/assets/js/kr-growth.js' | relative_url | bust_file_cache }}"></script>
 
 ## Major Themes
 
