@@ -53,6 +53,12 @@ numbers:
       image_alt: RESILORIS emblem showing heat, drought and salinity around a plant
       contain: true
       link: /projects/2_project/
+    - value: "9"
+      label: plant species in my research, from Arabidopsis to cereals, legumes, citrus and grapevine
+      image: focus-plants-card.webp
+      image_alt: Nine plant species drawn to scale on a soil profile, with their root systems
+      contain: true
+      link: /research/#focus-plants
     - value: "15"
       label: oral and poster presentations at international meetings
       image: 1.jpg

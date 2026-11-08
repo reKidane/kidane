@@ -49,6 +49,30 @@ My research examines how crops respond to complex abiotic stress from the cellul
 </div>
 <script defer src="{{ '/assets/js/kr-growth.js' | relative_url | bust_file_cache }}"></script>
 
+## Focus Plants
+
+<div class="kr-plants3d" id="focus-plants" data-kr-plants3d data-module="{{ '/assets/js/kr-plants3d-scene.js' | relative_url }}">
+  <div class="kr-p3-chips" role="group" aria-label="Fly to a plant">
+    <button type="button" data-plant="all" aria-pressed="true">All</button>
+    <button type="button" data-plant="sorghum" aria-pressed="false">Sorghum</button>
+    <button type="button" data-plant="maize" aria-pressed="false">Maize</button>
+    <button type="button" data-plant="barley" aria-pressed="false">Barley</button>
+    <button type="button" data-plant="wheat" aria-pressed="false">Bread wheat</button>
+    <button type="button" data-plant="bean" aria-pressed="false">Common bean</button>
+    <button type="button" data-plant="mung" aria-pressed="false">Mung bean</button>
+    <button type="button" data-plant="citrus" aria-pressed="false">Citrus</button>
+    <button type="button" data-plant="grapevine" aria-pressed="false">Grapevine</button>
+    <button type="button" data-plant="arabidopsis" aria-pressed="false">Arabidopsis</button>
+  </div>
+  <div class="kr-p3-stage">
+    <img class="kr-p3-poster" src="{{ '/assets/img/focus-plants.webp' | relative_url }}" alt="Sorghum, maize, barley, bread wheat, common bean, mung bean, citrus, grapevine and Arabidopsis drawn to scale above a soil profile, with their root systems below ground." width="1853" height="684" loading="lazy">
+    <div class="kr-p3-labels" aria-hidden="true"></div>
+    <span class="kr-p3-hint">Drag to turn the scene</span>
+  </div>
+  <p class="kr-p3-note">Nine plants I work with, from the model plant Arabidopsis to cereals, legumes, citrus and the vineyard, shown to scale on a soil profile with A, B and C horizons. Shoots stand on the surface and roots spread down the cut face; legume roots carry nitrogen-fixing nodules. Rod bands are 0.25 m; Arabidopsis is shown 3× life size. Models are illustrative.</p>
+</div>
+<script defer src="{{ '/assets/js/kr-plants3d.js' | relative_url | bust_file_cache }}"></script>
+
 ## Major Themes
 
 <div class="kr-explorer" id="research-explorer">

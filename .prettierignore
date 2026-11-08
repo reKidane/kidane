@@ -20,3 +20,6 @@ _data/publication_metrics.yml
 # reference. It is not part of the site's source, so it is not held to the
 # site's formatting.
 preview_project_page.html
+
+# three.js library files (MIT licence), kept as published
+assets/js/three/*
