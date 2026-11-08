@@ -226,87 +226,32 @@
     }
 
     function pot(cx, t, isRight, seed) {
+      // The pot is cut in half: the front half is removed, so the soil is seen
+      // as a vertical section and the stem and roots meet at the soil line.
       var topY = H * 0.68,
         potH = H * 0.27,
         tw = Math.min(W * 0.2, H * 0.42),
         bw = tw * 0.76,
-        ry = tw * 0.12;
-      // back rim
-      ctx.fillStyle = "rgba(255,255,255,0.05)";
+        ry = tw * 0.12,
+        wt = Math.max(4, tw * 0.04); // wall thickness
+      var wet = t.water;
+      var surf = "rgb(" + Math.round(mix(170, 74, wet)) + "," + Math.round(mix(136, 54, wet)) + "," + Math.round(mix(96, 36, wet)) + ")";
+
+      // back half of the rim and the soil surface behind the cut
+      ctx.fillStyle = "#8f4f31";
+      ctx.beginPath();
+      ctx.ellipse(cx, topY, tw / 2 + wt, ry + wt * 0.6, 0, Math.PI, 0);
+      ctx.closePath();
+      ctx.fill();
+      ctx.fillStyle = surf;
       ctx.beginPath();
       ctx.ellipse(cx, topY, tw / 2, ry, 0, Math.PI, 0);
-      ctx.fill();
-      // soil body in a clear pot (cut-away)
-      var wet = t.water;
-      var soil = ctx.createLinearGradient(0, topY, 0, topY + potH);
-      soil.addColorStop(0, "rgb(" + Math.round(mix(150, 62, wet)) + "," + Math.round(mix(118, 44, wet)) + "," + Math.round(mix(82, 30, wet)) + ")");
-      soil.addColorStop(1, "rgb(" + Math.round(mix(118, 40, wet)) + "," + Math.round(mix(92, 28, wet)) + "," + Math.round(mix(62, 20, wet)) + ")");
-      ctx.save();
-      ctx.beginPath();
-      ctx.moveTo(cx - tw / 2, topY);
-      ctx.lineTo(cx - bw / 2, topY + potH);
-      ctx.ellipse(cx, topY + potH, bw / 2, ry * 0.8, 0, Math.PI, 0, true);
-      ctx.lineTo(cx + tw / 2, topY);
       ctx.closePath();
-      ctx.fillStyle = soil;
-      ctx.fill();
-      ctx.clip();
-
-      // water held in the soil
-      if (wet > 0.3) {
-        var wg = ctx.createLinearGradient(0, topY + potH * (1 - wet), 0, topY + potH);
-        wg.addColorStop(0, "rgba(60,120,150,0)");
-        wg.addColorStop(1, "rgba(60,120,150," + 0.18 * wet + ")");
-        ctx.fillStyle = wg;
-        ctx.fillRect(cx - tw, topY, tw * 2, potH * 1.2);
-      }
-      // dry cracks
-      if (wet < 0.35) {
-        var rc = rng(seed + 5);
-        ctx.strokeStyle = "rgba(60,40,24," + (0.6 - wet) + ")";
-        ctx.lineWidth = 1.2;
-        for (var c = 0; c < 7; c++) {
-          var px = cx + (rc() - 0.5) * tw * 0.8,
-            py = topY + rc() * potH * 0.8;
-          ctx.beginPath();
-          ctx.moveTo(px, py);
-          for (var s = 0; s < 4; s++) {
-            px += (rc() - 0.5) * 18;
-            py += rc() * 14;
-            ctx.lineTo(px, py);
-          }
-          ctx.stroke();
-        }
-      }
-      // salt specks in the soil
-      if (t.salt > 0.05) {
-        var rs = rng(seed + 9);
-        ctx.fillStyle = "rgba(245,245,240," + 0.75 * t.salt + ")";
-        for (var p = 0; p < 90 * t.salt; p++) {
-          ctx.fillRect(cx + (rs() - 0.5) * tw, topY + rs() * potH, 1.6, 1.6);
-        }
-      }
-      roots(cx, topY + ry * 0.4, potH, tw, t, seed);
-      ctx.restore();
-
-      // pot walls and front rim
-      ctx.strokeStyle = "rgba(255,255,255,0.28)";
-      ctx.lineWidth = 1.5;
-      ctx.beginPath();
-      ctx.moveTo(cx - tw / 2, topY);
-      ctx.lineTo(cx - bw / 2, topY + potH);
-      ctx.ellipse(cx, topY + potH, bw / 2, ry * 0.8, 0, Math.PI, 0, true);
-      ctx.lineTo(cx + tw / 2, topY);
-      ctx.stroke();
-      // soil surface
-      ctx.fillStyle = "rgb(" + Math.round(mix(170, 74, wet)) + "," + Math.round(mix(136, 54, wet)) + "," + Math.round(mix(96, 36, wet)) + ")";
-      ctx.beginPath();
-      ctx.ellipse(cx, topY, tw / 2, ry, 0, 0, Math.PI * 2);
       ctx.fill();
       if (t.salt > 0.05) {
         var rr = rng(seed + 13);
-        for (var q = 0; q < 70 * t.salt; q++) {
-          var a = rr() * Math.PI * 2,
+        for (var q = 0; q < 60 * t.salt; q++) {
+          var a = Math.PI + rr() * Math.PI,
             d = Math.sqrt(rr());
           var sx = cx + Math.cos(a) * d * tw * 0.47,
             sy = topY + Math.sin(a) * d * ry * 0.9;
@@ -315,10 +260,111 @@
           ctx.fillRect(sx - 1, sy - 1, 2.2, 2.2);
         }
       }
-      ctx.strokeStyle = "rgba(255,255,255,0.35)";
+      if (wet < 0.35) {
+        // dry crust cracks on the surface
+        var rk = rng(seed + 21);
+        ctx.strokeStyle = "rgba(70,46,28," + (0.7 - wet) + ")";
+        ctx.lineWidth = 1;
+        for (var k = 0; k < 5; k++) {
+          var kx = cx + (rk() - 0.5) * tw * 0.8,
+            ky = topY - rk() * ry * 0.8;
+          ctx.beginPath();
+          ctx.moveTo(kx, ky);
+          ctx.lineTo(kx + (rk() - 0.5) * 22, ky + (rk() - 0.5) * 4);
+          ctx.stroke();
+        }
+      }
+
+      // pot wall in section: terracotta band around the cut face
+      var wall = ctx.createLinearGradient(cx - tw / 2 - wt, 0, cx + tw / 2 + wt, 0);
+      wall.addColorStop(0, "#9c5636");
+      wall.addColorStop(0.5, "#c47a4f");
+      wall.addColorStop(1, "#8a4a2e");
+      ctx.fillStyle = wall;
       ctx.beginPath();
-      ctx.ellipse(cx, topY, tw / 2, ry, 0, 0, Math.PI * 2);
+      ctx.moveTo(cx - tw / 2 - wt, topY);
+      ctx.lineTo(cx - bw / 2 - wt, topY + potH + wt);
+      ctx.lineTo(cx + bw / 2 + wt, topY + potH + wt);
+      ctx.lineTo(cx + tw / 2 + wt, topY);
+      ctx.closePath();
+      ctx.fill();
+
+      // soil in section
+      var soil = ctx.createLinearGradient(0, topY, 0, topY + potH);
+      soil.addColorStop(0, "rgb(" + Math.round(mix(150, 62, wet)) + "," + Math.round(mix(118, 44, wet)) + "," + Math.round(mix(82, 30, wet)) + ")");
+      soil.addColorStop(1, "rgb(" + Math.round(mix(118, 40, wet)) + "," + Math.round(mix(92, 28, wet)) + "," + Math.round(mix(62, 20, wet)) + ")");
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(cx - tw / 2, topY);
+      ctx.lineTo(cx - bw / 2, topY + potH);
+      ctx.lineTo(cx + bw / 2, topY + potH);
+      ctx.lineTo(cx + tw / 2, topY);
+      ctx.closePath();
+      ctx.fillStyle = soil;
+      ctx.fill();
+      ctx.clip();
+
+      // soil texture
+      var rt = rng(seed + 3);
+      for (var g = 0; g < 160; g++) {
+        ctx.fillStyle = rt() < 0.5 ? "rgba(0,0,0,0.12)" : "rgba(255,255,255,0.05)";
+        ctx.fillRect(cx + (rt() - 0.5) * tw, topY + rt() * potH, 2, 2);
+      }
+      // water held in the soil
+      if (wet > 0.3) {
+        var wg = ctx.createLinearGradient(0, topY + potH * (1 - wet), 0, topY + potH);
+        wg.addColorStop(0, "rgba(60,120,150,0)");
+        wg.addColorStop(1, "rgba(60,120,150," + 0.2 * wet + ")");
+        ctx.fillStyle = wg;
+        ctx.fillRect(cx - tw, topY, tw * 2, potH * 1.2);
+      }
+      // dry cracks running down from the surface
+      if (wet < 0.35) {
+        var rc = rng(seed + 5);
+        ctx.strokeStyle = "rgba(60,40,24," + (0.6 - wet) + ")";
+        ctx.lineWidth = 1.2;
+        for (var c = 0; c < 6; c++) {
+          var px = cx + (rc() - 0.5) * tw * 0.85,
+            py = topY;
+          ctx.beginPath();
+          ctx.moveTo(px, py);
+          for (var st = 0; st < 4; st++) {
+            px += (rc() - 0.5) * 10;
+            py += 6 + rc() * 12;
+            ctx.lineTo(px, py);
+          }
+          ctx.stroke();
+        }
+      }
+      // salt specks through the soil
+      if (t.salt > 0.05) {
+        var rs = rng(seed + 9);
+        ctx.fillStyle = "rgba(245,245,240," + 0.75 * t.salt + ")";
+        for (var p = 0; p < 90 * t.salt; p++) {
+          ctx.fillRect(cx + (rs() - 0.5) * tw, topY + Math.pow(rs(), 1.6) * potH, 1.6, 1.6);
+        }
+      }
+      // the cut face catches light at the edges: soft shading for depth
+      var sh = ctx.createLinearGradient(cx - tw / 2, 0, cx + tw / 2, 0);
+      sh.addColorStop(0, "rgba(0,0,0,0.22)");
+      sh.addColorStop(0.18, "rgba(0,0,0,0)");
+      sh.addColorStop(0.82, "rgba(0,0,0,0)");
+      sh.addColorStop(1, "rgba(0,0,0,0.26)");
+      ctx.fillStyle = sh;
+      ctx.fillRect(cx - tw, topY, tw * 2, potH);
+      roots(cx, topY, potH, tw, t, seed);
+      ctx.restore();
+
+      // soil line and the top of the cut walls
+      ctx.strokeStyle = "rgba(255,240,220,0.35)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(cx - tw / 2, topY + 0.5);
+      ctx.lineTo(cx + tw / 2, topY + 0.5);
       ctx.stroke();
+      ctx.fillStyle = "#d89466";
+      ctx.fillRect(cx - tw / 2 - wt, topY - 1, wt, 2.5);
+      ctx.fillRect(cx + tw / 2, topY - 1, wt, 2.5);
       return { topY: topY, tw: tw, potH: potH };
     }
 
@@ -335,7 +381,7 @@
         wob = (r() - 0.5) * 0.6;
       for (var i = 0; i <= n; i++) {
         var f = i / n;
-        pts.push({ x: cx + Math.sin(f * 3 + wob * 4) * tw * 0.035, y: y0 + D * f });
+        pts.push({ x: cx + (Math.sin(f * 3 + wob * 4) - Math.sin(wob * 4)) * tw * 0.035, y: y0 + D * f });
       }
       function stroke(path, w0, w1, a) {
         for (var k = 0; k < path.length - 1; k++) {
