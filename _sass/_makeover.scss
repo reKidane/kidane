@@ -2397,26 +2397,28 @@ html.kr-lb-lock body {
 
 /* ======================================================================
  * Photo title band (set header_image in a page's front matter)
+ * The band keeps the photo's own proportions (1600 x 628, about 2.55 : 1)
+ * so the whole scene stays in view.
  * ==================================================================== */
 [role="main"] > .post > .post-header.kr-photo-band:not(.about-intro) {
   position: relative;
   overflow: hidden;
-  min-height: clamp(300px, 34vw, 460px);
+  min-height: clamp(300px, 39.25vw, 620px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: var(--kr-forest-deep);
   isolation: isolate;
 
-  /* the photo, mirrored so the seedling sits on the right, with a slow drift */
+  /* the photo, mirrored so the seedling sits on the right, with a gentle drift */
   &::before {
     content: "";
     position: absolute;
-    inset: -6% -2%;
+    inset: 0;
     z-index: -2;
-    background: var(--kr-band-img) center 58% / cover no-repeat;
-    transform: scaleX(-1) scale(1.06);
-    animation: kr-band-drift 26s ease-in-out infinite alternate;
+    background: var(--kr-band-img) center center / cover no-repeat;
+    transform: scaleX(-1);
+    animation: kr-band-drift 24s ease-in-out infinite alternate;
   }
 
   /* green veil, darkest behind the title */
@@ -2426,13 +2428,13 @@ html.kr-lb-lock body {
     inset: 0;
     z-index: -1;
     background:
-      linear-gradient(90deg, rgba(15, 29, 21, 0.94) 0%, rgba(15, 29, 21, 0.78) 34%, rgba(15, 29, 21, 0.22) 68%, rgba(15, 29, 21, 0.05) 100%),
-      linear-gradient(0deg, rgba(15, 29, 21, 0.55), transparent 40%);
+      linear-gradient(90deg, rgba(15, 29, 21, 0.92) 0%, rgba(15, 29, 21, 0.72) 32%, rgba(15, 29, 21, 0.18) 60%, rgba(15, 29, 21, 0) 100%),
+      linear-gradient(0deg, rgba(15, 29, 21, 0.45), transparent 35%);
   }
 
   .post-title,
   .post-description {
-    max-width: min(620px, 55vw);
+    max-width: min(560px, 46vw);
     text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
   }
 
@@ -2445,21 +2447,30 @@ html.kr-lb-lock body {
 
 @keyframes kr-band-drift {
   from {
-    transform: scaleX(-1) scale(1.06) translateX(0);
+    transform: scaleX(-1) scale(1);
   }
 
   to {
-    transform: scaleX(-1) scale(1.12) translateX(1.5%);
+    transform: scaleX(-1) scale(1.035);
   }
 }
 
+/* Phones: the full photo sits on top as a strip, the title on green below it */
 @media (max-width: 767.98px) {
   [role="main"] > .post > .post-header.kr-photo-band:not(.about-intro) {
-    &::after {
-      background: linear-gradient(0deg, rgba(15, 29, 21, 0.92) 10%, rgba(15, 29, 21, 0.55) 60%, rgba(15, 29, 21, 0.25) 100%);
+    min-height: 0;
+    justify-content: flex-end;
+    padding-top: calc(39.25vw + 1.25rem);
+
+    &::before {
+      bottom: auto;
+      height: 39.25vw;
+      animation: none;
     }
 
-    justify-content: flex-end;
+    &::after {
+      background: linear-gradient(180deg, transparent 0, transparent calc(39.25vw - 3rem), var(--kr-forest-deep) 39.25vw);
+    }
 
     .post-title,
     .post-description {
