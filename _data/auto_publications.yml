@@ -1,5 +1,5 @@
 # Automatically updated from OpenAlex. Edit script settings, not this file.
-# Last updated: 2026-11-02
+# Last updated: 2026-11-09
 - title: "Multiscale Phenomics Reveals a Varietal Signature of Grapevine Response to Heatwaves"
   year: 2026
   date: "2026-07-22"
@@ -63,7 +63,7 @@
   source: "Plant Stress"
   doi: "https://doi.org/10.1016/j.stress.2025.101050"
   openalex: "https://openalex.org/W4414475689"
-  citations: 4
+  citations: 5
   type: "article"
 
 - title: "Metabolic and Physiological Analysis Reveals Distinct Salinity Tipping Point in Vitis Vinifera Cv. Syrah to Enter a Stress Response Mode"
@@ -76,21 +76,6 @@
   source: "SSRN Electronic Journal"
   doi: "https://doi.org/10.2139/ssrn.5109238"
   openalex: "https://openalex.org/W4406750151"
-  citations: 0
-  type: "preprint"
-
-- title: "Modulation of Grafted Syrah Grapevine Phenology and Agronomical Performance on Two Rootstocks Under Combined Salinity and Water Stress Conditions: A Three-Year Field Study"
-  year: 2025
-  date: "2025-01-01"
-  authors:
-    - "Kidanemaryam Reta"
-    - "Yaniv Lupo"
-    - "Noga Sikron"
-    - "Naftali Lazarovitch"
-    - "Aaron Fait"
-  source: "SSRN Electronic Journal"
-  doi: "https://doi.org/10.2139/ssrn.5291409"
-  openalex: "https://openalex.org/W4411258123"
   citations: 0
   type: "preprint"
 
@@ -110,7 +95,7 @@
   source: "OENO One"
   doi: "https://doi.org/10.20870/oeno-one.2024.58.1.7148"
   openalex: "https://openalex.org/W4392748351"
-  citations: 7
+  citations: 9
   type: "article"
 
 - title: "Metabolic and Physiological Analysis Reveals Distinct Salinity Tipping Point in Vitis Vinifera Cv. Syrah to Enter a Stress Response Mode"
