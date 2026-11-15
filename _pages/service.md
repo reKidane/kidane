@@ -9,6 +9,8 @@ nav: false
 ## Peer Review
 
 - The Plant Cell
+- Plant Physiology
+- Plant Stress
 - PLOS One
 - Plant Physiology and Biochemistry
 - Scientia Horticulturae
