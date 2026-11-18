@@ -65,23 +65,17 @@
         {% endfor %}
       </nav>
 
-      <div class="kr-footer-pills">
-        {% if site.data.socials.scholar_userid %}
-          <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener">Google Scholar</a>
-        {% endif %}
-        {% if site.data.socials.orcid_id %}
-          <a href="https://orcid.org/{{ site.data.socials.orcid_id }}" target="_blank" rel="noopener">ORCID</a>
-        {% endif %}
-        {% if site.data.socials.cv_pdf %}
-          <a href="{{ site.data.socials.cv_pdf | relative_url }}" target="_blank" rel="noopener">Download CV</a>
-        {% endif %}
-      </div>
+      {% comment %}
+        Scholar, ORCID and CV buttons hidden; the social icons below already link to these profiles.
+        <div class="kr-footer-pills"> ... </div>
+      {% endcomment %}
+
+      <div class="kr-footer-social contact-icons">{% social_links %}</div>
 
       <p class="kr-footer-note">{{ site.contact_note }}</p>
 
       <div class="kr-footer-bottom">
         <div class="kr-footer-copy">{{ footer_contents }}</div>
-        <div class="kr-footer-social contact-icons">{% social_links %}</div>
       </div>
     </div>
   </footer>
