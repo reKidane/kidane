@@ -10,6 +10,7 @@ Core references from established publishers. Books marked **open access** are fr
 
 ## Plant physiology and photosynthesis
 
+- **[Plant Physiology and Development, 6th edition](https://learninglink.oup.com/access/taiz-plant-physiology-6e)**. Taiz L., Zeiger E., Møller I.M. and Murphy A. Sinauer, Oxford University Press, 2015. The standard plant physiology textbook: water and solute transport, photosynthesis, stomatal biology, nutrient assimilation, hormones and development from germination to senescence.
 - **[Plant Physiological Ecology, 3rd edition](https://doi.org/10.1007/978-3-030-29639-1)**. Lambers H. and Oliveira R.S. Springer, 2019. Carbon metabolism, water relations, energy balance and mineral nutrition, scaled from leaf to canopy and ecosystem.
 - **[Photosynthesis: Physiology and Metabolism](https://doi.org/10.1007/0-306-48137-5)**. Leegood R.C., Sharkey T.D. and von Caemmerer S. (eds). Springer, 2000, Advances in Photosynthesis and Respiration vol. 9. The Calvin cycle, Rubisco, photorespiration, sucrose and starch metabolism, and C4 photosynthesis.
 
