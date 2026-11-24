@@ -121,12 +121,7 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/kidane/books/";
               },
-            },{id: "books-climate-resilient-crop-science-references",
-          title: 'Climate-Resilient Crop Science References',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/kidane/books/climate_resilient_crop_science/";
-            },},{id: "news-awarded-an-international-organisation-of-vine-and-wine-research-grant-for-integrative-metabolomics-physiology-uav-thermal-phenotyping-and-predictive-modeling-in-vitis-vinifera-under-elevated-temperature",
+            },{id: "news-awarded-an-international-organisation-of-vine-and-wine-research-grant-for-integrative-metabolomics-physiology-uav-thermal-phenotyping-and-predictive-modeling-in-vitis-vinifera-under-elevated-temperature",
           title: 'Awarded an International Organisation of Vine and Wine research grant for integrative metabolomics,...',
           description: "",
           section: "News",},{id: "news-received-the-akis-publication-prize-at-ben-gurion-university-of-the-negev",
