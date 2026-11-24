@@ -1,40 +1,38 @@
 ---
 layout: page
-title: Reading List
+title: To Read
 permalink: /books/
 nav: false
-description: Free, full-text books from established publishers and scientific societies, chosen for plant stress biology, omics and crop improvement.
+description: Core books from Springer, Elsevier and other leading publishers on plant stress physiology, metabolomics, omics and crop improvement.
 ---
 
-Every book below is free to read in full, legally, from the publisher, a scientific society or the authors' official site.
+Core references from established publishers. Books marked **open access** are free to read in full; the rest are available through institutional subscriptions on SpringerLink and ScienceDirect.
 
-## Plant physiology
+## Plant physiology and photosynthesis
 
-- **[Plants in Action, 2nd edition](https://www.rseco.org/content/about.html)**. Australian Society of Plant Scientists and New Zealand Society of Plant Biologists. A peer-reviewed plant physiology textbook covering water relations, photosynthesis, nutrition and stress, from cell to field.
-- **[The Arabidopsis Book](https://bioone.org/journals/the-arabidopsis-book)**. American Society of Plant Biologists, 2002 to 2019. Authoritative reviews on Arabidopsis biology, from abscisic acid signalling to the phenylpropanoid pathway.
+- **[Plant Physiological Ecology, 3rd edition](https://doi.org/10.1007/978-3-030-29639-1)**. Lambers H. and Oliveira R.S. Springer, 2019. Carbon metabolism, water relations, energy balance and mineral nutrition, scaled from leaf to canopy and ecosystem.
+- **[Photosynthesis: Physiology and Metabolism](https://doi.org/10.1007/0-306-48137-5)**. Leegood R.C., Sharkey T.D. and von Caemmerer S. (eds). Springer, 2000, Advances in Photosynthesis and Respiration vol. 9. The Calvin cycle, Rubisco, photorespiration, sucrose and starch metabolism, and C4 photosynthesis.
+- **[Marschner's Mineral Nutrition of Plants, 4th edition](https://doi.org/10.1016/C2019-0-00491-8)**. Rengel Z., Cakmak I. and White P.J. (eds). Elsevier, Academic Press, 2023. Ion uptake, long-distance transport, nutrient functions and stress physiology; the reference for ionomics and salinity.
 
-## Metabolomics and mass spectrometry
+## Plant metabolism and metabolomics
 
-- **[R for Mass Spectrometry](https://rformassspectrometry.github.io/book/)**. Gatto L., Gibb S. and Rainer J. Teaching material from the Bioconductor R for Mass Spectrometry project for processing and analysing metabolomics and proteomics data.
+- **[Plant Biochemistry, 4th edition](https://shop.elsevier.com/books/catalog/isbn/9780123849878)**. Heldt H.W. and Piechulla B. Elsevier, Academic Press, 2010. Primary and specialised metabolism, from photosynthesis to secondary compounds.
+- **[Plant Metabolomics](https://doi.org/10.1007/3-540-29782-0)**. Saito K., Dixon R.A. and Willmitzer L. (eds). Springer, 2006, Biotechnology in Agriculture and Forestry vol. 57. The founding volume of plant metabolomics, by the leaders who shaped the field.
+- **[Plant Metabolomics: Methods and Protocols](https://doi.org/10.1007/978-1-4939-7819-9)**. António C. (ed). Springer, Humana, 2018, Methods in Molecular Biology vol. 1778. Laboratory protocols for GC-MS, LC-MS and NMR plant metabolomics.
+- **[Processing Metabolomics and Proteomics Data with Open Software](https://doi.org/10.1039/9781788019880)**. Royal Society of Chemistry, 2020. GC-MS, LC-MS and lipidomics data processing, statistics and metabolite annotation with open tools.
 
-## Genomics
+## Genomics, genomic prediction and breeding
 
-- **[Genomes, 2nd edition](https://www.ncbi.nlm.nih.gov/books/NBK21128/)**. Brown T.A. Wiley-Liss, 2002, on NCBI Bookshelf. A classic text on how genomes are organised, studied, expressed and evolve.
-- **[Computational Genomics with R](https://compgenomr.github.io/book/)**. Akalin A. Chapman and Hall/CRC, 2020. Genome biology, statistics and R workflows for RNA-seq, ChIP-seq, methylation and multi-omics integration.
+- **[Genomic Prediction of Complex Traits: Methods and Protocols](https://doi.org/10.1007/978-1-0716-2205-6)**. Ahmadi N. and Bartholomé J. (eds). Springer, Humana, 2022, Methods in Molecular Biology vol. 2467. From QTL mapping to genomic, phenomic and multi-omics prediction in plant breeding.
+- **[Multivariate Statistical Machine Learning Methods for Genomic Prediction](https://doi.org/10.1007/978-3-030-89010-0)**. Montesinos López O.A., Montesinos López A. and Crossa J. Springer, 2022, **open access**. Genomic selection models, from Bayesian regression to deep learning, with worked R examples.
+- **[Wheat Improvement: Food Security in a Changing Climate](https://doi.org/10.1007/978-3-030-90673-3)**. Reynolds M.P. and Braun H.J. (eds). Springer, 2022, **open access**. Breeding methods, genetic gain, physiology and phenotyping for climate resilience in small-grain cereals.
 
-## Transcriptomics, single-cell and spatial omics
+## Omics data analysis
 
-- **[Orchestrating Single-Cell Analysis with Bioconductor](https://bioconductor.org/books/release/OSCA/)**. Amezquita R., Lun A., Hicks S. and Gottardo R. Bioconductor. Reproducible workflows for single-cell RNA-seq.
-- **[Single-cell Best Practices](https://www.sc-best-practices.org/)**. Heumos L., Schaar A.C., Theis F.J. and the Single-cell Best Practices Consortium. Companion book to the 2023 _Nature Reviews Genetics_ expert recommendation on single-cell analysis across modalities.
-- **[Orchestrating Spatial Transcriptomics Analysis with Bioconductor](https://bioconductor.org/books/release/OSTA/)**. Bioconductor, continuously updated. Analysis workflows for sequencing-based and imaging-based spatial omics data.
+- **[Modern Statistics for Modern Biology](https://www.huber.embl.de/msmb/)**. Holmes S. and Huber W. Cambridge University Press, 2019, **free online**. Multivariate analysis, clustering, testing and networks for high-throughput biology in R.
+- **[Orchestrating Spatial Transcriptomics Analysis with Bioconductor](https://bioconductor.org/books/release/OSTA/)**. Bioconductor, **free online**. Workflows for sequencing-based and imaging-based spatial omics data.
 
-## Statistics, machine learning and bioinformatics
+## Crops
 
-- **[Modern Statistics for Modern Biology](https://www.huber.embl.de/msmb/)**. Holmes S. and Huber W. Cambridge University Press, 2019. Statistics for high-throughput biology: multivariate analysis, clustering, testing and networks in R.
-- **[An Introduction to Statistical Learning](https://www.statlearning.com/)**. James G., Witten D., Hastie T. and Tibshirani R. Springer. The standard introduction to regression, classification, resampling and machine learning, with R and Python labs.
-
-## Plant breeding and crop improvement
-
-- **[Wheat Improvement: Food Security in a Changing Climate](https://doi.org/10.1007/978-3-030-90673-3)**. Reynolds M.P. and Braun H.J. (eds). Springer, 2022, open access. A textbook on breeding methods, genetic gain, physiology and phenotyping for climate resilience, much of it relevant to all small-grain cereals.
-- **[Multivariate Statistical Machine Learning Methods for Genomic Prediction](https://doi.org/10.1007/978-3-030-89010-0)**. Montesinos López O.A., Montesinos López A. and Crossa J. Springer, 2022, open access. Genomic selection models, from Bayesian regression to deep learning, with worked R examples from breeding trials.
-- **[Mutation Breeding, Genetic Diversity and Crop Adaptation to Climate Change](https://doi.org/10.1079/9781789249095.0000)**. Sivasankar S., Ellis N., Jankuloski L. and Ingelbrecht I. (eds). Joint FAO/IAEA Centre and CABI, 2021, open access. Induced genetic variation and genomics for climate-adapted crops, including sorghum.
+- **[The Science of Grapevines, 3rd edition](https://shop.elsevier.com/books/the-science-of-grapevines/keller/978-0-12-816365-8)**. Keller M. Elsevier, Academic Press, 2020. Grapevine anatomy, phenology, water relations, photosynthesis, partitioning and stress physiology.
+- **[The Genus Citrus](https://doi.org/10.1016/C2016-0-02375-6)**. Talon M., Caruso M. and Gmitter F.G. (eds). Elsevier, Woodhead, 2020. Citrus genome, rootstocks, breeding, and responses to salinity, water deficit and changing climates.
