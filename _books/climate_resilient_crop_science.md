@@ -7,6 +7,7 @@ categories: plant-physiology crop-improvement metabolomics phenotyping climate-r
 tags: reference
 date: 2026-05-17
 status: Ongoing
+published: false
 ---
 
 This placeholder collection is reserved for reference books, review papers, manuals, and protocol resources in plant physiology, crop improvement, plant metabolomics, high-throughput phenotyping, and climate-resilient agriculture.
