@@ -114,8 +114,8 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/kidane/news/";
               },
-            },{id: "dropdown-reading-list",
-              title: "Reading List",
+            },{id: "dropdown-to-read",
+              title: "To Read",
               description: "",
               section: "Dropdown",
               handler: () => {
